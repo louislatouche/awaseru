@@ -8,7 +8,7 @@
 // Le navigateur ne détecte une mise à jour que si ce fichier-ci, ou un fichier qu'il charge avec
 // importScripts, change d'au moins un octet (Chrome le vérifie depuis sa version 78). Sans cela,
 // le téléphone continuerait de servir l'ancienne copie, indéfiniment.
-const VERSION = 132;
+const VERSION = 133;
 importScripts('pieces/version.js'); // définit VERSION_PIECES
 
 // Sur GitHub Pages, tous tes projets partagent le même site, donc le même espace de caches.

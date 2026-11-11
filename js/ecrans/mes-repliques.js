@@ -79,7 +79,8 @@ export function afficherMesRepliques(racine, piece) {
           creerJaponais(role.nom, 'role'),
           el('span', { className: 'role-fr' }, traduire(role, 'nom_fr'))),
         total),
-      role.note && el('p', { className: 'role-note' }, traduire(role, 'note')));
+      // La note, dans la langue qu'a la pièce (une pièce peut n'avoir que celle de sa troupe).
+      traduire(role, 'note') && el('p', { className: 'role-note' }, traduire(role, 'note')));
   }
 
   function creerLigneReplique(ligne) {

@@ -138,6 +138,8 @@ export function afficherScript(racine, piece) {
   document.addEventListener('visibilitychange', surVisibilite);
 
   const rolesAvecLien = piece.roles.filter((role) => role.lien);
+  // L'explication, dans la langue qu'a la pièce (une pièce peut n'avoir que celle de sa troupe).
+  const explication = traduire(piece, 'explication');
   // La première réplique de la pièce, posée dans un cadre qui portera la pastille du tuto (plus bas) :
   // la pastille est un bouton, et un bouton ne peut pas se trouver dans la carte, qui en est un aussi.
   let cadreTuto = null;
@@ -156,7 +158,7 @@ export function afficherScript(racine, piece) {
     el('div', { className: 'acc-collapse' },
       el('div', { className: 'acc-inner' },
         el('div', { className: 'acc-pad' },
-          piece.explication && el('p', {}, traduire(piece, 'explication')),
+          explication && el('p', {}, explication),
           rolesAvecLien.map((role) => el('div', { className: 'lien-role' },
             el('span', { className: 'coche-texte' },
               creerJaponais(role.nom, 'role'),
@@ -168,7 +170,7 @@ export function afficherScript(racine, piece) {
     el('div', { className: 'en-tete-piece' },
       creerJaponais(piece.titre, 'titre-piece'),
       el('h1', { className: 'vue-titre' }, traduire(piece, 'titre_fr'))),
-    (piece.explication || rolesAvecLien.length > 0) && apropos,
+    (explication || rolesAvecLien.length > 0) && apropos,
     creerAvisVoix(piece),
     creerInterrupteurs(piece.id),
     piece.scenes.map((scene) => el('section', { className: 'scene' },

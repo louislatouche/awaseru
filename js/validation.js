@@ -17,11 +17,31 @@ function estLienWeb(valeur) {
   }
 }
 
+// Les traductions d'un champ, dans toutes les langues qu'a l'objet. Le français est la langue
+// d'origine du format : fr, titre_fr, nom_fr, ou pas de suffixe (explication, note, credit). Les
+// autres langues prennent leur code de deux lettres : en, de, titre_en, titre_de, explication_de...
+// Chaque troupe fait traduire ses pièces dans sa langue et en anglais : aucune langue n'est imposée.
+function traductions(objet, champ) {
+  let motif;
+  if (champ === 'fr') motif = /^[a-z]{2}$/;
+  else if (champ.endsWith('_fr')) motif = new RegExp(`^${champ.slice(0, -3)}_[a-z]{2}$`);
+  else motif = new RegExp(`^${champ}(_[a-z]{2})?$`);
+  // « id » a deux lettres, mais ce n'est pas une langue.
+  return Object.entries(objet).filter(([cle]) => cle !== 'id' && motif.test(cle)).map(([, valeur]) => valeur);
+}
+
 // Renvoie la liste des problèmes trouvés : une liste vide veut dire que la pièce est valide.
 export function validerPiece(piece) {
   if (!estObjet(piece)) return ['le fichier ne contient pas une pièce (il faudrait un objet JSON { ... }).'];
 
   const erreurs = [];
+
+  // Toutes les traductions d'un champ sont des textes. S'il est exigé, il en faut au moins une non vide.
+  const verifierTraductions = (objet, champ, lieu, exige) => {
+    const valeurs = traductions(objet, champ);
+    if (valeurs.some((valeur) => typeof valeur !== 'string')) erreurs.push(`${lieu} : chaque traduction doit être un texte.`);
+    else if (exige && !valeurs.some(estTexteRempli)) erreurs.push(`${lieu} : traduction manquante (en français, en anglais ou dans la langue de la troupe).`);
+  };
 
   const exigerJaponais = (valeur, lieu) => {
     if (!estTexteRempli(valeur)) {
@@ -32,18 +52,14 @@ export function validerPiece(piece) {
     if (probleme) erreurs.push(`${lieu} : ${probleme}.`);
   };
 
-  const exigerFrancais = (valeur, lieu) => {
-    if (!estTexteRempli(valeur)) erreurs.push(`${lieu} : texte manquant.`);
-  };
-
   if (piece.format !== undefined && piece.format !== FORMAT_CONNU) {
     erreurs.push(`format ${piece.format} inconnu (Awaseru connaît le format ${FORMAT_CONNU}).`);
   }
   if (piece.id !== undefined && !estTexteRempli(piece.id)) erreurs.push('« id » doit être un texte non vide.');
 
   exigerJaponais(piece.titre, '« titre »');
-  exigerFrancais(piece.titre_fr, '« titre_fr »');
-  if (typeof piece.explication !== 'string') erreurs.push('« explication » doit être un texte.');
+  verifierTraductions(piece, 'titre_fr', '« titre_fr »', true);
+  verifierTraductions(piece, 'explication', '« explication »', false);
 
   // Les rôles. Un Set est une collection sans doublon, très rapide pour « est-ce que ça existe ? ».
   const idsRoles = new Set();
@@ -57,9 +73,9 @@ export function validerPiece(piece) {
       else if (idsRoles.has(role.id)) erreurs.push(`${lieu} : l'id « ${role.id} » est utilisé deux fois.`);
       else idsRoles.add(role.id);
       exigerJaponais(role.nom, `${lieu}, « nom »`);
-      exigerFrancais(role.nom_fr, `${lieu}, « nom_fr »`);
+      verifierTraductions(role, 'nom_fr', `${lieu}, « nom_fr »`, true);
       if (role.nom_court !== undefined) exigerJaponais(role.nom_court, `${lieu}, « nom_court »`);
-      if (role.note !== undefined && typeof role.note !== 'string') erreurs.push(`${lieu} : « note » doit être un texte.`);
+      verifierTraductions(role, 'note', `${lieu}, « note »`, false);
       if (role.lien !== undefined && !estLienWeb(role.lien)) erreurs.push(`${lieu} : « lien » n'est pas une adresse http ou https.`);
     });
   }
@@ -80,8 +96,7 @@ export function validerPiece(piece) {
         else if (idsMots.has(mot.id)) erreurs.push(`${lieu} : l'id « ${mot.id} » est utilisé deux fois.`);
         else idsMots.add(mot.id);
         exigerJaponais(mot.mot, `${lieu}, « mot »`);
-        exigerFrancais(mot.fr, `${lieu}, « fr »`);
-        if (mot.en !== undefined && typeof mot.en !== 'string') erreurs.push(`${lieu} : « en » doit être un texte.`);
+        verifierTraductions(mot, 'fr', `${lieu}, « fr »`, true);
         if (mot.particule !== undefined && typeof mot.particule !== 'boolean') erreurs.push(`${lieu} : « particule » doit valoir true ou false.`);
       });
     }
@@ -115,7 +130,7 @@ export function validerPiece(piece) {
       if (!estObjet(scene)) { erreurs.push(`${lieuScene} : ce n'est pas un objet.`); return; }
       if (typeof scene.numero !== 'number') erreurs.push(`${lieuScene} : « numero » manquant.`);
       exigerJaponais(scene.titre, `${lieuScene}, « titre »`);
-      exigerFrancais(scene.titre_fr, `${lieuScene}, « titre_fr »`);
+      verifierTraductions(scene, 'titre_fr', `${lieuScene}, « titre_fr »`, true);
       if (!Array.isArray(scene.repliques)) { erreurs.push(`${lieuScene} : « repliques » doit être une liste.`); return; }
 
       scene.repliques.forEach((replique, rang) => {
@@ -127,15 +142,18 @@ export function validerPiece(piece) {
         // null est permis (réplique sans rôle), mais la clé doit exister et l'id être connu.
         if (replique.role !== null && !idsRoles.has(replique.role)) erreurs.push(`${lieu} : le rôle « ${replique.role} » n'existe pas dans « roles ».`);
         exigerJaponais(replique.texte, `${lieu}, « texte »`);
-        if (typeof replique.fr !== 'string') erreurs.push(`${lieu} : « fr » doit être un texte.`);
+        // Une traduction au moins (elle peut être vide), dans n'importe quelle langue.
+        if (traductions(replique, 'fr').length === 0) erreurs.push(`${lieu} : traduction manquante (« fr », « en » ou la langue de la troupe).`);
+        else verifierTraductions(replique, 'fr', lieu, false);
         if (replique.mots !== undefined) verifierMots(replique, lieu);
       });
     });
     if (numeros.size === 0) erreurs.push('la pièce ne contient aucune réplique.');
   }
 
-  if (piece.audio !== undefined && !(estObjet(piece.audio) && typeof piece.audio.credit === 'string')) {
-    erreurs.push('« audio » doit être un objet avec un texte « credit ».');
+  if (piece.audio !== undefined) {
+    if (!estObjet(piece.audio)) erreurs.push('« audio » doit être un objet avec un texte « credit ».');
+    else verifierTraductions(piece.audio, 'credit', '« audio », « credit »', true);
   }
 
   return erreurs;

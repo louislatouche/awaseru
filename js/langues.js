@@ -62,13 +62,29 @@ export function t(phrase, valeurs = {}) {
   return texte.replace(/\{(\w+)\}/g, (_, nom) => valeurs[nom]);
 }
 
-// Le contenu d'une pièce : en français pour le français, en anglais pour toutes les autres langues.
-// fr devient en, titre_fr devient titre_en, explication devient explication_en, etc.
-// S'il manque une traduction anglaise, le français vaut mieux que rien.
-export function traduire(objet, champ) {
-  if (langueActive() === 'fr') return objet[champ];
-  let nom = `${champ}_en`;
-  if (champ === 'fr') nom = 'en';
-  else if (champ.endsWith('_fr')) nom = champ.replace(/fr$/, 'en');
-  return objet[nom] ?? objet[champ];
+// Le nom d'un champ de pièce dans une langue. Le français est la langue d'origine du format : ses
+// champs s'appellent fr, titre_fr, nom_fr, ou n'ont pas de suffixe (explication, note, credit).
+// Les autres langues prennent leur code : fr devient de, titre_fr devient titre_de, explication
+// devient explication_de, etc.
+function champDans(champ, langue) {
+  if (langue === 'fr') return champ;
+  if (champ === 'fr') return langue;
+  if (champ.endsWith('_fr')) return champ.replace(/fr$/, langue);
+  return `${champ}_${langue}`;
+}
+
+// Le contenu d'une pièce. Chaque troupe fait traduire ses pièces dans sa langue, et en anglais,
+// la langue commune. On prend donc la langue de l'app si la pièce l'a, sinon l'anglais, sinon le
+// français. Avec plusieurs objets (le mot tel qu'il est employé ici, puis le mot du vocabulaire),
+// on cherche la langue de l'app chez chacun avant de passer à la langue suivante : mieux vaut le
+// sens général dans sa langue que le sens précis dans une autre.
+export function traduire(objets, champ) {
+  const liste = Array.isArray(objets) ? objets : [objets];
+  for (const langue of new Set([langueActive(), 'en', 'fr'])) {
+    for (const objet of liste) {
+      const valeur = objet?.[champDans(champ, langue)];
+      if (valeur !== undefined) return valeur;
+    }
+  }
+  return undefined;
 }

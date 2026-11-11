@@ -153,7 +153,7 @@ export function afficherVocabulaire(racine, piece) {
     const mot = morceau.v ? parId.get(morceau.v) : null;
     const classes = ['morceau', gloses && 'avec-glose', surligne && 'surligne', didascalie && 'didascalie'].filter(Boolean).join(' ');
     // La traduction du mot tel qu'il est employé ici ; à défaut, celle du vocabulaire.
-    const glose = gloses && mot && el('span', { className: 'glose', lang: langueActive() }, traduire(morceau, 'fr') ?? traduire(mot, 'fr'));
+    const glose = gloses && mot && el('span', { className: 'glose', lang: langueActive() }, traduire([morceau, mot], 'fr'));
     // Dans le contexte d'un mot : on entend 通りかかりました, pas la forme du dictionnaire 通りかかる.
     if (surligne && direSurligne) return creerTouchable(classes, () => dire(morceau.t), japonais, glose);
     if (!interactif || !mot) return el('span', { className: classes }, japonais, glose);
@@ -352,7 +352,8 @@ export function afficherVocabulaire(racine, piece) {
     const ailleurs = [...parLigne.values()];
 
     const sens = traduire(mot, 'fr');
-    const sensIci = traduire(morceau, 'fr');
+    // Le sens ici, dans la même langue que le sens général : sinon on le croirait différent.
+    const sensIci = traduire([morceau, mot], 'fr');
     remplacer(panneau,
       el('div', { className: 'mot-tete' },
         creerJaponais(mot.mot, 'mot-japonais'),
