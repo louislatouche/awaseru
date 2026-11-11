@@ -28,16 +28,16 @@ B. Sinon, demande-moi comment je veux faire l'installation :
    - « moi-même » : tu me guides, et je fais les manipulations sur le site de GitHub.
    Dans les deux cas, il me faut un compte GitHub. Si je n'en ai pas, envoie-moi le créer sur https://github.com/signup : ça, je dois le faire moi-même.
 
-C. L'installation. Mon app sera ensuite à l'adresse https://MON-COMPTE.github.io/awaseru/ (MON-COMPTE en minuscules).
+C. L'installation. Mon app sera ensuite à l'adresse https://MON-COMPTE.github.io/awaseru/ (MON-COMPTE en minuscules). Ma copie se range dans un dossier à elle : si tu es ouvert dans un dossier qui contient déjà autre chose (un autre projet), ne la mets pas dedans, demande-moi où la ranger (par exemple un dossier Awaseru dans mes Documents).
    Par l'IA :
    1. Installe Git et GitHub CLI s'ils manquent (Windows : winget install --id Git.Git, puis winget install --id GitHub.cli --source winget ; Mac : brew install gh ; si la commande brew n'existe pas, c'est à moi d'installer Homebrew dans l'application Terminal, car il demande mon mot de passe : guide-moi d'après https://brew.sh).
    2. Connecte-moi à GitHub : lance gh auth login --hostname github.com --git-protocol https --web --skip-ssh-key en arrière-plan, pour lire ce qu'il affiche pendant qu'il attend. Il donne un code et l'adresse https://github.com/login/device : transmets-les-moi, je saisis le code sur cette page, et la commande se termine seule. Puis lance gh auth setup-git.
-   3. Crée ma copie et récupère-la ici : gh repo fork awaseru-app/awaseru --fork-name awaseru --default-branch-only --clone
+   3. Crée ma copie et récupère-la dans ce dossier : gh repo fork awaseru-app/awaseru --fork-name awaseru --default-branch-only --clone
    4. Mets-la en ligne : gh api -X POST repos/MON-COMPTE/awaseru/pages -f "source[branch]=main" -f "source[path]=/". Vérifie ensuite avec gh api repos/MON-COMPTE/awaseru/pages/builds/latest ; si rien ne se publie, active les Actions de ma copie : gh api -X PUT repos/MON-COMPTE/awaseru/actions/permissions -F enabled=true
    Moi-même :
    1. Guide-moi pour créer ma copie : sur https://github.com/awaseru-app/awaseru, bouton « Fork », mon compte comme « Owner », nom « awaseru », puis « Create fork ».
    2. Puis pour la mettre en ligne : dans ma copie, Settings, Pages, « Deploy from a branch », branche main, dossier / (root), Save. Si rien n'est en ligne au bout de dix minutes : onglet Actions de ma copie, autoriser les workflows.
-   3. Installe Git s'il manque (Windows : winget install --id Git.Git), puis clone ma copie ici (https://github.com/MON-COMPTE/awaseru), dans un sous-dossier awaseru si ce dossier n'est pas vide.
+   3. Installe Git s'il manque (Windows : winget install --id Git.Git), puis clone ma copie dans ce dossier (https://github.com/MON-COMPTE/awaseru).
 
 D. Lis AGENTS.md dans ma copie et respecte-le : en particulier, ne modifie rien en dehors du dossier pieces/, et si git demande un nom et une adresse e-mail, demande-les-moi.
 
@@ -84,7 +84,7 @@ Si elle n'est toujours pas en ligne au bout de dix minutes, ouvre l'onglet **Act
 1. Installe Git, qui sert à récupérer ta copie sur ton ordinateur et à la renvoyer sur GitHub. Sur Windows, dans un terminal : `winget install --id Git.Git`. Sur Mac, tape `git --version` dans le Terminal : macOS propose de l'installer s'il manque.
 2. Récupère ta copie sur ton ordinateur : `git clone https://github.com/TONCOMPTE/awaseru`.
 3. Ouvre le dossier `awaseru` dans ton assistant, puis lance le skill qui ajoute une pièce : `/nouvelle-piece chemin/du/script.pdf` dans Claude Code, `$nouvelle-piece` suivi du chemin du PDF dans Codex. L'assistant vérifie qu'il a ses outils (Node.js, ffmpeg et AivisSpeech) et te demande ton accord pour installer ceux qui manquent. Puis il convertit le script, fabrique les voix, vérifie le tout et te propose de le publier. La première fois que ton ordinateur envoie quelque chose sur GitHub, une fenêtre te demande de te connecter.
-4. Relis les points que l'assistant te signale (lectures des kanji, coquilles), et écoute les voix sur ton téléphone.
+4. Relis les points que l'assistant te signale (lectures des kanji, coquilles), et écoute l'extrait de chaque voix qu'il t'envoie dans la conversation, avant qu'il publie.
 
 #### 4. Récupérer les améliorations d'Awaseru
 

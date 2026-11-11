@@ -161,4 +161,7 @@ const fichiers = readdirSync(racineAudio, { withFileTypes: true })
     .map((nom) => `pieces/audio/${entree.name}/${nom}`))
   .sort((a, b) => a.localeCompare(b, undefined, { numeric: true }));
 writeFileSync(join(racineAudio, 'index.json'), `${JSON.stringify(fichiers, null, 2)}\n`);
-console.log(`${fichiers.length} fichiers audio dans pieces/audio/index.json`);
+// Le compte peut surprendre : une réplique avec didascalie a deux fichiers, avec et sans elle.
+const avecDidascalies = fichiers.filter((chemin) => chemin.endsWith('-didascalies.mp3')).length;
+console.log(`${fichiers.length} fichiers audio dans pieces/audio/index.json, toutes pièces confondues : `
+  + `${fichiers.length - avecDidascalies} répliques, plus ${avecDidascalies} lues avec leur didascalie.`);

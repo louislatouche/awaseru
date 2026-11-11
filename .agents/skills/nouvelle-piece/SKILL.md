@@ -9,6 +9,8 @@ Le PDF à traiter est celui que la personne indique. Si elle n'en indique pas, d
 
 Le modèle de référence est `exemple/hanasaka-jiisan.json`, dans le dossier de ce skill, avec `exemple/voix.json` pour les voix : une pièce complète et validée, où toutes les règles ci-dessous sont appliquées. C'est un exemple : ne l'ajoute pas à l'app.
 
+**Si la pièce de la troupe est justement celle de l'exemple** (même titre, 花さかじいさん), pars de l'exemple au lieu de tout refaire : copie-le dans `pieces/` avec ses voix (`exemple/voix.json`), puis compare-le au PDF réplique par réplique. Signale chaque différence à la personne et demande-lui laquelle garder, sans trancher seul : l'exemple a déjà corrigé des problèmes de son propre PDF (les rôles des répliques 13 et 15, la réplique 29).
+
 Ne modifie rien en dehors du dossier `pieces/` (voir AGENTS.md).
 
 ## Avant de commencer : les outils
@@ -25,7 +27,7 @@ Commence par savoir sur quel ordinateur tu es : Windows, Mac à puce Apple (`una
 | ffmpeg | enregistrer les voix en MP3 | `ffmpeg -hide_banner -encoders` doit citer `libmp3lame` | `winget install --id Gyan.FFmpeg --exact` | `brew install ffmpeg` |
 | AivisSpeech | fabriquer les voix japonaises | voir ci-dessous | voir ci-dessous | voir ci-dessous |
 
-**ffmpeg sur Mac : uniquement par Homebrew.** Ne le télécharge pas depuis un site : ceux que propose ffmpeg.org pour le Mac ne conviennent pas (evermeet.cx ne fait que des versions pour Mac Intel, osxexperts.net des versions non signées que macOS bloque).
+**ffmpeg sur Mac : uniquement par Homebrew.** Ne le télécharge pas depuis un site : ceux que propose ffmpeg.org pour le Mac ne conviennent pas (evermeet.cx ne fait que des versions pour Mac Intel, osxexperts.net des versions non signées que macOS bloque). `brew install ffmpeg` prend plusieurs minutes (il installe beaucoup de dépendances) : lance-le dès le début, en arrière-plan, pendant que tu t'occupes d'AivisSpeech.
 
 **AivisSpeech** : une application, sur Windows comme sur Mac (macOS 13 ou plus récent). Awaseru ne se sert que de son **moteur**, qu'elle contient, et qui peut tourner seul, sans fenêtre. **Tu t'en occupes toi-même**, la personne n'a rien à ouvrir.
 
@@ -38,6 +40,8 @@ Commence par savoir sur quel ordinateur tu es : Windows, Mac à puce Apple (`una
    - Windows : `C:\Program Files\AivisSpeech\AivisSpeech-Engine\run.exe`, ou `%LOCALAPPDATA%\Programs\AivisSpeech\AivisSpeech-Engine\run.exe` ;
    - Mac : `/Applications/AivisSpeech.app/Contents/Resources/AivisSpeech-Engine/run`.
 2. Sinon, avec l'accord de la personne, télécharge le Zip qui correspond à son ordinateur, décompresse-le dans un dossier à elle (par exemple `AivisSpeech` dans son dossier personnel), et repère le moteur : le fichier `run.exe` (Windows) ou `run` (Mac) du dossier `AivisSpeech-Engine`.
+
+   **Vérifie toujours que ce fichier existe avant de continuer.** L'application pèse près d'1 Go : si la personne l'installe ou la copie elle-même (par exemple en la glissant dans Applications), cela prend plusieurs minutes. Lors du premier essai réel, elle a répondu « c'est fait » alors que la copie n'en était qu'à 70 Mo. Attends que le fichier du moteur soit là.
 3. Avant de fabriquer les voix, lance ce moteur **en arrière-plan**, puis attends qu'il réponde : http://127.0.0.1:10101/version doit renvoyer `1.1.0-dev`. Une autre version est déjà installée ? Préviens la personne et installe la bonne à côté, dans un dossier à part. À son tout premier lancement, le moteur télécharge ses modèles de base (environ 900 Mo) : préviens que cela prend plusieurs minutes (sur un PC qui les a déjà, il répond en une vingtaine de secondes). Les voix de chaque rôle sont ensuite installées par `outils/generer-audio.mjs`.
 4. Une fois les voix faites, arrête le moteur.
 
