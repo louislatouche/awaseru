@@ -17,13 +17,17 @@ Trois outils doivent être installés sur l'ordinateur. Vérifie chacun. S'il ma
 
 - **Node.js**, pour vérifier la pièce et préparer les voix. Vérifier : `node --version`. Windows : `winget install --id OpenJS.NodeJS.LTS --exact`. macOS : `brew install node`, ou l'installateur de https://nodejs.org.
 - **ffmpeg**, pour enregistrer les voix en MP3. Vérifier : `ffmpeg -version`. Windows : `winget install --id Gyan.FFmpeg --exact`. macOS : `brew install ffmpeg`.
-- **AivisSpeech**, qui fabrique les voix japonaises, gratuitement, sur l'ordinateur. Il n'est pas dans winget : télécharge l'installateur depuis le site officiel, https://aivis-project.com/ (Windows : `.exe`, macOS : `.dmg`), puis lance-le ; la personne suit l'assistant d'installation. Son moteur, à démarrer avant de fabriquer les voix :
+- **AivisSpeech**, qui fabrique les voix japonaises, gratuitement, sur l'ordinateur. C'est une application, sur Windows comme sur Mac ; Awaseru ne se sert que de son moteur, qu'elle contient. Il n'est pas dans winget : télécharge-la depuis le site officiel, https://aivis-project.com/ (Windows : un installateur `.exe`, que la personne lance ; Mac : un fichier `.dmg`, dont la personne fait glisser AivisSpeech dans le dossier Applications). Le plus simple pour démarrer le moteur : **ouvrir l'application AivisSpeech et la laisser ouverte** pendant la fabrication des voix. Sans fenêtre, il se lance aussi directement :
   - Windows : `C:\Program Files\AivisSpeech\AivisSpeech-Engine\run.exe`, ou `%LOCALAPPDATA%\Programs\AivisSpeech\AivisSpeech-Engine\run.exe` pour une installation réservée à l'utilisateur ;
-  - macOS : `/Applications/AivisSpeech.app/Contents/Resources/AivisSpeech-Engine/run`.
+  - Mac : `/Applications/AivisSpeech.app/Contents/Resources/AivisSpeech-Engine/run`.
 
   Le moteur répond sur http://127.0.0.1:10101. À son tout premier lancement, il télécharge ses modèles de base (environ 900 Mo) : préviens que cela prend plusieurs minutes. Les voix de chaque rôle, elles, sont installées par `outils/generer-audio.mjs`.
 
-Après une installation par winget, le programme n'est connu que des terminaux ouverts ensuite : si `node` ou `ffmpeg` reste introuvable, ouvre un nouveau terminal, ou appelle-le par son chemin complet.
+  Sur Mac, l'application n'est pas signée : la première fois, macOS peut refuser de l'ouvrir. La personne fait alors un clic droit (ou Contrôle + clic) sur AivisSpeech dans le dossier Applications, choisit « Ouvrir », puis confirme ; ou bien elle ouvre Réglages Système, Confidentialité et sécurité, et touche « Ouvrir quand même ». Il faut macOS 13 (Ventura) ou plus récent.
+
+**Sur Mac, les outils s'installent avec Homebrew** (`brew install node ffmpeg`). Si la commande `brew` n'existe pas, tu ne peux pas l'installer toi-même : son installation demande le mot de passe de l'ordinateur. Demande à la personne d'ouvrir l'application Terminal, d'y coller la commande donnée sur https://brew.sh, de taper son mot de passe quand il est demandé (rien ne s'affiche pendant la frappe, c'est normal), puis de coller aussi les lignes que Homebrew affiche à la fin (« Next steps »). Si `git` manque, `git --version` propose de l'installer.
+
+Après une installation par winget (Windows) ou Homebrew (Mac), le programme n'est connu que des terminaux ouverts ensuite : si `node` ou `ffmpeg` reste introuvable, ouvre un nouveau terminal, ou appelle-le par son chemin complet (Homebrew les range dans `/opt/homebrew/bin` sur les Mac récents).
 
 ## Les étapes
 

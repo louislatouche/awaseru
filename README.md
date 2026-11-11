@@ -30,7 +30,7 @@ B. Sinon, demande-moi comment je veux faire l'installation :
 
 C. L'installation. Mon app sera ensuite à l'adresse https://MON-COMPTE.github.io/awaseru/ (MON-COMPTE en minuscules).
    Par l'IA :
-   1. Installe Git et GitHub CLI s'ils manquent (Windows : winget install --id Git.Git, puis winget install --id GitHub.cli --source winget ; Mac : https://cli.github.com).
+   1. Installe Git et GitHub CLI s'ils manquent (Windows : winget install --id Git.Git, puis winget install --id GitHub.cli --source winget ; Mac : brew install gh ; si la commande brew n'existe pas, c'est à moi d'installer Homebrew dans l'application Terminal, car il demande mon mot de passe : guide-moi d'après https://brew.sh).
    2. Connecte-moi à GitHub : lance gh auth login --hostname github.com --git-protocol https --web --skip-ssh-key en arrière-plan, pour lire ce qu'il affiche pendant qu'il attend. Il donne un code et l'adresse https://github.com/login/device : transmets-les-moi, je saisis le code sur cette page, et la commande se termine seule. Puis lance gh auth setup-git.
    3. Crée ma copie et récupère-la ici : gh repo fork awaseru-app/awaseru --fork-name awaseru --default-branch-only --clone
    4. Mets-la en ligne : gh api -X POST repos/MON-COMPTE/awaseru/pages -f "source[branch]=main" -f "source[path]=/". Vérifie ensuite avec gh api repos/MON-COMPTE/awaseru/pages/builds/latest ; si rien ne se publie, active les Actions de ma copie : gh api -X PUT repos/MON-COMPTE/awaseru/actions/permissions -F enabled=true
