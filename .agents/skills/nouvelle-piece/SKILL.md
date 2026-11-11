@@ -15,21 +15,37 @@ Ne modifie rien en dehors du dossier `pieces/` (voir AGENTS.md).
 
 Trois outils doivent être installés sur l'ordinateur. Vérifie chacun. S'il manque, dis à la personne ce que tu vas installer et pourquoi, demande son accord, puis installe-le.
 
-- **Node.js**, pour vérifier la pièce et préparer les voix. Vérifier : `node --version`. Windows : `winget install --id OpenJS.NodeJS.LTS --exact`. macOS : `brew install node`, ou l'installateur de https://nodejs.org.
-- **ffmpeg**, pour enregistrer les voix en MP3. Vérifier : `ffmpeg -version`. Windows : `winget install --id Gyan.FFmpeg --exact`. macOS : `brew install ffmpeg`.
-- **AivisSpeech**, qui fabrique les voix japonaises, gratuitement, sur l'ordinateur. C'est une application, sur Windows comme sur Mac (macOS 13 ou plus récent) ; Awaseru ne se sert que de son **moteur**, qu'elle contient, et qui peut tourner seul, sans fenêtre. **Tu t'en occupes toi-même**, la personne n'a rien à ouvrir :
-  1. Cherche si elle est déjà installée. Le moteur est alors ici :
-     - Windows : `C:\Program Files\AivisSpeech\AivisSpeech-Engine\run.exe`, ou `%LOCALAPPDATA%\Programs\AivisSpeech\AivisSpeech-Engine\run.exe` ;
-     - Mac : `/Applications/AivisSpeech.app/Contents/Resources/AivisSpeech-Engine/run`.
-  2. Sinon, avec l'accord de la personne, télécharge la version « Zip » (pas d'installateur à suivre) sur https://github.com/Aivis-Project/AivisSpeech/releases, la plus récente : `AivisSpeech-Windows-x64-<version>.zip`, ou pour Mac `AivisSpeech-macOS-arm64-<version>.zip` (puce Apple) ou `AivisSpeech-macOS-x64-<version>.zip` (Mac Intel ; `uname -m` répond `arm64` ou `x86_64`). Décompresse-la dans un dossier de la personne (par exemple `AivisSpeech` dans son dossier personnel), et repère le moteur : le fichier `run.exe` (Windows) ou `run` (Mac) du dossier `AivisSpeech-Engine`.
-  3. Avant de fabriquer les voix, lance ce moteur **en arrière-plan**, puis attends qu'il réponde sur http://127.0.0.1:10101. À son tout premier lancement, il télécharge ses modèles de base (environ 900 Mo) : préviens que cela prend plusieurs minutes. Les voix de chaque rôle sont ensuite installées par `outils/generer-audio.mjs`.
-  4. Une fois les voix faites, arrête le moteur.
+**Prends chaque outil exactement à la source indiquée ici, et nulle part ailleurs**, même si une recherche en propose une autre. Lors du premier essai réel (2026-11-11, sur un Mac), l'assistant avait pris une autre version d'AivisSpeech et un autre ffmpeg, et rien ne marchait.
+
+Commence par savoir sur quel ordinateur tu es : Windows, Mac à puce Apple (`uname -m` répond `arm64`) ou Mac Intel (`x86_64`).
+
+| Outil | À quoi il sert | Vérifier | Windows | Mac (avec Homebrew, voir plus bas) |
+|---|---|---|---|---|
+| Node.js | vérifier la pièce, préparer les voix | `node --version` | `winget install --id OpenJS.NodeJS.LTS --exact` | `brew install node` |
+| ffmpeg | enregistrer les voix en MP3 | `ffmpeg -hide_banner -encoders` doit citer `libmp3lame` | `winget install --id Gyan.FFmpeg --exact` | `brew install ffmpeg` |
+| AivisSpeech | fabriquer les voix japonaises | voir ci-dessous | voir ci-dessous | voir ci-dessous |
+
+**ffmpeg sur Mac : uniquement par Homebrew.** Ne le télécharge pas depuis un site : ceux que propose ffmpeg.org pour le Mac ne conviennent pas (evermeet.cx ne fait que des versions pour Mac Intel, osxexperts.net des versions non signées que macOS bloque).
+
+**AivisSpeech** : une application, sur Windows comme sur Mac (macOS 13 ou plus récent). Awaseru ne se sert que de son **moteur**, qu'elle contient, et qui peut tourner seul, sans fenêtre. **Tu t'en occupes toi-même**, la personne n'a rien à ouvrir.
+
+- **La bonne version** est celle que propose le site officiel, https://aivis-project.com/ : aujourd'hui la **1.1.0-dev**, celle qui a servi à fabriquer les voix d'Awaseru. **Ne prends pas la version marquée « Latest » sur GitHub** : c'est la 1.0.0, de novembre 2024, plus ancienne. Prends la version « Zip » (pas d'installateur à suivre), à ces adresses exactes :
+  - Windows : https://github.com/Aivis-Project/AivisSpeech/releases/download/1.1.0-dev/AivisSpeech-Windows-x64-1.1.0-dev.zip
+  - Mac à puce Apple : https://github.com/Aivis-Project/AivisSpeech/releases/download/1.1.0-dev/AivisSpeech-macOS-arm64-1.1.0-dev.zip
+  - Mac Intel : https://github.com/Aivis-Project/AivisSpeech/releases/download/1.1.0-dev/AivisSpeech-macOS-x64-1.1.0-dev.zip
+
+1. Cherche si AivisSpeech est déjà installée. Le moteur est alors ici :
+   - Windows : `C:\Program Files\AivisSpeech\AivisSpeech-Engine\run.exe`, ou `%LOCALAPPDATA%\Programs\AivisSpeech\AivisSpeech-Engine\run.exe` ;
+   - Mac : `/Applications/AivisSpeech.app/Contents/Resources/AivisSpeech-Engine/run`.
+2. Sinon, avec l'accord de la personne, télécharge le Zip qui correspond à son ordinateur, décompresse-le dans un dossier à elle (par exemple `AivisSpeech` dans son dossier personnel), et repère le moteur : le fichier `run.exe` (Windows) ou `run` (Mac) du dossier `AivisSpeech-Engine`.
+3. Avant de fabriquer les voix, lance ce moteur **en arrière-plan**, puis attends qu'il réponde : http://127.0.0.1:10101/version doit renvoyer `1.1.0-dev`. Une autre version est déjà installée ? Préviens la personne et installe la bonne à côté, dans un dossier à part. À son tout premier lancement, le moteur télécharge ses modèles de base (environ 900 Mo) : préviens que cela prend plusieurs minutes (sur un PC qui les a déjà, il répond en une vingtaine de secondes). Les voix de chaque rôle sont ensuite installées par `outils/generer-audio.mjs`.
+4. Une fois les voix faites, arrête le moteur.
 
   **La seule chose qui revient à la personne** : AivisSpeech n'est pas signée par son éditeur (FAQ d'AivisSpeech). La première fois, Windows ou macOS peut refuser de lancer le moteur et demander une validation humaine. C'est une protection voulue : ne la contourne pas (ni `xattr`, ni désactivation de Gatekeeper ou de SmartScreen). Explique à la personne quoi faire, puis relance le moteur :
   - Mac (méthode d'Apple) : Réglages Système, Confidentialité et sécurité, descendre jusqu'au message sur AivisSpeech, « Ouvrir quand même », puis confirmer ;
   - Windows : dans la fenêtre « Windows a protégé votre ordinateur », « Informations complémentaires », puis « Exécuter quand même ».
 
-**Sur Mac, les outils s'installent avec Homebrew** (`brew install node ffmpeg`). Si la commande `brew` n'existe pas, tu ne peux pas l'installer toi-même : son installation demande le mot de passe de l'ordinateur. Demande à la personne d'ouvrir l'application Terminal, d'y coller la commande donnée sur https://brew.sh, de taper son mot de passe quand il est demandé (rien ne s'affiche pendant la frappe, c'est normal), puis de coller aussi les lignes que Homebrew affiche à la fin (« Next steps »). Si `git` manque, `git --version` propose de l'installer.
+**Sur Mac, Node.js et ffmpeg s'installent avec Homebrew** (`brew install node ffmpeg`), le gestionnaire de programmes de référence sur Mac. Si la commande `brew` n'existe pas, tu ne peux pas l'installer toi-même : son installation demande le mot de passe de l'ordinateur. Demande à la personne d'ouvrir l'application Terminal, d'y coller la commande donnée sur https://brew.sh, de taper son mot de passe quand il est demandé (rien ne s'affiche pendant la frappe, c'est normal), puis de coller aussi les lignes que Homebrew affiche à la fin (« Next steps »). Si `git` manque, `git --version` propose de l'installer.
 
 Après une installation par winget (Windows) ou Homebrew (Mac), le programme n'est connu que des terminaux ouverts ensuite : si `node` ou `ffmpeg` reste introuvable, ouvre un nouveau terminal, ou appelle-le par son chemin complet (Homebrew les range dans `/opt/homebrew/bin` sur les Mac récents).
 
