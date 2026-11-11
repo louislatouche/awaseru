@@ -2,149 +2,67 @@
 
 Une application web installable (PWA) pour apprendre ses répliques de théâtre en japonais, sur un téléphone Android. Elle fonctionne hors ligne et garde toutes ses données sur le téléphone : aucun serveur, aucun compte.
 
-## Rôle de chaque fichier
+Ce dépôt est **l'original** d'Awaseru : le code seul, sans aucune pièce. Chaque troupe en fait **sa propre copie** sur son compte GitHub, y ajoute ses pièces et la publie gratuitement, à sa propre adresse. Les pièces et les données de chaque troupe restent chez elle. Quand l'original s'améliore, deux clics suffisent pour récupérer la nouveauté.
 
-| Fichier | Rôle |
-|---|---|
-| `index.html` | L'unique page de l'app : trois zones vides que le JavaScript remplit. |
-| `manifest.webmanifest` | La carte d'identité de l'app pour Android : nom, icônes, mode plein écran. |
-| `sw.js` | Le service worker : garde une copie de l'app pour le hors-ligne. Contient le numéro de version du code. |
-| `pieces/version.js` | Le numéro de version des pièces et de leurs voix, distinct de celui du code. |
-| `css/style.css` | Les styles propres à Awaseru, posés sur le design kit. |
-| `css/polices.css` | Déclare les polices rangées dans `polices/`. |
-| `design-kit/` | Copie exacte de `tokens.css` et `base.css` du design kit : couleurs, boutons, cartes. Ne pas les modifier ici. |
-| `polices/` | Fraunces, Karla et Poppins, servies par l'app pour rester hors ligne, avec leurs licences. |
-| `js/app.js` | Le point d'entrée : affiche le bon écran selon l'adresse, enregistre le service worker. |
-| `js/dom.js` | Petits outils pour fabriquer des éléments de page sans `innerHTML`, et les icônes. |
-| `js/modale.js` | Les demandes de confirmation, en feuille du bas. |
-| `js/texte.js` | Le balisage japonais : `[漢字\|よみ]`, `（…）`, texte à lire à voix haute. |
-| `js/validation.js` | Vérifie qu'un fichier de pièce est correct avant de l'accepter. |
-| `js/stockage.js` | Lit et écrit dans `localStorage` : réglages, sélection, progression. |
-| `js/sauvegarde.js` | Copie ces données dans un fichier et les récupère. |
-| `js/telechargement.js` | Retire une pièce du téléphone et la retélécharge. |
-| `js/langues.js` et `js/langues/` | La langue de l'app et ses dictionnaires, un fichier par langue. |
-| `js/pincement.js` | Reconnaît le pincement à deux doigts. |
-| `js/pieces.js` | Charge les pièces, calcule la progression, le signal d'entrée et les enchaînements. |
-| `js/voix.js` | La lecture à voix haute et ses précautions pour Android. |
-| `js/affichage.js` | Les briques communes aux écrans : réplique, interrupteurs, avertissements. |
-| `js/ecrans/bibliotheque.js` | Écran des pièces. |
-| `js/ecrans/script.js` | Écran du texte complet. |
-| `js/ecrans/mes-repliques.js` | Écran du choix des rôles et des répliques. |
-| `js/ecrans/fiches.js` | Répétition en fiches. |
-| `js/ecrans/filage.js` | Répétition en filage. |
-| `js/ecrans/reglages.js` | Écran des réglages. |
-| `pieces/index.json` | La liste des pièces fournies avec l'app. |
-| `pieces/hanasaka-jiisan.json` | La pièce d'exemple. |
-| `pieces/audio/` | Les fichiers audio par réplique, et dans chaque dossier `voix.json`, le choix des voix par rôle. |
-| `outils/generer-audio.mjs` | Fabrique ces fichiers audio avec AivisSpeech. Il tourne sur ton ordinateur, pas dans l'app. |
-| `icons/` | Les dessins sources (SVG) et les icônes exportées (PNG). |
-| `.nojekyll` | Fichier vide : dit à GitHub Pages de publier les fichiers tels quels. |
-| `AGENTS.md` | Les consignes du projet pour les assistants de code (Codex, Claude Code). |
-| `CLAUDE.md` | Importe `AGENTS.md` : Claude Code lit ce nom-là. |
-| `.agents/skills/nouvelle-piece/` | Le skill qui transforme un PDF de pièce en fichier Awaseru, avec une pièce d'exemple. Codex le lit ici. |
-| `.claude/skills/nouvelle-piece/` | Le même skill pour Claude Code, qui renvoie au précédent. |
+## Avoir l'Awaseru de ta troupe
 
-## L'apparence
+### Ce qu'il te faut
 
-Awaseru utilise le thème clair du design kit de Louis, comme Faktur et SessionConnect : fond papier, sauge, ambre, Fraunces pour les titres, Karla pour le texte. L'app ne suit pas le mode sombre du téléphone.
+- Un compte GitHub, gratuit : <https://github.com/signup>.
+- Pour ajouter des pièces, un ordinateur Windows ou Mac et un assistant de code : **Codex**, dans l'application ChatGPT (inclus dans le forfait gratuit, en accès limité), ou **Claude Code** (forfait Claude Pro).
+- Les scripts de tes pièces, en PDF.
 
-Le kit fonctionne par copie : le maître est dans `P:\_DEV\design-kit`. Pour reprendre une nouvelle version, recopie `tokens.css` et `base.css` dans `design-kit/`, puis augmente `VERSION` dans `sw.js`.
+### 1. Faire ta copie
 
-Le kit charge normalement ses polices depuis Google Fonts. Awaseru garde les siennes dans `polices/` : aucune ressource externe, et la même typographie hors ligne. Le japonais reste affiché avec la police du téléphone.
+1. Connecté à GitHub, ouvre <https://github.com/awaseru-app/awaseru>.
+2. En haut à droite, touche **Fork**.
+3. À la ligne *Owner*, choisis ton compte. À la ligne *Repository name*, garde `awaseru` : ce nom fait partie de l'adresse de ton app. Laisse cochée la case qui ne copie que la branche `main`.
+4. Touche **Create fork**.
 
-## Les voix
+**Une seule copie d'Awaseru par compte GitHub.** Deux copies sur le même compte seraient sur le même site, donc dans le même stockage des téléphones : leurs données se mélangeraient. Pour une deuxième troupe, prends un autre compte, ou une organisation GitHub.
 
-Les pièces fournies ont une voix enregistrée par rôle : des fichiers MP3 générés à l'avance sur l'ordinateur avec [AivisSpeech](https://aivis-project.com/), gratuit et local. Elles marchent donc hors ligne, avec la même voix sur tous les téléphones. L'app se sert de la voix du téléphone si un fichier manque. Un réglage permet de les comparer.
+### 2. La mettre en ligne
 
-Pour changer une voix, modifie `pieces/audio/<id>/voix.json`, démarre AivisSpeech, puis :
+1. Sur la page de ta copie, ouvre **Settings**, puis **Pages** dans la colonne de gauche.
+2. Sous **Build and deployment**, à la ligne **Source**, choisis **Deploy from a branch**.
+3. Choisis la branche `main`, le dossier `/ (root)`, puis touche **Save**.
+4. Quelques minutes plus tard, ton app est en ligne à l'adresse `https://TONCOMPTE.github.io/awaseru/`. Elle est encore vide : *Mes pièces* n'affiche rien.
 
-```bash
-node outils/generer-audio.mjs hanasaka-jiisan
-```
+Si elle n'est toujours pas en ligne au bout de dix minutes, ouvre l'onglet **Actions** de ta copie : si GitHub demande d'autoriser les workflows, accepte.
 
-Pour ne refaire que quelques répliques, ajoute leurs numéros à la fin de la commande. Il faut que `ffmpeg` soit installé. Augmente ensuite `VERSION_PIECES` dans `pieces/version.js`, puis publie.
+### 3. Ajouter tes pièces
 
-Le script garde les kanji, car le moteur reconnaît mieux les mots qu'avec des kana seuls. Il compare ensuite la lecture du moteur à tes furigana : là où elle diffère, il remplace ce kanji par sa lecture, puis le signale dans son rapport.
+Avec **Codex** :
 
-## Tester sur l'ordinateur
+1. Installe l'application ChatGPT ([liens de téléchargement](https://learn.chatgpt.com/docs/app), et [la page pour Windows](https://learn.chatgpt.com/codex/windows/windows-app)), connecte-toi avec ton compte ChatGPT, puis choisis **Codex** dans le menu de ChatGPT.
+2. Installe Git, qui sert à récupérer ta copie sur ton ordinateur et à la renvoyer sur GitHub. Sur Windows, dans un terminal : `winget install --id Git.Git`. Sur Mac, tape `git --version` dans le Terminal : macOS propose de l'installer s'il manque.
+3. Dans Codex, ouvre un dossier vide (par exemple *Documents*), puis écris : « Clone https://github.com/TONCOMPTE/awaseru ici ». Ouvre ensuite le dossier `awaseru` qui vient d'apparaître. La première fois que Codex renvoie quelque chose sur GitHub, une fenêtre te demande de te connecter.
+4. Écris `$nouvelle-piece` suivi du chemin du PDF de ta pièce. Codex vérifie qu'il a ses outils (Node.js, ffmpeg et AivisSpeech, qui fabrique les voix japonaises) et te demande ton accord pour installer ceux qui manquent. Puis il convertit le script, fabrique les voix, vérifie le tout et te propose de le publier. La première fois est plus longue : AivisSpeech télécharge près d'un gigaoctet.
+5. Relis les points que Codex te signale (lectures des kanji, coquilles), et écoute les voix sur ton téléphone.
 
-Dans ce dossier :
+Avec **Claude Code**, c'est la même chose : ouvre le dossier de ta copie et tape `/nouvelle-piece chemin/du/script.pdf`.
 
-```bash
-python -m http.server 8000
-```
+### 4. Récupérer les améliorations d'Awaseru
 
-Puis ouvre <http://localhost:8000> dans Chrome. Il faut passer par ce petit serveur : ouvrir `index.html` en double-cliquant ne fonctionne pas, car les modules JavaScript et le service worker sont refusés pour un fichier local.
+1. Sur la page de ta copie, au-dessus de la liste des fichiers, touche **Sync fork**.
+2. Touche **Update branch**.
 
-**Piège quand tu modifies le code.** Une fois le service worker en place, le navigateur sert sa copie, pas tes fichiers. Pour voir tes changements : monte le numéro `VERSION` dans `sw.js`, ou bien, dans Chrome, ouvre les outils de développement (F12), onglet *Application*, section *Service workers*, et coche *Update on reload*.
+Ton site se met à jour en quelques minutes, et les téléphones affichent « Nouvelle version prête ».
 
-## Tester depuis le téléphone, sur le même Wi-Fi
+Si GitHub te propose plutôt d'ouvrir une *pull request*, c'est qu'un fichier a été modifié en dehors du dossier `pieces/` dans ta copie. N'insiste pas, et demande de l'aide sur <https://github.com/awaseru-app/awaseru/issues>.
 
-1. Laisse le serveur tourner sur l'ordinateur.
-2. Trouve l'adresse de l'ordinateur : tape `ipconfig` dans un terminal et repère « Adresse IPv4 » (par exemple `192.168.1.20`).
-3. Sur le téléphone, ouvre dans Chrome `http://192.168.1.20:8000` avec ton adresse.
-4. Si la page ne s'ouvre pas, le pare-feu de Windows bloque sans doute Python : autorise-le sur les réseaux privés.
+### La règle d'or
 
-**Limite importante : sans HTTPS, l'installation et le hors-ligne ne marchent pas.** Chrome réserve les service workers aux adresses sécurisées (HTTPS ou `localhost`). Une adresse en `http://192.168...` permet de tester l'affichage et la voix, rien de plus. Pour installer l'app, il faut la mettre en ligne.
-
-## Mettre en ligne sur GitHub Pages
-
-GitHub Pages héberge gratuitement l'app en HTTPS. Le dépôt doit être public avec un compte gratuit : le texte de tes pièces fournies sera donc visible par tous.
-
-1. Sur <https://github.com/new>, crée un dépôt nommé `awaseru`, public.
-2. Dans ce dossier, envoie les fichiers (remplace `TONNOM` par ton identifiant GitHub) :
-
-   ```bash
-   git init -b main
-   ```
-
-   ```bash
-   git add .
-   ```
-
-   ```bash
-   git commit -m "Première version d'Awaseru"
-   ```
-
-   ```bash
-   git remote add origin https://github.com/TONNOM/awaseru.git
-   ```
-
-   ```bash
-   git push -u origin main
-   ```
-
-3. Sur la page du dépôt, ouvre **Settings**, puis **Pages** dans la colonne de gauche.
-4. Sous **Build and deployment**, à la ligne **Source**, choisis **Deploy from a branch**.
-5. Choisis la branche `main`, le dossier `/ (root)`, puis clique sur **Save**.
-6. Attends quelques minutes (jusqu'à 10) : l'app est en ligne à l'adresse `https://TONNOM.github.io/awaseru/`.
-
-### Publier une mise à jour
-
-1. Modifie les fichiers.
-2. **Augmente le bon numéro de version** (1 devient 2) : `VERSION` dans `sw.js` si tu as changé le code, `VERSION_PIECES` dans `pieces/version.js` si tu as changé une pièce ou une voix. Sans cela, le téléphone garde indéfiniment l'ancienne version : il ne détecte une mise à jour que si l'un de ces deux fichiers change.
-3. Envoie les changements :
-
-   ```bash
-   git add .
-   ```
-
-   ```bash
-   git commit -m "Ce que j'ai changé"
-   ```
-
-   ```bash
-   git push
-   ```
-
-4. Sur le téléphone, ferme l'app et rouvre-la. Un bandeau « Nouvelle version prête » apparaît : touche-le. Le numéro de version est affiché en bas des Réglages : « 131.4 » veut dire le code en version 131 et les pièces en version 4.
+**Dans ta copie, ne modifie rien en dehors du dossier `pieces/`.** C'est ce qui permet de récupérer les améliorations sans jamais rien casser. Codex et Claude Code le savent : c'est écrit dans `AGENTS.md`.
 
 ## Installer sur Android
 
-1. Ouvre `https://TONNOM.github.io/awaseru/` dans Chrome et laisse la page se charger quelques secondes.
+1. Ouvre `https://TONCOMPTE.github.io/awaseru/` dans Chrome et laisse la page se charger quelques secondes.
 2. Menu **⋮** de Chrome, puis **Ajouter à l'écran d'accueil** ou **Installer l'application** (le libellé varie selon la version).
 3. Awaseru apparaît sur l'écran d'accueil et s'ouvre sans la barre d'adresse.
 4. Pour vérifier le hors-ligne : passe en mode avion et ouvre l'app.
+
+Le numéro de version est affiché en bas des Réglages : « 131.4 » veut dire le code en version 131 et les pièces de ta troupe en version 4.
 
 ### La voix japonaise
 
@@ -162,16 +80,41 @@ Les répliques choisies, la progression et les réglages restent sur le téléph
 
 *Supprimer du téléphone*, sur la carte d'une pièce, efface ses voix de ce téléphone pour libérer de la place, sans rien changer sur le site. La ligne *Télécharger des pièces*, en bas de *Mes pièces*, ouvre la liste des pièces du site, comme celle des extensions d'un navigateur : on coche celles qui manquent, puis *Télécharger* les récupère (il faut alors du réseau). Une suppression ne touche jamais aux répliques choisies ni à la progression, et les mises à jour de l'app ne réinstallent pas une pièce retirée.
 
-## Ajouter une nouvelle pièce
+## Les pièces, en détail
 
-**Depuis un PDF du cours :** dans Claude Code, lance `/nouvelle-piece chemin/du/script.pdf`. Dans Codex (inclus dans le forfait gratuit de ChatGPT, en accès limité), tape `$nouvelle-piece` suivi du chemin du PDF. Le skill installe au besoin Node.js, ffmpeg et AivisSpeech, convertit le PDF, pose les furigana, choisit les voix, génère l'audio, vérifie le tout et ajoute la pièce à l'app.
+Tout ce qui appartient à une troupe est dans `pieces/` :
 
-**À la main :**
+| Fichier | Rôle |
+|---|---|
+| `pieces/index.json` | La liste des pièces de la troupe : `["ma-piece.json", "une-autre.json"]`. Vide dans l'original. |
+| `pieces/<id>.json` | Une pièce : texte, furigana, traductions, vocabulaire. |
+| `pieces/audio/<id>/` | Ses voix : un MP3 par réplique, et `voix.json`, le choix d'une voix par rôle. |
+| `pieces/audio/index.json` | La liste de tous les MP3, tenue à jour par `outils/generer-audio.mjs`. |
+| `pieces/version.js` | Le numéro de version des pièces. **À augmenter à chaque changement** dans ce dossier, sinon les téléphones gardent les anciennes pièces. |
+
+### Ajouter une pièce à la main
 
 1. Place le fichier dans `pieces/`.
-2. Ajoute son nom dans `pieces/index.json` : `["hanasaka-jiisan.json", "ma-piece.json"]`.
+2. Ajoute son nom dans `pieces/index.json`.
 3. Choisis les voix dans `pieces/audio/<id>/voix.json`, puis génère l'audio (voir « Les voix »).
-4. Augmente `VERSION_PIECES` dans `pieces/version.js`, puis publie.
+4. Vérifie la pièce : `node outils/verifier-piece.mjs <id>`.
+5. Augmente `VERSION_PIECES` dans `pieces/version.js`, puis publie.
+
+Le modèle complet, vocabulaire compris, est `.agents/skills/nouvelle-piece/exemple/hanasaka-jiisan.json`.
+
+### Les voix
+
+Les pièces ont une voix enregistrée par rôle : des fichiers MP3 générés à l'avance sur l'ordinateur avec [AivisSpeech](https://aivis-project.com/), gratuit et local. Elles marchent donc hors ligne, avec la même voix sur tous les téléphones. L'app se sert de la voix du téléphone si un fichier manque. Un réglage permet de les comparer.
+
+Pour changer une voix, modifie `pieces/audio/<id>/voix.json`, démarre AivisSpeech, puis :
+
+```bash
+node outils/generer-audio.mjs <id>
+```
+
+Pour ne refaire que quelques répliques, ajoute leurs numéros à la fin de la commande. Il faut que `ffmpeg` soit installé. Augmente ensuite `VERSION_PIECES` dans `pieces/version.js`, puis publie.
+
+Le script garde les kanji, car le moteur reconnaît mieux les mots qu'avec des kana seuls. Il compare ensuite la lecture du moteur à tes furigana : là où elle diffère, il remplace ce kanji par sa lecture, puis le signale dans son rapport.
 
 ### Format d'un fichier de pièce
 
@@ -218,3 +161,93 @@ Les règles que l'app vérifie au chargement :
 - **`lien`** : uniquement une adresse `http` ou `https`. Il s'affiche dans *À propos de cette pièce*, à côté du nom du rôle. Son libellé suit l'adresse : *Voir la vidéo* pour YouTube ou Vimeo, sinon *Ouvrir le lien*.
 - **Facultatifs** : `format`, `id` (sinon le nom du fichier est utilisé), `nom_court`, `note`, `lien`.
 - **Anglais** : `titre_en`, `explication_en`, `nom_en`, `note_en`, `credit_en`, et `en` sur chaque réplique. Toutes les langues autres que le français les affichent. S'il en manque un, le français s'affiche à sa place.
+
+## Pour qui modifie le code
+
+Le code ne se modifie que dans l'original. Chaque troupe récupère ensuite le changement avec **Sync fork**.
+
+### Rôle de chaque fichier
+
+| Fichier | Rôle |
+|---|---|
+| `index.html` | L'unique page de l'app : trois zones vides que le JavaScript remplit. |
+| `manifest.webmanifest` | La carte d'identité de l'app pour Android : nom, icônes, mode plein écran. |
+| `sw.js` | Le service worker : garde une copie de l'app pour le hors-ligne. Contient le numéro de version du code. |
+| `css/style.css` | Les styles propres à Awaseru, posés sur le design kit. |
+| `css/polices.css` | Déclare les polices rangées dans `polices/`. |
+| `design-kit/` | Copie exacte de `tokens.css` et `base.css` du design kit : couleurs, boutons, cartes. Ne pas les modifier ici. |
+| `polices/` | Fraunces, Karla et Poppins, servies par l'app pour rester hors ligne, avec leurs licences. |
+| `js/app.js` | Le point d'entrée : affiche le bon écran selon l'adresse, enregistre le service worker. |
+| `js/version.js` | Lit la version qui tourne et propose de recharger quand une nouvelle est prête. |
+| `js/dom.js` | Petits outils pour fabriquer des éléments de page sans `innerHTML`, et les icônes. |
+| `js/modale.js` | Les demandes de confirmation, en feuille du bas. |
+| `js/texte.js` | Le balisage japonais : `[漢字\|よみ]`, `（…）`, texte à lire à voix haute. |
+| `js/validation.js` | Vérifie qu'un fichier de pièce est correct avant de l'accepter. |
+| `js/stockage.js` | Lit et écrit dans `localStorage` : réglages, sélection, progression. |
+| `js/sauvegarde.js` | Copie ces données dans un fichier et les récupère. |
+| `js/telechargement.js` | Retire une pièce du téléphone et la retélécharge. |
+| `js/langues.js` et `js/langues/` | La langue de l'app et ses dictionnaires, un fichier par langue. |
+| `js/pincement.js` | Reconnaît le pincement à deux doigts. |
+| `js/gestes.js` | Les gestes des cartes : appui long, glissement à droite ou à gauche, balayage du filage. |
+| `js/tuto.js` | Les tutos des gestes, derrière la pastille « ? ». |
+| `js/pieces.js` | Charge les pièces, calcule la progression, le signal d'entrée et les enchaînements. |
+| `js/voix.js` | La lecture à voix haute et ses précautions pour Android. |
+| `js/affichage.js` | Les briques communes aux écrans : réplique, interrupteurs, avertissements. |
+| `js/ecrans/` | Un fichier par écran : pièces, script, mes répliques, fiches, filage, vocabulaire, réglages. |
+| `outils/verifier-piece.mjs` | Vérifie une pièce avec les mêmes règles que l'app. Tourne sur l'ordinateur. |
+| `outils/generer-audio.mjs` | Fabrique les voix avec AivisSpeech. Tourne sur l'ordinateur. |
+| `icons/` | Les dessins sources (SVG) et les icônes exportées (PNG). |
+| `.nojekyll` | Fichier vide : dit à GitHub Pages de publier les fichiers tels quels. |
+| `AGENTS.md` | Les consignes du projet pour les assistants de code (Codex, Claude Code). |
+| `CLAUDE.md` | Importe `AGENTS.md` : Claude Code lit ce nom-là. |
+| `.agents/skills/nouvelle-piece/` | Le skill qui transforme un PDF de pièce en fichier Awaseru, avec une pièce d'exemple. Codex le lit ici. |
+| `.claude/skills/nouvelle-piece/` | Le même skill pour Claude Code, qui renvoie au précédent. |
+
+### L'apparence
+
+Awaseru utilise le thème clair du design kit de Louis, comme Faktur et SessionConnect : fond papier, sauge, ambre, Fraunces pour les titres, Karla pour le texte. L'app ne suit pas le mode sombre du téléphone.
+
+Le kit fonctionne par copie : le maître est dans `P:\_DEV\design-kit`. Pour reprendre une nouvelle version, recopie `tokens.css` et `base.css` dans `design-kit/`, puis augmente `VERSION` dans `sw.js`.
+
+Le kit charge normalement ses polices depuis Google Fonts. Awaseru garde les siennes dans `polices/` : aucune ressource externe, et la même typographie hors ligne. Le japonais reste affiché avec la police du téléphone.
+
+### Tester sur l'ordinateur
+
+L'original n'a pas de pièces : pour tester avec des pièces, fais-le dans une copie. Dans son dossier :
+
+```bash
+python -m http.server 8000
+```
+
+Puis ouvre <http://localhost:8000> dans Chrome. Il faut passer par ce petit serveur : ouvrir `index.html` en double-cliquant ne fonctionne pas, car les modules JavaScript et le service worker sont refusés pour un fichier local.
+
+**Piège quand tu modifies le code.** Une fois le service worker en place, le navigateur sert sa copie, pas tes fichiers. Pour voir tes changements : monte le numéro `VERSION` dans `sw.js`, ou bien, dans Chrome, ouvre les outils de développement (F12), onglet *Application*, section *Service workers*, et coche *Update on reload*.
+
+### Tester depuis le téléphone, sur le même Wi-Fi
+
+1. Laisse le serveur tourner sur l'ordinateur.
+2. Trouve l'adresse de l'ordinateur : tape `ipconfig` dans un terminal et repère « Adresse IPv4 » (par exemple `192.168.1.20`).
+3. Sur le téléphone, ouvre dans Chrome `http://192.168.1.20:8000` avec ton adresse.
+4. Si la page ne s'ouvre pas, le pare-feu de Windows bloque sans doute Python : autorise-le sur les réseaux privés.
+
+**Limite importante : sans HTTPS, l'installation et le hors-ligne ne marchent pas.** Chrome réserve les service workers aux adresses sécurisées (HTTPS ou `localhost`). Une adresse en `http://192.168...` permet de tester l'affichage et la voix, rien de plus. Pour installer l'app, il faut la mettre en ligne.
+
+### Publier une mise à jour
+
+1. Modifie les fichiers.
+2. **Augmente le bon numéro de version** (1 devient 2) : `VERSION` dans `sw.js` pour le code (dans l'original), `VERSION_PIECES` dans `pieces/version.js` pour une pièce ou une voix (dans une copie). Sans cela, le téléphone garde indéfiniment l'ancienne version : il ne détecte une mise à jour que si l'un de ces deux fichiers change.
+3. Envoie les changements :
+
+   ```bash
+   git add .
+   ```
+
+   ```bash
+   git commit -m "Ce que j'ai changé"
+   ```
+
+   ```bash
+   git push
+   ```
+
+4. Pour le code, chaque troupe le récupère ensuite avec **Sync fork**. Sur le téléphone, un bandeau « Nouvelle version prête » apparaît : touche-le.
