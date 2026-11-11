@@ -14,22 +14,41 @@ Ce dépôt est **l'original** d'Awaseru : le code seul, sans aucune pièce. Chaq
 2. Crée un dossier vide sur ton ordinateur (par exemple *Documents/Awaseru*) et ouvre-le dans ton assistant.
 3. Copie le message ci-dessous, colle-le dans ton assistant, envoie-le, et laisse-toi guider.
 
+Ton assistant te demandera d'abord comment tu veux faire l'installation : **par l'IA** (il fait tout lui-même, tu n'as qu'à te connecter une fois à GitHub en recopiant un code) ou **toi-même** (il te guide, et tu fais les manipulations sur le site de GitHub).
+
 ```text
-Aide-moi à installer Awaseru pour ma troupe de théâtre et à y ajouter nos pièces. Je ne m'y connais pas en informatique : guide-moi une étape à la fois, avec des mots simples, et attends ma réponse avant de passer à la suivante. Fais toi-même tout ce qui se fait sur cet ordinateur, mais demande mon accord avant d'installer un programme. Si tu ne peux pas lancer de commandes sur cet ordinateur, dis-le-moi tout de suite : il me faut Claude Code ou Codex.
+Aide-moi à installer Awaseru pour ma troupe de théâtre et à y ajouter nos pièces. Je ne m'y connais pas en informatique : parle-moi avec des mots simples, une étape à la fois, et attends ma réponse avant de passer à la suivante. Demande mon accord avant d'installer un programme. Si tu ne peux pas lancer de commandes sur cet ordinateur, dis-le-moi tout de suite : il me faut Claude Code ou Codex.
 
 Awaseru est une application web pour apprendre ses répliques de théâtre en japonais. L'original est https://github.com/awaseru-app/awaseru : chaque troupe en fait sa propre copie (un fork) sur son compte GitHub, y ajoute ses pièces et la publie gratuitement avec GitHub Pages.
 
-1. Si ma copie est déjà sur cet ordinateur (un dossier qui contient AGENTS.md et pieces/), travaille dedans, récupère sa dernière version avec git pull, et passe à l'étape 5.
-2. Demande-moi le nom de mon compte GitHub. Si je n'en ai pas, envoie-moi sur https://github.com/signup.
-3. Si je n'ai pas encore de copie, guide-moi pour la créer : sur https://github.com/awaseru-app/awaseru, bouton « Fork », mon compte comme « Owner », nom « awaseru », puis « Create fork ». Puis pour la mettre en ligne : dans ma copie, Settings, Pages, « Deploy from a branch », branche main, dossier / (root), Save. Mon app sera à l'adresse https://MON-COMPTE.github.io/awaseru/ (en minuscules). Si elle n'est pas en ligne au bout de dix minutes : onglet Actions de ma copie, autoriser les workflows.
-4. Installe Git s'il manque (Windows : winget install --id Git.Git). Clone ma copie (https://github.com/MON-COMPTE/awaseru) dans ce dossier s'il est vide, sinon dans un sous-dossier awaseru.
-5. Lis AGENTS.md dans ma copie et respecte-le : en particulier, ne modifie rien en dehors du dossier pieces/, et si git demande un nom et une adresse e-mail, demande-les-moi.
-6. Demande-moi le PDF du script, puis ajoute la pièce en suivant pas à pas .agents/skills/nouvelle-piece/SKILL.md (il dit aussi quels outils installer).
-7. Quand tout est vérifié, envoie le travail sur GitHub (commit puis push). Si GitHub me demande de me connecter, guide-moi.
-8. Pour finir, explique-moi comment installer l'app sur les téléphones de la troupe, et comment récupérer plus tard les améliorations d'Awaseru (README.md de ma copie, parties « Installer sur Android » et « Récupérer les améliorations d'Awaseru »).
+A. Si ma copie est déjà sur cet ordinateur (un dossier qui contient AGENTS.md et pieces/), travaille dedans, récupère sa dernière version avec git pull, et passe directement à D.
+
+B. Sinon, demande-moi comment je veux faire l'installation :
+   - « par l'IA » : tu fais tout toi-même, je n'aurai qu'à me connecter une fois à GitHub ;
+   - « moi-même » : tu me guides, et je fais les manipulations sur le site de GitHub.
+   Dans les deux cas, il me faut un compte GitHub. Si je n'en ai pas, envoie-moi le créer sur https://github.com/signup : ça, je dois le faire moi-même.
+
+C. L'installation. Mon app sera ensuite à l'adresse https://MON-COMPTE.github.io/awaseru/ (MON-COMPTE en minuscules).
+   Par l'IA :
+   1. Installe Git et GitHub CLI s'ils manquent (Windows : winget install --id Git.Git, puis winget install --id GitHub.cli --source winget ; Mac : https://cli.github.com).
+   2. Connecte-moi à GitHub : lance gh auth login --hostname github.com --git-protocol https --web --skip-ssh-key en arrière-plan, pour lire ce qu'il affiche pendant qu'il attend. Il donne un code et l'adresse https://github.com/login/device : transmets-les-moi, je saisis le code sur cette page, et la commande se termine seule. Puis lance gh auth setup-git.
+   3. Crée ma copie et récupère-la ici : gh repo fork awaseru-app/awaseru --fork-name awaseru --default-branch-only --clone
+   4. Mets-la en ligne : gh api -X POST repos/MON-COMPTE/awaseru/pages -f "source[branch]=main" -f "source[path]=/". Vérifie ensuite avec gh api repos/MON-COMPTE/awaseru/pages/builds/latest ; si rien ne se publie, active les Actions de ma copie : gh api -X PUT repos/MON-COMPTE/awaseru/actions/permissions -F enabled=true
+   Moi-même :
+   1. Guide-moi pour créer ma copie : sur https://github.com/awaseru-app/awaseru, bouton « Fork », mon compte comme « Owner », nom « awaseru », puis « Create fork ».
+   2. Puis pour la mettre en ligne : dans ma copie, Settings, Pages, « Deploy from a branch », branche main, dossier / (root), Save. Si rien n'est en ligne au bout de dix minutes : onglet Actions de ma copie, autoriser les workflows.
+   3. Installe Git s'il manque (Windows : winget install --id Git.Git), puis clone ma copie ici (https://github.com/MON-COMPTE/awaseru), dans un sous-dossier awaseru si ce dossier n'est pas vide.
+
+D. Lis AGENTS.md dans ma copie et respecte-le : en particulier, ne modifie rien en dehors du dossier pieces/, et si git demande un nom et une adresse e-mail, demande-les-moi.
+
+E. Demande-moi le PDF du script, puis ajoute la pièce en suivant pas à pas .agents/skills/nouvelle-piece/SKILL.md (il dit aussi quels outils installer).
+
+F. Quand tout est vérifié, envoie le travail sur GitHub (commit puis push). Si GitHub me demande de me connecter, guide-moi.
+
+G. Pour finir, explique-moi comment installer l'app sur les téléphones de la troupe, et comment récupérer plus tard les améliorations d'Awaseru (README.md de ma copie, parties « Installer sur Android » et « Récupérer les améliorations d'Awaseru »). Dis-moi aussi que tu pourras le faire pour moi, comme l'explique AGENTS.md.
 ```
 
-Pour ajouter une autre pièce plus tard, ouvre le même dossier dans ton assistant et recolle le même message.
+Pour ajouter une autre pièce plus tard, ou récupérer les améliorations d'Awaseru, ouvre le même dossier dans ton assistant et recolle le même message.
 
 **À savoir avant de commencer :**
 
@@ -40,7 +59,7 @@ Pour ajouter une autre pièce plus tard, ouvre le même dossier dans ton assista
 
 ### Le détail, étape par étape
 
-Ce que ton assistant te fera faire, si tu préfères le suivre toi-même.
+Ce que ton assistant te fera faire si tu choisis « moi-même », ou si tu préfères te passer de lui.
 
 #### 1. Faire ta copie
 

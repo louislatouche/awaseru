@@ -17,6 +17,15 @@ Pour savoir où tu es : `gh repo view --json isFork,parent`, ou la mention « fo
 
 **Dans l'original, ne touche jamais au dossier `pieces/`.** Chaque copie a modifié ces fichiers : le moindre changement ici créerait un conflit chez toutes les troupes.
 
+Pour récupérer les améliorations de l'original dans une copie, la personne peut toucher « Sync fork » puis « Update branch » sur la page GitHub de sa copie, puis tu fais `git pull`. Ou bien tu le fais toi-même, sur l'ordinateur :
+
+1. `git pull` ;
+2. `git fetch upstream` (si la remote `upstream` manque : `git remote add upstream https://github.com/awaseru-app/awaseru.git`) ;
+3. `git merge upstream/main` : une fusion, qui garde les pièces de la troupe ;
+4. `git push`.
+
+S'il y a un conflit, arrête-toi (`git merge --abort`) et explique-le à la personne. **N'utilise jamais `gh repo sync`** : il ne sait qu'aligner la copie sur l'original, il échoue dès que la copie a ses propres pièces, et avec `--force` il les effacerait. Pour la même raison, jamais de `git reset --hard` ni de `git push --force` dans une copie.
+
 **Avant tout travail dans une copie, récupère sa dernière version (`git pull`).** La troupe a peut-être récupéré entre-temps une amélioration de l'original sur GitHub (« Sync fork ») : sans `git pull`, l'envoi final serait refusé.
 
 **Identité git :** si git demande un nom et une adresse e-mail pour signer les commits, demande-les à la personne. N'en invente pas, et n'en reprends pas d'un ancien commit.
