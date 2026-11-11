@@ -158,6 +158,14 @@ node outils/generer-audio.mjs <id>
 
 Pour ne refaire que quelques répliques, ajoute leurs numéros à la fin de la commande. Il faut que `ffmpeg` soit installé. Augmente ensuite `VERSION_PIECES` dans `pieces/version.js`, puis publie.
 
+Pour écouter les voix choisies, un extrait par rôle :
+
+```bash
+node outils/ecouter-voix.mjs <id>
+```
+
+La page s'ouvre dans le navigateur, avec un bouton lecture par voix. Elle tient en un seul fichier, sons compris : on peut aussi l'envoyer sur un téléphone.
+
 Le script garde les kanji, car le moteur reconnaît mieux les mots qu'avec des kana seuls. Il compare ensuite la lecture du moteur à tes furigana : là où elle diffère, il remplace ce kanji par sa lecture, puis le signale dans son rapport.
 
 ### Format d'un fichier de pièce
@@ -240,6 +248,7 @@ Le code ne se modifie que dans l'original. Chaque troupe récupère ensuite le c
 | `js/ecrans/` | Un fichier par écran : pièces, script, mes répliques, fiches, filage, vocabulaire, réglages. |
 | `outils/verifier-piece.mjs` | Vérifie une pièce avec les mêmes règles que l'app. Tourne sur l'ordinateur. |
 | `outils/generer-audio.mjs` | Fabrique les voix avec AivisSpeech. Tourne sur l'ordinateur. |
+| `outils/ecouter-voix.mjs` | Fait une page pour écouter un extrait de chaque voix d'une pièce, et l'ouvre dans le navigateur. |
 | `icons/` | Les dessins sources (SVG) et les icônes exportées (PNG). |
 | `.nojekyll` | Fichier vide : dit à GitHub Pages de publier les fichiers tels quels. |
 | `AGENTS.md` | Les consignes du projet pour les assistants de code (Codex, Claude Code). |
