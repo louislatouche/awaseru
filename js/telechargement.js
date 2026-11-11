@@ -1,6 +1,6 @@
 // Retirer une pièce du téléphone, puis la retélécharger. Rien ne change sur le site.
 //
-// Les voix pèsent presque tout : 1,9 Mo pour Hanasaka Jiisan, contre 15 Ko de texte. Retirer une
+// Les voix pèsent presque tout : près de 2 Mo pour une pièce courte, contre une quinzaine de Ko de texte. Retirer une
 // pièce efface donc ses voix de la copie locale et garde son texte, qui permet d'afficher son nom
 // dans la liste même sans réseau. Tes répliques choisies et ta progression ne bougent pas.
 //

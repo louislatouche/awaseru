@@ -2,8 +2,8 @@
 // Ce script tourne sur ton ordinateur, avec Node : il ne fait pas partie de l'app.
 //
 // Il faut que le moteur AivisSpeech soit lancé et que ffmpeg soit installé. Puis :
-//   node outils/generer-audio.mjs hanasaka-jiisan        toute la pièce
-//   node outils/generer-audio.mjs hanasaka-jiisan 12 31  seulement ces répliques
+//   node outils/generer-audio.mjs ma-piece        toute la pièce
+//   node outils/generer-audio.mjs ma-piece 12 31  seulement ces répliques
 //
 // Le choix des voix est dans pieces/audio/<id>/voix.json.
 

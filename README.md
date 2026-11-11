@@ -57,6 +57,36 @@ Pour ajouter une autre pièce plus tard, ou récupérer les améliorations d'Awa
 - **La première pièce prend du temps** : AivisSpeech, qui fabrique les voix, télécharge près d'un gigaoctet à son premier lancement, puis environ 240 Mo par voix.
 - **Avec un forfait limité**, une longue pièce peut épuiser ton quota en route : le travail est enregistré sur ton ordinateur, l'assistant le reprendra plus tard.
 
+### Pourquoi une IA ?
+
+**L'app elle-même n'a aucune IA.** Awaseru fonctionne sans serveur, sans compte et hors ligne. Tes répliques, ta progression et tes réglages restent sur ton téléphone. L'IA n'intervient qu'une fois par pièce, sur l'ordinateur de la troupe, pour la préparer.
+
+**Préparer une pièce, c'est un travail d'expert, long et minutieux.** Pour un script d'une quarantaine de répliques, il faut :
+
+- poser la lecture de chaque kanji selon le contexte (一人 se lit ひとり, 今日 se lit きょう), y compris les lectures irrégulières ;
+- découper chaque réplique en mots, donner pour chacun sa forme du dictionnaire, sa traduction, repérer les particules, et garder les mêmes mots d'une pièce à l'autre : près de deux cents mots pour une seule pièce courte ;
+- corriger les caractères que certains PDF encodent mal, et ajouter la traduction anglaise ;
+- choisir une voix par rôle, fabriquer les voix et vérifier que le moteur prononce bien chaque mot.
+
+Le fichier d'une pièce courte fait près de 100 000 caractères. À la main, il faudrait des jours et une bonne connaissance du japonais. Avec une IA, c'est fait en une séance.
+
+**L'IA ne travaille pas seule.**
+
+- Un outil vérifie chaque pièce avec les mêmes règles que l'app, sans IA.
+- L'IA signale les lectures qui se discutent : c'est toi qui tranches.
+- Tu écoutes chaque voix avant qu'elle soit publiée.
+- Le texte du professeur n'est jamais corrigé : les coquilles sont seulement signalées.
+
+**Elle est aussi là pour l'installation.** Copie GitHub, mise en ligne, outils : elle s'en charge pour les troupes qui n'y connaissent rien en informatique.
+
+**Elle n'est pas obligatoire.** Tout est décrit pour le faire à la main (voir « Ajouter une pièce à la main »).
+
+**À savoir :**
+
+- le PDF du script est envoyé à l'IA (Anthropic pour Claude, OpenAI pour Codex) ;
+- les voix sont fabriquées sur ton ordinateur par AivisSpeech, gratuitement, sans rien envoyer en ligne ;
+- de toute façon, le texte des pièces devient public sur GitHub.
+
 ### Le détail, étape par étape
 
 Ce que ton assistant te fera faire si tu choisis « moi-même », ou si tu préfères te passer de lui.
@@ -144,7 +174,7 @@ Tout ce qui appartient à une troupe est dans `pieces/` :
 4. Vérifie la pièce : `node outils/verifier-piece.mjs <id>`.
 5. Augmente `VERSION_PIECES` dans `pieces/version.js`, puis publie.
 
-Le modèle complet, vocabulaire compris, est `.agents/skills/nouvelle-piece/exemple/hanasaka-jiisan.json`.
+Le modèle complet, vocabulaire compris, est `.agents/skills/nouvelle-piece/exemple/neko-to-tsuki.json` : une courte pièce inventée.
 
 ### Les voix
 
@@ -166,16 +196,16 @@ Le script garde les kanji, car le moteur reconnaît mieux les mots qu'avec des k
 {
   "format": 1,
   "id": "ma-piece",
-  "titre": "[花|はな]さかじいさん",
-  "titre_fr": "Le Vieux Monsieur aux fleurs",
+  "titre": "ねこと[月|つき]",
+  "titre_fr": "Le Chat et la Lune",
   "explication": "Quelques mots sur la pièce.",
   "roles": [
     { "id": "narrateur", "nom": "ナレーター", "nom_fr": "Narrateur" },
     {
-      "id": "ojiisan",
-      "nom": "[正直|しょうじき]なおじいさん",
-      "nom_court": "[正直|しょうじき]おじい",
-      "nom_fr": "Gentil Vieux Monsieur",
+      "id": "neko",
+      "nom": "[小|ちい]さいねこ",
+      "nom_court": "ねこ",
+      "nom_fr": "Petit Chat",
       "note": "Facultatif",
       "lien": "https://exemple.fr/facultatif"
     }
@@ -183,11 +213,11 @@ Le script garde les kanji, car le moteur reconnaît mieux les mots qu'avec des k
   "scenes": [
     {
       "numero": 1,
-      "titre": "[畑|はたけ]とシロ",
-      "titre_fr": "Le champ et Shiro",
+      "titre": "[屋根|やね]の[上|うえ]",
+      "titre_fr": "Sur le toit",
       "repliques": [
         { "numero": 1, "role": "narrateur", "texte": "むかしむかし。", "fr": "Il était une fois." },
-        { "numero": 2, "role": "ojiisan", "texte": "おや。\n（[犬|いぬ]が[吠|ほ]える）", "fr": "Tiens. (Le chien aboie)" },
+        { "numero": 2, "role": "neko", "texte": "こんばんは。\n（[空|そら]を[見|み]る）", "fr": "Bonsoir. (Il regarde le ciel)" },
         { "numero": 3, "role": null, "texte": "おしまい。", "fr": "Fin." }
       ]
     }

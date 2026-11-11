@@ -9,7 +9,7 @@ const MOTIF_FURIGANA = /\[([^[\]|]+)\|([^[\]|]+)\]/g;
 // Coupe un texte en morceaux : [{ didascalie: false, texte }, { didascalie: true, texte }, ...]
 //
 // Pourquoi une boucle plutôt qu'un simple motif ? Une didascalie peut contenir du furigana
-// (réplique 8 : （シロを[無理|むり]やり...）), et on veut pouvoir traiter les deux couches
+// (par exemple （[空|そら]を[見|み]る）), et on veut pouvoir traiter les deux couches
 // séparément. Le compteur de profondeur gère aussi d'éventuelles parenthèses imbriquées.
 function decouperDidascalies(texte) {
   const morceaux = [];

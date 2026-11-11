@@ -1,0 +1,171 @@
+{
+  "format": 1,
+  "id": "neko-to-tsuki",
+  "titre": "ねこと[月|つき]",
+  "titre_fr": "Le Chat et la Lune",
+  "titre_en": "The Cat and the Moon",
+  "explication": "Une pièce inventée, qui sert de modèle : courte, mais elle applique toutes les règles d'un fichier Awaseru.",
+  "explication_en": "An invented play used as a model: short, but it applies every rule of an Awaseru file.",
+  "roles": [
+    { "id": "narrateur", "nom": "ナレーター", "nom_fr": "Narrateur", "nom_en": "Narrator" },
+    {
+      "id": "neko",
+      "nom": "[小|ちい]さいねこ",
+      "nom_court": "ねこ",
+      "nom_fr": "Petit Chat",
+      "nom_en": "Little Cat",
+      "note": "Peut être joué à deux.",
+      "note_en": "Can be played by two people."
+    },
+    { "id": "tsuki", "nom": "お[月|つき]さま", "nom_fr": "Madame la Lune", "nom_en": "Lady Moon" }
+  ],
+  "scenes": [
+    {
+      "numero": 1,
+      "titre": "[屋根|やね]の[上|うえ]",
+      "titre_fr": "Sur le toit",
+      "titre_en": "On the roof",
+      "repliques": [
+        {
+          "numero": 1,
+          "role": "narrateur",
+          "texte": "むかしむかし、[小|ちい]さいねこが[屋根|やね]の[上|うえ]にいました。",
+          "fr": "Il était une fois un petit chat, sur un toit.",
+          "en": "Once upon a time, there was a little cat on a roof.",
+          "mots": [
+            { "t": "むかしむかし", "v": "mukashimukashi" },
+            { "t": "、" },
+            { "t": "[小|ちい]さい", "v": "chiisai" },
+            { "t": "ねこ", "v": "neko" },
+            { "t": "が", "v": "ga" },
+            { "t": "[屋根|やね]", "v": "yane" },
+            { "t": "の", "v": "no" },
+            { "t": "[上|うえ]", "v": "ue" },
+            { "t": "に", "v": "ni" },
+            { "t": "いました", "v": "iru", "fr": "se trouvait", "en": "was" },
+            { "t": "。" }
+          ]
+        },
+        {
+          "numero": 2,
+          "role": "neko",
+          "texte": "[今日|きょう]も[空|そら]がきれいだね。\n（[空|そら]を[見|み]る）",
+          "fr": "Le ciel est beau aujourd'hui encore. (Il regarde le ciel)",
+          "en": "The sky is beautiful again today. (He looks at the sky)",
+          "mots": [
+            { "t": "[今日|きょう]", "v": "kyou" },
+            { "t": "も", "v": "mo", "fr": "encore", "en": "again" },
+            { "t": "[空|そら]", "v": "sora" },
+            { "t": "が", "v": "ga" },
+            { "t": "きれい", "v": "kirei" },
+            { "t": "だ", "v": "da" },
+            { "t": "ね", "v": "ne" },
+            { "t": "。" },
+            { "t": "\n" },
+            { "t": "（" },
+            { "t": "[空|そら]", "v": "sora" },
+            { "t": "を", "v": "wo" },
+            { "t": "[見|み]る", "v": "miru", "fr": "regarde", "en": "looks at" },
+            { "t": "）" }
+          ]
+        },
+        {
+          "numero": 3,
+          "role": "tsuki",
+          "texte": "こんばんは、ねこさん。",
+          "fr": "Bonsoir, petit chat.",
+          "en": "Good evening, little cat.",
+          "mots": [
+            { "t": "こんばんは", "v": "konbanwa" },
+            { "t": "、" },
+            { "t": "ねこ", "v": "neko" },
+            { "t": "さん", "v": "san" },
+            { "t": "。" }
+          ]
+        }
+      ]
+    },
+    {
+      "numero": 2,
+      "titre": "[月|つき]の[歌|うた]",
+      "titre_fr": "La chanson de la lune",
+      "titre_en": "The moon's song",
+      "repliques": [
+        {
+          "numero": 4,
+          "role": "neko",
+          "texte": "お[月|つき]さま、[歌|うた]いましょう！",
+          "fr": "Madame la Lune, chantons !",
+          "en": "Lady Moon, let's sing!",
+          "mots": [
+            { "t": "お[月|つき]さま", "v": "otsukisama" },
+            { "t": "、" },
+            { "t": "[歌|うた]いましょう", "v": "utau", "fr": "chantons", "en": "let's sing" },
+            { "t": "！" }
+          ]
+        },
+        {
+          "numero": 5,
+          "role": "tsuki",
+          "texte": "ええ、[歌|うた]いましょう。",
+          "fr": "Oui, chantons.",
+          "en": "Yes, let's sing.",
+          "mots": [
+            { "t": "ええ", "v": "ee" },
+            { "t": "、" },
+            { "t": "[歌|うた]いましょう", "v": "utau", "fr": "chantons", "en": "let's sing" },
+            { "t": "。" }
+          ]
+        },
+        {
+          "numero": 6,
+          "role": null,
+          "texte": "（[二人|ふたり]で[歌|うた]う）\nおしまい。",
+          "fr": "(Ils chantent à deux) Fin.",
+          "en": "(They sing together) The end.",
+          "mots": [
+            { "t": "（" },
+            { "t": "[二人|ふたり]", "v": "futari" },
+            { "t": "で", "v": "de", "fr": "à (deux)", "en": "as (a pair)" },
+            { "t": "[歌|うた]う", "v": "utau", "fr": "chantent", "en": "sing" },
+            { "t": "）" },
+            { "t": "\n" },
+            { "t": "おしまい", "v": "oshimai" },
+            { "t": "。" }
+          ]
+        }
+      ]
+    }
+  ],
+  "vocabulaire": [
+    { "id": "mukashimukashi", "mot": "むかしむかし", "fr": "il était une fois", "en": "once upon a time" },
+    { "id": "chiisai", "mot": "[小|ちい]さい", "fr": "petit", "en": "small" },
+    { "id": "neko", "mot": "ねこ", "fr": "chat", "en": "cat" },
+    { "id": "ga", "mot": "が", "fr": "(marque le sujet)", "en": "(subject marker)", "particule": true },
+    { "id": "yane", "mot": "[屋根|やね]", "fr": "toit", "en": "roof" },
+    { "id": "no", "mot": "の", "fr": "de (appartenance)", "en": "of (possession)", "particule": true },
+    { "id": "ue", "mot": "[上|うえ]", "fr": "dessus", "en": "top" },
+    { "id": "ni", "mot": "に", "fr": "à, sur, dans (lieu)", "en": "at, on, in (place)", "particule": true },
+    { "id": "iru", "mot": "いる", "fr": "être là, se trouver (êtres vivants)", "en": "to be (living things)" },
+    { "id": "kyou", "mot": "[今日|きょう]", "fr": "aujourd'hui", "en": "today" },
+    { "id": "mo", "mot": "も", "fr": "aussi", "en": "also", "particule": true },
+    { "id": "sora", "mot": "[空|そら]", "fr": "ciel", "en": "sky" },
+    { "id": "kirei", "mot": "きれい", "fr": "beau, joli", "en": "beautiful" },
+    { "id": "da", "mot": "だ", "fr": "c'est, être (copule)", "en": "to be (copula)" },
+    { "id": "ne", "mot": "ね", "fr": "n'est-ce pas", "en": "isn't it", "particule": true },
+    { "id": "wo", "mot": "を", "fr": "(marque le complément d'objet)", "en": "(object marker)", "particule": true },
+    { "id": "miru", "mot": "[見|み]る", "fr": "regarder, voir", "en": "to look, to see" },
+    { "id": "konbanwa", "mot": "こんばんは", "fr": "bonsoir", "en": "good evening" },
+    { "id": "san", "mot": "さん", "fr": "M., Mme (suffixe de politesse)", "en": "Mr., Ms. (polite suffix)" },
+    { "id": "otsukisama", "mot": "お[月|つき]さま", "fr": "la lune (avec respect)", "en": "the moon (respectful)" },
+    { "id": "utau", "mot": "[歌|うた]う", "fr": "chanter", "en": "to sing" },
+    { "id": "ee", "mot": "ええ", "fr": "oui", "en": "yes" },
+    { "id": "futari", "mot": "[二人|ふたり]", "fr": "deux personnes", "en": "two people" },
+    { "id": "de", "mot": "で", "fr": "avec, par (moyen, manière)", "en": "with, by (means, manner)", "particule": true },
+    { "id": "oshimai", "mot": "おしまい", "fr": "fin", "en": "the end" }
+  ],
+  "audio": {
+    "credit": "Voix générées avec AivisSpeech : 阿井田 茂, コハク, morioki.",
+    "credit_en": "Voices generated with AivisSpeech: 阿井田 茂, コハク, morioki."
+  }
+}

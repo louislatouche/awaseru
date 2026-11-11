@@ -1,5 +1,5 @@
 // Vérifie un fichier de pièce avec les mêmes règles que l'app, puis fait le point sur son vocabulaire.
-// Usage : node outils/verifier-piece.mjs <id>     (par exemple : node outils/verifier-piece.mjs hanasaka-jiisan)
+// Usage : node outils/verifier-piece.mjs <id>     (par exemple : node outils/verifier-piece.mjs ma-piece)
 //
 // Le point sur le vocabulaire signale ce qu'un oubli laisserait passer sans erreur :
 // - les répliques qui n'ont pas encore leur mot à mot ;
