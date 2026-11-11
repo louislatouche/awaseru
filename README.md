@@ -6,13 +6,43 @@ Ce dépôt est **l'original** d'Awaseru : le code seul, sans aucune pièce. Chaq
 
 ## Avoir l'Awaseru de ta troupe
 
-### Ce qu'il te faut
+### Le plus simple : laisse ton assistant te guider
 
-- Un compte GitHub, gratuit : <https://github.com/signup>.
-- Pour ajouter des pièces, un ordinateur Windows ou Mac et un assistant de code : **Codex**, dans l'application ChatGPT (inclus dans le forfait gratuit, en accès limité), ou **Claude Code** (forfait Claude Pro).
-- Les scripts de tes pièces, en PDF.
+1. Il te faut un assistant qui travaille **sur ton ordinateur** (la simple discussion en ligne ne suffit pas) :
+   - **Claude Code** : l'onglet *Code* de l'application Claude ([l'installer](https://code.claude.com/docs/en/desktop-quickstart)), avec un forfait Claude Pro ou plus ;
+   - ou **Codex** : le mode *Codex* de l'application ChatGPT ([l'installer](https://learn.chatgpt.com/docs/app)), inclus dans le forfait gratuit, en accès limité.
+2. Crée un dossier vide sur ton ordinateur (par exemple *Documents/Awaseru*) et ouvre-le dans ton assistant.
+3. Copie le message ci-dessous, colle-le dans ton assistant, envoie-le, et laisse-toi guider.
 
-### 1. Faire ta copie
+```text
+Aide-moi à installer Awaseru pour ma troupe de théâtre et à y ajouter nos pièces. Je ne m'y connais pas en informatique : guide-moi une étape à la fois, avec des mots simples, et attends ma réponse avant de passer à la suivante. Fais toi-même tout ce qui se fait sur cet ordinateur, mais demande mon accord avant d'installer un programme. Si tu ne peux pas lancer de commandes sur cet ordinateur, dis-le-moi tout de suite : il me faut Claude Code ou Codex.
+
+Awaseru est une application web pour apprendre ses répliques de théâtre en japonais. L'original est https://github.com/awaseru-app/awaseru : chaque troupe en fait sa propre copie (un fork) sur son compte GitHub, y ajoute ses pièces et la publie gratuitement avec GitHub Pages.
+
+1. Si ma copie est déjà sur cet ordinateur (un dossier qui contient AGENTS.md et pieces/), travaille dedans, récupère sa dernière version avec git pull, et passe à l'étape 5.
+2. Demande-moi le nom de mon compte GitHub. Si je n'en ai pas, envoie-moi sur https://github.com/signup.
+3. Si je n'ai pas encore de copie, guide-moi pour la créer : sur https://github.com/awaseru-app/awaseru, bouton « Fork », mon compte comme « Owner », nom « awaseru », puis « Create fork ». Puis pour la mettre en ligne : dans ma copie, Settings, Pages, « Deploy from a branch », branche main, dossier / (root), Save. Mon app sera à l'adresse https://MON-COMPTE.github.io/awaseru/ (en minuscules). Si elle n'est pas en ligne au bout de dix minutes : onglet Actions de ma copie, autoriser les workflows.
+4. Installe Git s'il manque (Windows : winget install --id Git.Git). Clone ma copie (https://github.com/MON-COMPTE/awaseru) dans ce dossier s'il est vide, sinon dans un sous-dossier awaseru.
+5. Lis AGENTS.md dans ma copie et respecte-le : en particulier, ne modifie rien en dehors du dossier pieces/, et si git demande un nom et une adresse e-mail, demande-les-moi.
+6. Demande-moi le PDF du script, puis ajoute la pièce en suivant pas à pas .agents/skills/nouvelle-piece/SKILL.md (il dit aussi quels outils installer).
+7. Quand tout est vérifié, envoie le travail sur GitHub (commit puis push). Si GitHub me demande de me connecter, guide-moi.
+8. Pour finir, explique-moi comment installer l'app sur les téléphones de la troupe, et comment récupérer plus tard les améliorations d'Awaseru (README.md de ma copie, parties « Installer sur Android » et « Récupérer les améliorations d'Awaseru »).
+```
+
+Pour ajouter une autre pièce plus tard, ouvre le même dossier dans ton assistant et recolle le même message.
+
+**À savoir avant de commencer :**
+
+- **Ta copie est publique** (c'est la condition pour la publier gratuitement) : le texte de tes pièces sera visible par tous.
+- **Une seule copie d'Awaseru par compte GitHub** (voir plus bas).
+- **La première pièce prend du temps** : AivisSpeech, qui fabrique les voix, télécharge près d'un gigaoctet à son premier lancement, puis environ 240 Mo par voix.
+- **Avec un forfait limité**, une longue pièce peut épuiser ton quota en route : le travail est enregistré sur ton ordinateur, l'assistant le reprendra plus tard.
+
+### Le détail, étape par étape
+
+Ce que ton assistant te fera faire, si tu préfères le suivre toi-même.
+
+#### 1. Faire ta copie
 
 1. Connecté à GitHub, ouvre <https://github.com/awaseru-app/awaseru>.
 2. En haut à droite, touche **Fork**.
@@ -21,7 +51,7 @@ Ce dépôt est **l'original** d'Awaseru : le code seul, sans aucune pièce. Chaq
 
 **Une seule copie d'Awaseru par compte GitHub.** Deux copies sur le même compte seraient sur le même site, donc dans le même stockage des téléphones : leurs données se mélangeraient. Pour une deuxième troupe, prends un autre compte, ou une organisation GitHub.
 
-### 2. La mettre en ligne
+#### 2. La mettre en ligne
 
 1. Sur la page de ta copie, ouvre **Settings**, puis **Pages** dans la colonne de gauche.
 2. Sous **Build and deployment**, à la ligne **Source**, choisis **Deploy from a branch**.
@@ -30,24 +60,19 @@ Ce dépôt est **l'original** d'Awaseru : le code seul, sans aucune pièce. Chaq
 
 Si elle n'est toujours pas en ligne au bout de dix minutes, ouvre l'onglet **Actions** de ta copie : si GitHub demande d'autoriser les workflows, accepte.
 
-### 3. Ajouter tes pièces
+#### 3. Ajouter tes pièces
 
-Avec **Codex** :
+1. Installe Git, qui sert à récupérer ta copie sur ton ordinateur et à la renvoyer sur GitHub. Sur Windows, dans un terminal : `winget install --id Git.Git`. Sur Mac, tape `git --version` dans le Terminal : macOS propose de l'installer s'il manque.
+2. Récupère ta copie sur ton ordinateur : `git clone https://github.com/TONCOMPTE/awaseru`.
+3. Ouvre le dossier `awaseru` dans ton assistant, puis lance le skill qui ajoute une pièce : `/nouvelle-piece chemin/du/script.pdf` dans Claude Code, `$nouvelle-piece` suivi du chemin du PDF dans Codex. L'assistant vérifie qu'il a ses outils (Node.js, ffmpeg et AivisSpeech) et te demande ton accord pour installer ceux qui manquent. Puis il convertit le script, fabrique les voix, vérifie le tout et te propose de le publier. La première fois que ton ordinateur envoie quelque chose sur GitHub, une fenêtre te demande de te connecter.
+4. Relis les points que l'assistant te signale (lectures des kanji, coquilles), et écoute les voix sur ton téléphone.
 
-1. Installe l'application ChatGPT ([liens de téléchargement](https://learn.chatgpt.com/docs/app), et [la page pour Windows](https://learn.chatgpt.com/codex/windows/windows-app)), connecte-toi avec ton compte ChatGPT, puis choisis **Codex** dans le menu de ChatGPT.
-2. Installe Git, qui sert à récupérer ta copie sur ton ordinateur et à la renvoyer sur GitHub. Sur Windows, dans un terminal : `winget install --id Git.Git`. Sur Mac, tape `git --version` dans le Terminal : macOS propose de l'installer s'il manque.
-3. Dans Codex, ouvre un dossier vide (par exemple *Documents*), puis écris : « Clone https://github.com/TONCOMPTE/awaseru ici ». Ouvre ensuite le dossier `awaseru` qui vient d'apparaître. La première fois que Codex renvoie quelque chose sur GitHub, une fenêtre te demande de te connecter.
-4. Écris `$nouvelle-piece` suivi du chemin du PDF de ta pièce. Codex vérifie qu'il a ses outils (Node.js, ffmpeg et AivisSpeech, qui fabrique les voix japonaises) et te demande ton accord pour installer ceux qui manquent. Puis il convertit le script, fabrique les voix, vérifie le tout et te propose de le publier. La première fois est plus longue : AivisSpeech télécharge près d'un gigaoctet.
-5. Relis les points que Codex te signale (lectures des kanji, coquilles), et écoute les voix sur ton téléphone.
-
-Avec **Claude Code**, c'est la même chose : ouvre le dossier de ta copie et tape `/nouvelle-piece chemin/du/script.pdf`.
-
-### 4. Récupérer les améliorations d'Awaseru
+#### 4. Récupérer les améliorations d'Awaseru
 
 1. Sur la page de ta copie, au-dessus de la liste des fichiers, touche **Sync fork**.
 2. Touche **Update branch**.
 
-Ton site se met à jour en quelques minutes, et les téléphones affichent « Nouvelle version prête ».
+Ton site se met à jour en quelques minutes, et les téléphones affichent « Nouvelle version prête ». Sur ton ordinateur, ta copie se met à jour avec `git pull` (le message à copier le prévoit).
 
 Si GitHub te propose plutôt d'ouvrir une *pull request*, c'est qu'un fichier a été modifié en dehors du dossier `pieces/` dans ta copie. N'insiste pas, et demande de l'aide sur <https://github.com/awaseru-app/awaseru/issues>.
 

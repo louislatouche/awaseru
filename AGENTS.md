@@ -17,6 +17,10 @@ Pour savoir où tu es : `gh repo view --json isFork,parent`, ou la mention « fo
 
 **Dans l'original, ne touche jamais au dossier `pieces/`.** Chaque copie a modifié ces fichiers : le moindre changement ici créerait un conflit chez toutes les troupes.
 
+**Avant tout travail dans une copie, récupère sa dernière version (`git pull`).** La troupe a peut-être récupéré entre-temps une amélioration de l'original sur GitHub (« Sync fork ») : sans `git pull`, l'envoi final serait refusé.
+
+**Identité git :** si git demande un nom et une adresse e-mail pour signer les commits, demande-les à la personne. N'en invente pas, et n'en reprends pas d'un ancien commit.
+
 ## Ajouter une pièce
 
 Suis le skill `nouvelle-piece` (`.agents/skills/nouvelle-piece/SKILL.md`), du PDF du script jusqu'aux voix enregistrées. Il dit aussi comment installer les outils nécessaires.
