@@ -236,7 +236,7 @@ The rules the app checks when loading a play:
 - **`\n`**: line break.
 - **`lien`**: only an `http` or `https` address. It is shown in *About this play*, next to the role's name. Its label depends on the address: *Watch the video* for YouTube or Vimeo, otherwise *Open the link*.
 - **Optional**: `format`, `id` (otherwise the file name is used), `nom_court`, `note`, `lien`.
-- **English**: `titre_en`, `explication_en`, `nom_en`, `note_en`, `credit_en`, and `en` on each line. Every language other than French shows them. If one is missing, the French is shown instead.
+- **Translations**: each troupe has its plays translated into its own language and into English, the common language. French fields are named as above (`fr`, `titre_fr`, `nom_fr`, and `explication`, `note`, `credit` without a suffix); other languages use their two-letter code instead: `en`, `titre_en`, `explication_en`, `nom_en`, `note_en`, `credit_en`, or `de`, `titre_de`... for German. The app shows the phone's language if the play has it, otherwise English, otherwise French. At least one translation is required, in any language.
 
 ## For those who change the code
 

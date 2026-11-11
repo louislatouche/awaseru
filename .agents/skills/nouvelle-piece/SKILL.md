@@ -51,19 +51,27 @@ Commence par savoir sur quel ordinateur tu es : Windows, Mac à puce Apple (`una
 
 Après une installation par winget (Windows) ou Homebrew (Mac), le programme n'est connu que des terminaux ouverts ensuite : si `node` ou `ffmpeg` reste introuvable, ouvre un nouveau terminal, ou appelle-le par son chemin complet (Homebrew les range dans `/opt/homebrew/bin` sur les Mac récents).
 
+## Les langues de traduction
+
+Une pièce est traduite dans **la langue de la troupe** et en **anglais**, la langue commune. L'app affiche la traduction dans la langue du téléphone si la pièce l'a, sinon l'anglais, sinon le français. Avant de commencer, demande à la personne dans quelle langue sa troupe veut les traductions (propose celle de votre conversation). Si c'est l'anglais, une seule langue suffit.
+
+Le nom des champs : le français est la langue d'origine du format, ses champs s'écrivent `fr`, `titre_fr`, `nom_fr`, et `explication`, `note`, `credit` sans suffixe. Les autres langues prennent leur code de deux lettres, parmi ceux de l'app : `en`, `de`, `es`, `it`, `pt`, `nl`, `pl`, `sv`, `da`, `no`, `fi`, `cs`, `hu`, `ro`, `el`, `uk`, `ru`, `ja`, `ko`. Pour l'allemand, par exemple : `de` sur chaque réplique, chaque mot du vocabulaire et chaque morceau traduit, `titre_de` sur la pièce et sur chaque scène, `nom_de`, `note_de`, `explication_de`, `credit_de`. Le modèle, en français et en anglais, montre où va chaque champ.
+
+La traduction que donne le PDF, quelle que soit sa langue, se recopie telle quelle dans les champs de sa langue. L'autre langue, c'est toi qui la traduis.
+
 ## Les étapes
 
 1. Lis le PDF, en texte ET en image des pages pour vérifier. Attention : certains PDF ont une police mal encodée où des hiragana sortent en caractères CJK rares : 䛸=と 䛾=の 䛿=は 䛷=で 䛺=な 䛻=に 䜀=ば 䛶=て 䛹=ど. Corrige-les, et vérifie avec les images qu'il ne reste aucun caractère bizarre.
-2. Structure la pièce exactement comme le modèle : rôles avec un id court en ascii, scènes, répliques numérotées comme dans le PDF, role à null quand le PDF n'indique pas de rôle. Recopie la traduction française telle quelle (ne corrige pas le texte du script, signale seulement les coquilles).
+2. Structure la pièce exactement comme le modèle : rôles avec un id court en ascii, scènes, répliques numérotées comme dans le PDF, role à null quand le PDF n'indique pas de rôle. Recopie la traduction du PDF telle quelle, dans les champs de sa langue (ne corrige pas le texte du script, signale seulement les coquilles).
 3. Furigana : chaque kanji du japonais (titre, noms de rôles, titres de scènes, répliques) au format [漢字|よみ].
    - Lecture selon le contexte (一人=ひとり, 二人=ふたり, 今日=きょう…).
    - Annotation par mot ; les lectures irrégulières (熟字訓) en bloc sur le mot entier.
    - Les lectures déjà entre parenthèses dans le PDF, ex. 歌（うた）, passent en furigana et les parenthèses disparaissent.
    - Didascalies et bruitages restent entre （）.
-   - Anglais : ajoute la traduction anglaise à côté du français (`titre_en`, `explication_en`, `nom_en`, `note_en`, `credit_en`, `titre_en` sur chaque scène, `en` sur chaque réplique). L'app l'affiche dans toutes les langues autres que le français.
+   - Traductions : dans les deux langues décidées au départ (voir « Les langues de traduction »), sur le titre, l'explication, les rôles, les scènes, chaque réplique, le vocabulaire et le crédit des voix.
 3 bis. Vocabulaire (l'onglet Vocabulaire de l'app) : sur le modèle, format vérifié par js/validation.js.
    - Une liste `vocabulaire` à la fin de la pièce : chaque mot employé, pas seulement les kanji (mots en kana et en katakana, particules, interjections, onomatopées, noms). `{ "id": "utau", "mot": "[歌|うた]う", "fr": "chanter", "en": "to sing" }` : id court en ascii, le mot à sa forme du dictionnaire avec les mêmes furigana que le texte, traductions courtes.
-   - Sur chaque réplique, juste après `en`, un découpage `mots` : `[{ "t": "[歌|うた]いましょう", "v": "utau", "fr": "chantons", "en": "let's sing" }, { "t": "！" }]`. Mis bout à bout, les `t` redonnent exactement `texte` (espaces, retours à la ligne, ponctuation et （ ） compris, chacun dans son propre morceau sans `v`). Ne jamais couper un bloc [漢字|よみ]. Un verbe garde sa conjugaison dans un seul morceau ; les particules sont à part. `fr`/`en` sur le morceau quand le sens en contexte diffère de celui du dictionnaire.
+   - Sur chaque réplique, juste après `en`, un découpage `mots` : `[{ "t": "[歌|うた]いましょう", "v": "utau", "fr": "chantons", "en": "let's sing" }, { "t": "！" }]`. Mis bout à bout, les `t` redonnent exactement `texte` (espaces, retours à la ligne, ponctuation et （ ） compris, chacun dans son propre morceau sans `v`). Ne jamais couper un bloc [漢字|よみ]. Un verbe garde sa conjugaison dans un seul morceau ; les particules sont à part. Une traduction sur le morceau (dans les deux langues décidées) quand le sens en contexte diffère de celui du dictionnaire. Ces exemples sont en `fr` et `en` : pour une autre troupe, mets les codes de ses deux langues.
    - Le même mot garde le même id et le même sens de base dans toute la pièce.
    - Et d'une pièce à l'autre : avant de créer un id, cherche le mot dans le vocabulaire des autres pièces (pieces/*.json). Un mot déjà présent avec le même sens reprend exactement son id et son `mot` : une coche « Je savais » vaut pour toutes les pièces, et « Toutes » ne lui donne qu'une carte. Un homographe d'un autre sens prend un autre id (ある « un certain » et ある « il y a »). verifier-piece signale les mots écrits pareil sous un autre id ailleurs : à vérifier un par un.
    - Les particules portent `"particule": true` (après `en`) : la liste du Vocabulaire ne les montre pas, et elles ne s'y révisent pas (le texte les garde touchables). Ce sont les particules casuelles et de liaison (に, と, が, を, は, の, で, から, も, や, へ, まで, より…), leurs emplois de liaison entre propositions (と « quand », が « mais », の « c'est que ») et les particules de fin de phrase (か, よ, ね, ぞ, な, わ…). Pas les copules だ et です, ni の « le fait que » : ils restent des mots ordinaires (choix de l'auteur d'Awaseru, 2026-11-10). Modèle : les particules du modèle.

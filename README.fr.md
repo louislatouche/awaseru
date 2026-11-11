@@ -67,7 +67,7 @@ Pour ajouter une autre pièce plus tard, ou récupérer les améliorations d'Awa
 
 - poser la lecture de chaque kanji selon le contexte (一人 se lit ひとり, 今日 se lit きょう), y compris les lectures irrégulières ;
 - découper chaque réplique en mots, donner pour chacun sa forme du dictionnaire, sa traduction, repérer les particules, et garder les mêmes mots d'une pièce à l'autre : près de deux cents mots pour une seule pièce courte ;
-- corriger les caractères que certains PDF encodent mal, et ajouter la traduction anglaise ;
+- corriger les caractères que certains PDF encodent mal, et ajouter les traductions ;
 - choisir une voix par rôle, fabriquer les voix et vérifier que le moteur prononce bien chaque mot.
 
 Le fichier d'une pièce courte fait près de 100 000 caractères. À la main, il faudrait des jours et une bonne connaissance du japonais. Avec une IA, c'est fait en une séance.
@@ -236,7 +236,7 @@ Les règles que l'app vérifie au chargement :
 - **`\n`** : retour à la ligne.
 - **`lien`** : uniquement une adresse `http` ou `https`. Il s'affiche dans *À propos de cette pièce*, à côté du nom du rôle. Son libellé suit l'adresse : *Voir la vidéo* pour YouTube ou Vimeo, sinon *Ouvrir le lien*.
 - **Facultatifs** : `format`, `id` (sinon le nom du fichier est utilisé), `nom_court`, `note`, `lien`.
-- **Anglais** : `titre_en`, `explication_en`, `nom_en`, `note_en`, `credit_en`, et `en` sur chaque réplique. Toutes les langues autres que le français les affichent. S'il en manque un, le français s'affiche à sa place.
+- **Traductions** : chaque troupe fait traduire ses pièces dans sa langue et en anglais, la langue commune. Les champs français s'écrivent comme ci-dessus (`fr`, `titre_fr`, `nom_fr`, et `explication`, `note`, `credit` sans suffixe) ; les autres langues prennent leur code de deux lettres : `en`, `titre_en`, `explication_en`, `nom_en`, `note_en`, `credit_en`, ou `de`, `titre_de`... pour l'allemand. L'app affiche la langue du téléphone si la pièce l'a, sinon l'anglais, sinon le français. Il faut au moins une traduction, dans n'importe quelle langue.
 
 ## Pour qui modifie le code
 
