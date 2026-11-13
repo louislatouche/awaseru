@@ -2600,7 +2600,7 @@
         },
         {
           "numero": 31,
-          "role": null,
+          "role": "narrateur",
           "texte": "（よさくは ねむりこむ）",
           "fr": "(Yosaku s'endort)",
           "en": "(Yosaku falls asleep)",
@@ -2632,7 +2632,7 @@
         },
         {
           "numero": 32,
-          "role": null,
+          "role": "narrateur",
           "texte": "（[翌朝|よくあさ]、つうが[青|あお]ざめた[顔|かお]で[美|うつく]しい[布|ぬの]を[持|も]って[出|で]てくる）",
           "fr": "(Au matin, Tsuu sort, le visage très pâle, tenant un magnifique tissu)",
           "en": "(The next morning, Tsuu comes out, her face deathly pale, holding a beautiful cloth)",
