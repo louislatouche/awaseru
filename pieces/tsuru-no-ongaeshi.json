@@ -1080,7 +1080,7 @@
         },
         {
           "numero": 11,
-          "role": null,
+          "role": "narrateur",
           "texte": "（[戸|と]を[開|あ]けると、うすい[着物|きもの]を[着|き]た[美|うつく]しい[娘|むすめ]が[立|た]っている）",
           "fr": "(Il ouvre la porte, une belle jeune fille portant un fin kimono se tient là)",
           "en": "(He opens the door: a beautiful young woman in a thin kimono is standing there)",
@@ -4519,7 +4519,7 @@
         },
         {
           "numero": 52,
-          "role": null,
+          "role": "narrateur",
           "texte": "（つう、さびしげな[表情|ひょうじょう]で[部屋|へや]から[出|で]てくる。[背中|せなか]に[羽|はね]を[残|のこ]して）",
           "fr": "(Tsuu sort de la pièce, l'air triste, gardant des plumes sur le dos)",
           "en": "(Tsuu comes out of the room looking sad, feathers still on her back)",
