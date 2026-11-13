@@ -8,10 +8,11 @@
 // Le choix des voix est dans pieces/audio/<id>/voix.json.
 
 import { spawnSync } from 'node:child_process';
-import { mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { mkdirSync, mkdtempSync, readFileSync, readdirSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { furiganaDe, texteAvecKanji } from '../js/texte.js';
+import { decouperDidascalies, furiganaDe, texteAvecKanji } from '../js/texte.js';
 
 const MOTEUR = 'http://127.0.0.1:10101';
 const RACINE = join(dirname(fileURLToPath(import.meta.url)), '..');
@@ -98,19 +99,49 @@ async function analyser(ligne, garderDidascalies, style) {
 
 // ---- La fabrication d'un fichier ----
 
-async function fabriquer(requete, style, sortie) {
+// loudnorm met toutes les voix au même volume ; mono à 64 kb/s suffit pour de la parole.
+const VOLUME = 'loudnorm=I=-18:TP=-1.5:LRA=11';
+const SILENCE_ENTRE_VOIX = 0.3; // secondes, entre la voix du rôle et celle du narrateur
+
+async function synthetiser(requete, style) {
   const reponse = await appeler(`/synthesis?speaker=${style}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(requete),
   });
-  const wav = Buffer.from(await reponse.arrayBuffer());
-  // loudnorm met toutes les voix au même volume ; mono à 64 kb/s suffit pour de la parole.
-  const resultat = spawnSync('ffmpeg', [
-    '-y', '-loglevel', 'error', '-i', 'pipe:0',
-    '-af', 'loudnorm=I=-18:TP=-1.5:LRA=11', '-ar', '44100', '-ac', '1', '-b:a', '64k', sortie,
-  ], { input: wav });
+  return Buffer.from(await reponse.arrayBuffer());
+}
+
+function ffmpeg(arguments_, entree) {
+  const resultat = spawnSync('ffmpeg', ['-y', '-loglevel', 'error', ...arguments_], { input: entree });
   if (resultat.status !== 0) throw new Error(`ffmpeg : ${resultat.stderr ?? resultat.error}`);
+}
+
+async function fabriquer(requete, style, sortie) {
+  const wav = await synthetiser(requete, style);
+  ffmpeg(['-i', 'pipe:0', '-af', VOLUME, '-ar', '44100', '-ac', '1', '-b:a', '64k', sortie], wav);
+}
+
+// Un fichier fait de plusieurs voix (morceaux : [{ requete, style }, ...]) : chaque morceau est mis
+// au même volume, puis ils sont mis bout à bout avec un court silence entre deux.
+async function assembler(morceaux, sortie) {
+  const dossierTemporaire = mkdtempSync(join(tmpdir(), 'awaseru-'));
+  try {
+    const entrees = [];
+    for (const [position, morceau] of morceaux.entries()) {
+      const chemin = join(dossierTemporaire, `${position}.wav`);
+      writeFileSync(chemin, await synthetiser(morceau.requete, morceau.style));
+      entrees.push('-i', chemin);
+    }
+    const dernier = morceaux.length - 1;
+    const filtres = morceaux.map((_, position) => `[${position}]${VOLUME},aresample=44100,aformat=channel_layouts=mono`
+      + `${position < dernier ? `,apad=pad_dur=${SILENCE_ENTRE_VOIX}` : ''}[m${position}]`);
+    const liste = morceaux.map((_, position) => `[m${position}]`).join('');
+    ffmpeg([...entrees, '-filter_complex', `${filtres.join(';')};${liste}concat=n=${morceaux.length}:v=0:a=1[sortie]`,
+      '-map', '[sortie]', '-ac', '1', '-b:a', '64k', sortie]);
+  } finally {
+    rmSync(dossierTemporaire, { recursive: true, force: true });
+  }
 }
 
 // ---- Le programme ----
@@ -147,9 +178,23 @@ for (const ligne of piece.scenes.flatMap((scene) => scene.repliques)) {
   }
 
   // La seconde version, avec la didascalie, seulement si le texte contient une parenthèse.
+  // La didascalie (geste, bruitage) est dite par la voix du narrateur, comme au théâtre : seules
+  // les paroles gardent la voix du rôle. Pour le narrateur lui-même, une seule voix suffit.
   if (ligne.texte.includes('（')) {
-    const avec = await analyser(ligne, true, style);
-    if (avec) await fabriquer(avec.requete, style, join(dossier, `${ligne.numero}-didascalies.mp3`));
+    const sortie = join(dossier, `${ligne.numero}-didascalies.mp3`);
+    const styleNarrateur = styleDe(config.roles[config.sans_role]);
+    if (styleNarrateur === style) {
+      const avec = await analyser(ligne, true, style);
+      if (avec) await fabriquer(avec.requete, style, sortie);
+    } else {
+      const morceaux = [];
+      for (const morceau of decouperDidascalies(ligne.texte)) {
+        const styleMorceau = morceau.didascalie ? styleNarrateur : style;
+        const version = await analyser({ texte: morceau.texte }, true, styleMorceau);
+        if (version) morceaux.push({ requete: version.requete, style: styleMorceau });
+      }
+      if (morceaux.length > 0) await assembler(morceaux, sortie);
+    }
   }
 }
 

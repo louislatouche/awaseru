@@ -11,7 +11,7 @@ const MOTIF_FURIGANA = /\[([^[\]|]+)\|([^[\]|]+)\]/g;
 // Pourquoi une boucle plutôt qu'un simple motif ? Une didascalie peut contenir du furigana
 // (par exemple （[空|そら]を[見|み]る）), et on veut pouvoir traiter les deux couches
 // séparément. Le compteur de profondeur gère aussi d'éventuelles parenthèses imbriquées.
-function decouperDidascalies(texte) {
+export function decouperDidascalies(texte) {
   const morceaux = [];
   let courant = '';
   let profondeur = 0;
