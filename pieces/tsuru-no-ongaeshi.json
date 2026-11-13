@@ -6,13 +6,16 @@
   "titre_en": "The Grateful Crane",
   "explication": "Ce conte est un exemple représentatif du genre « Mariage entre un humain et un animal » (Irui Koin-tan), dont la forme s'est répandue au milieu de l'époque d'Edo. Issu du folklore de « La Femme-Grue », il reflète la culture japonaise de la gratitude (Ongaeshi) et des valeurs morales selon lesquelles un animal secouru vient rendre un bienfait. Il met également en avant le caractère sacré du tissage traditionnel, ainsi que le thème mythologique du « tabou du regard », où la transgression d'une promesse entraîne la rupture définitive.",
   "explication_en": "This tale is a typical example of the \"marriage between a human and an animal\" genre (Irui Kon-in-tan), whose form spread in the middle of the Edo period. Drawn from the folklore of \"the Crane Wife\", it reflects the Japanese culture of gratitude (Ongaeshi) and the moral value that a rescued animal comes back to repay a kindness. It also highlights the sacred nature of traditional weaving, and the mythological theme of the \"forbidden look\", where breaking a promise leads to a final separation.",
+  "liens": [
+    "https://ladigitale.dev/digiview/#/v/c947c69670d8cee2",
+    "https://www.youtube.com/watch?v=vLgol3nDyMY"
+  ],
   "roles": [
     {
       "id": "narrateur",
       "nom": "ナレーター",
       "nom_fr": "Narrateur",
-      "nom_en": "Narrator",
-      "lien": "https://ladigitale.dev/digiview/#/v/c947c69670d8cee2"
+      "nom_en": "Narrator"
     },
     {
       "id": "yosaku",
