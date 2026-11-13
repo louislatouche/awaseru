@@ -7,4 +7,4 @@
 // Le code de l'app a son propre numéro, VERSION dans sw.js, et il n'appartient qu'à l'original
 // d'Awaseru : dans la copie d'une troupe, on ne touche qu'à ce dossier pieces/. Ainsi, récupérer
 // une mise à jour de l'original ne se heurte jamais aux pièces de la troupe.
-const VERSION_PIECES = 11;
+const VERSION_PIECES = 12;
