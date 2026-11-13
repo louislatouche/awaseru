@@ -1,18 +1,17 @@
 {
   "sans_role": "narrateur",
   "roles": {
-    "narrateur": { "nom": "阿井田 茂", "modele": "47e53151-a378-46f3-abee-ce13aa07feb1", "style": "Calm" },
-    "yosaku": { "nom": "fumifumi", "modele": "71e72188-2726-4739-9aa9-39567396fb2a", "style": "ノーマル" },
-    "tsuu": { "nom": "コハク", "modele": "22e8ed77-94fe-4ef2-871f-a86f94e9a579", "style": "ノーマル" },
-    "gonta": { "nom": "TANAKA", "modele": "470a41e2-863f-4bf2-8a20-bf7cde0d8f7b", "style": "Happy" },
-    "oyone": { "nom": "morioki", "modele": "baaae3c0-7b22-4605-8ba5-80c959b41a48", "style": "ノーマル" }
+    "narrateur": { "nom": "Lux", "modele": "3dabea2b-cc10-41da-955b-4618ce84e716", "style": "ノーマル" },
+    "yosaku": { "nom": "kokuren_voice", "modele": "e40d5b99-8cde-4442-a45b-0ebec9167506", "style": "ノーマル" },
+    "tsuu": { "nom": "みちのくあいり", "modele": "1b2830f4-8cf1-4184-a0d9-3a1bace3a844", "style": "標準" },
+    "gonta": { "nom": "猩々博士 (雑談ボイス)", "modele": "70a875a9-feae-41e6-a586-8cf9e47c6c0b", "style": "ノーマル" },
+    "oyone": { "nom": "凛音エル", "modele": "f5017410-fbb5-49e1-97cb-e785f42e15f5", "style": "ノーマル" }
   },
   "repliques": {
-    "41": { "style": "surprise" },
-    "53": { "style": "せつなめ" },
-    "55": { "style": "せつなめ" },
-    "56": { "style": "せつなめ" },
-    "58": { "style": "せつなめ" },
-    "59": { "style": "せつなめ" }
+    "53": { "style": "悲しみ" },
+    "55": { "style": "悲しみ" },
+    "56": { "style": "悲しみ" },
+    "58": { "style": "悲しみ" },
+    "59": { "style": "悲しみ" }
   }
 }

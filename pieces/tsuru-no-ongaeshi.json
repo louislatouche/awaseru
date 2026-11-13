@@ -11,7 +11,8 @@
       "id": "narrateur",
       "nom": "ナレーター",
       "nom_fr": "Narrateur",
-      "nom_en": "Narrator"
+      "nom_en": "Narrator",
+      "lien": "https://ladigitale.dev/digiview/#/v/c947c69670d8cee2"
     },
     {
       "id": "yosaku",
@@ -7648,7 +7649,7 @@
     }
   ],
   "audio": {
-    "credit": "Voix générées avec AivisSpeech : 阿井田 茂, fumifumi, コハク, TANAKA, morioki.",
-    "credit_en": "Voices generated with AivisSpeech: 阿井田 茂, fumifumi, コハク, TANAKA, morioki."
+    "credit": "Voix générées avec AivisSpeech : Lux, kokuren_voice, みちのくあいり, 猩々博士, 凛音エル.",
+    "credit_en": "Voices generated with AivisSpeech: Lux, kokuren_voice, みちのくあいり, 猩々博士, 凛音エル."
   }
 }
