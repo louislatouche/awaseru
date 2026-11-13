@@ -201,6 +201,7 @@ Le script garde les kanji, car le moteur reconnaît mieux les mots qu'avec des k
   "titre": "ねこと[月|つき]",
   "titre_fr": "Le Chat et la Lune",
   "explication": "Quelques mots sur la pièce.",
+  "liens": ["https://exemple.fr/facultatif"],
   "roles": [
     { "id": "narrateur", "nom": "ナレーター", "nom_fr": "Narrateur" },
     {
@@ -234,8 +235,9 @@ Les règles que l'app vérifie au chargement :
 - **`[漢字|よみ]`** : affiche le kanji avec sa lecture, et c'est la lecture qui est prononcée.
 - **`（…）`** : didascalie ou bruitage, en gris italique, non lue par défaut. Seules les parenthèses japonaises comptent.
 - **`\n`** : retour à la ligne.
+- **`liens`** : les adresses qui concernent toute la pièce (vidéo, page...), en liste. Elles s'affichent dans *À propos de cette pièce*, chacune avec le nom de son site.
 - **`lien`** : uniquement une adresse `http` ou `https`. Il s'affiche dans *À propos de cette pièce*, à côté du nom du rôle. Son libellé suit l'adresse : *Voir la vidéo* pour YouTube ou Vimeo, sinon *Ouvrir le lien*.
-- **Facultatifs** : `format`, `id` (sinon le nom du fichier est utilisé), `nom_court`, `note`, `lien`.
+- **Facultatifs** : `format`, `id` (sinon le nom du fichier est utilisé), `liens`, `nom_court`, `note`, `lien`.
 - **Traductions** : chaque troupe fait traduire ses pièces dans sa langue et en anglais, la langue commune. Les champs français s'écrivent comme ci-dessus (`fr`, `titre_fr`, `nom_fr`, et `explication`, `note`, `credit` sans suffixe) ; les autres langues prennent leur code de deux lettres : `en`, `titre_en`, `explication_en`, `nom_en`, `note_en`, `credit_en`, ou `de`, `titre_de`... pour l'allemand. L'app affiche la langue du téléphone si la pièce l'a, sinon l'anglais, sinon le français. Il faut au moins une traduction, dans n'importe quelle langue.
 
 ## Pour qui modifie le code

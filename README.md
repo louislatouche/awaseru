@@ -201,6 +201,7 @@ The script keeps the kanji, because the engine recognizes words better than with
   "titre": "ねこと[月|つき]",
   "titre_fr": "Le Chat et la Lune",
   "explication": "Quelques mots sur la pièce.",
+  "liens": ["https://exemple.fr/facultatif"],
   "roles": [
     { "id": "narrateur", "nom": "ナレーター", "nom_fr": "Narrateur" },
     {
@@ -234,8 +235,9 @@ The rules the app checks when loading a play:
 - **`[漢字|よみ]`**: shows the kanji with its reading, and the reading is what gets pronounced.
 - **`（…）`**: stage direction or sound effect, in grey italics, not read by default. Only Japanese parentheses count.
 - **`\n`**: line break.
+- **`liens`**: the addresses about the whole play (a video, a page...), as a list. They are shown in *About this play*, each with the name of its site.
 - **`lien`**: only an `http` or `https` address. It is shown in *About this play*, next to the role's name. Its label depends on the address: *Watch the video* for YouTube or Vimeo, otherwise *Open the link*.
-- **Optional**: `format`, `id` (otherwise the file name is used), `nom_court`, `note`, `lien`.
+- **Optional**: `format`, `id` (otherwise the file name is used), `liens`, `nom_court`, `note`, `lien`.
 - **Translations**: each troupe has its plays translated into its own language and into English, the common language. French fields are named as above (`fr`, `titre_fr`, `nom_fr`, and `explication`, `note`, `credit` without a suffix); other languages use their two-letter code instead: `en`, `titre_en`, `explication_en`, `nom_en`, `note_en`, `credit_en`, or `de`, `titre_de`... for German. The app shows the phone's language if the play has it, otherwise English, otherwise French. At least one translation is required, in any language.
 
 ## For those who change the code

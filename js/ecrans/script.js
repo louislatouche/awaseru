@@ -138,6 +138,7 @@ export function afficherScript(racine, piece) {
   document.addEventListener('visibilitychange', surVisibilite);
 
   const rolesAvecLien = piece.roles.filter((role) => role.lien);
+  const liens = piece.liens ?? [];
   // L'explication, dans la langue qu'a la pièce (une pièce peut n'avoir que celle de sa troupe).
   const explication = traduire(piece, 'explication');
   // La première réplique de la pièce, posée dans un cadre qui portera la pastille du tuto (plus bas) :
@@ -159,6 +160,9 @@ export function afficherScript(racine, piece) {
       el('div', { className: 'acc-inner' },
         el('div', { className: 'acc-pad' },
           explication && el('p', {}, explication),
+          liens.map((lien) => el('div', { className: 'lien-role' },
+            el('span', { className: 'coche-texte' }, new URL(lien).hostname.replace(/^(www|m)./, '')),
+            el('a', { className: 'btn-ghost btn-petit', href: lien, target: '_blank', rel: 'noopener noreferrer' }, libelleLien(lien)))),
           rolesAvecLien.map((role) => el('div', { className: 'lien-role' },
             el('span', { className: 'coche-texte' },
               creerJaponais(role.nom, 'role'),
@@ -170,7 +174,7 @@ export function afficherScript(racine, piece) {
     el('div', { className: 'en-tete-piece' },
       creerJaponais(piece.titre, 'titre-piece'),
       el('h1', { className: 'vue-titre' }, traduire(piece, 'titre_fr'))),
-    (explication || rolesAvecLien.length > 0) && apropos,
+    (explication || liens.length > 0 || rolesAvecLien.length > 0) && apropos,
     creerAvisVoix(piece),
     creerInterrupteurs(piece.id),
     piece.scenes.map((scene) => el('section', { className: 'scene' },

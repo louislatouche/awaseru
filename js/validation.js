@@ -60,6 +60,13 @@ export function validerPiece(piece) {
   exigerJaponais(piece.titre, '« titre »');
   verifierTraductions(piece, 'titre_fr', '« titre_fr »', true);
   verifierTraductions(piece, 'explication', '« explication »', false);
+  // Les liens de la pièce (facultatifs) : une liste d'adresses, montrées dans « À propos de cette pièce ».
+  if (piece.liens !== undefined) {
+    if (!Array.isArray(piece.liens)) erreurs.push('« liens » doit être une liste.');
+    else piece.liens.forEach((lien, position) => {
+      if (!estLienWeb(lien)) erreurs.push(`« liens », n° ${position + 1} : ce n'est pas une adresse http ou https.`);
+    });
+  }
 
   // Les rôles. Un Set est une collection sans doublon, très rapide pour « est-ce que ça existe ? ».
   const idsRoles = new Set();

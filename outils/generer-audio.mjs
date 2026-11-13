@@ -55,7 +55,10 @@ async function preparerVoix(config) {
 const versKatakana = (kana) => kana.replace(/[ぁ-ゖ]/g, (c) => String.fromCharCode(c.charCodeAt(0) + 0x60));
 
 // Le moteur écrit les voyelles longues comme on les prononce : しょう devient ショオ, れい devient レエ.
+// Il écrit aussi ズ et ジ pour づ et ぢ, qui se prononcent pareil (千羽鶴 せんばづる devient センバズル).
 const normaliser = (kana) => versKatakana(kana)
+  .replace(/ヅ/g, 'ズ')
+  .replace(/ヂ/g, 'ジ')
   .replace(/([オコソトノホモヨロゴゾドボポ]|ョ)ウ/g, '$1オ')
   .replace(/([エケセテネヘメレゲゼデベペ])イ/g, '$1エ');
 
