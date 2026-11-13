@@ -1472,7 +1472,7 @@
           "numero": 17,
           "role": "tsuu",
           "texte": "[実|じつ]は[私|わたし]、[親|おや]も[家|いえ]もなく、[行|い]くあてがありません。\nもしよろしければ、ここにおいていただけないでしょうか。あなたのお[世話|せわ]をさせてください。",
-          "fr": "En réalité, je n'ai ni parents, ni maison, ni endroit où aller. Si vous le voulez bien, me permetteriez-vous de rester ici ? Laissez-moi prendre soin de vous.",
+          "fr": "En réalité, je n'ai ni parents, ni maison, ni endroit où aller. Si vous le voulez bien, me permettriez-vous de rester ici ? Laissez-moi prendre soin de vous.",
           "en": "The truth is, I have no parents, no home, and nowhere to go. If you would allow it, could you let me stay here? Please let me take care of you.",
           "mots": [
             {
@@ -4183,7 +4183,7 @@
         },
         {
           "numero": 49,
-          "role": null,
+          "role": "yosaku",
           "texte": "あっ……！ つう……！？",
           "fr": "Ah... ! Tsuu... !?",
           "en": "Ah...! Tsuu...!?",
