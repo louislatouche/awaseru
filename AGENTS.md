@@ -30,6 +30,13 @@ S'il y a un conflit, arrête-toi (`git merge --abort`) et explique-le à la pers
 
 **Identité git :** si git demande un nom et une adresse e-mail pour signer les commits, demande-les à la personne. N'en invente pas, et n'en reprends pas d'un ancien commit.
 
+Préviens-la que ce nom et cette adresse seront visibles par tous dans l'historique du dépôt. Propose-lui :
+
+- comme adresse, l'adresse anonyme que GitHub donne à son compte : `ID+NOM-DU-COMPTE@users.noreply.github.com`. Les deux valeurs s'obtiennent avec `gh api user --jq .id` et `gh api user --jq .login`. Ce format vaut pour les comptes créés après le 18 juillet 2017 (lu : doc GitHub « Email addresses reference »). Pour un compte plus ancien, renvoie la personne à ses réglages GitHub, rubrique Emails ;
+- comme nom, celui qu'elle veut montrer : son prénom, le nom de sa troupe...
+
+Elle reste libre de choisir autre chose. Règle-les pour ce dépôt seulement, sans toucher aux autres projets de l'ordinateur : `git config user.name "..."` et `git config user.email "..."`, sans `--global`.
+
 ## Ajouter une pièce
 
 Suis le skill `nouvelle-piece` (`.agents/skills/nouvelle-piece/SKILL.md`), du PDF du script jusqu'aux voix enregistrées. Il dit aussi comment installer les outils nécessaires.
