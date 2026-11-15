@@ -43,7 +43,7 @@ Le téléphone garde une copie de toute l'app pour fonctionner hors ligne, et ne
 
 ## Publier
 
-Un commit poussé sur la branche `main` est en ligne quelques minutes plus tard (GitHub Pages). Propose le commit et le push à la personne une fois le travail vérifié.
+Un commit poussé sur la branche `main` est en ligne quelques minutes plus tard (GitHub Pages). Une fois le travail vérifié, propose le commit et le push à la personne, ou fais-les directement si elle te l'a déjà demandé.
 
 ## Tester sur l'ordinateur
 

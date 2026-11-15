@@ -7,13 +7,13 @@ description: Convertit le script PDF d'une pièce de théâtre japonais en fichi
 
 Le PDF à traiter est celui que la personne indique. Si elle n'en indique pas, demande-le.
 
-Le modèle de référence est `exemple/neko-to-tsuki.json`, dans le dossier de ce skill, avec `exemple/voix.json` pour les voix : une courte pièce inventée et validée, où toutes les règles ci-dessous sont appliquées (furigana, lecture irrégulière, didascalie, retour à la ligne, réplique sans rôle, vocabulaire, particules, anglais). C'est un exemple : ne l'ajoute pas à l'app.
+Le modèle de référence est `exemple/neko-to-tsuki.json`, dans le dossier de ce skill, avec `exemple/voix.json` pour les voix : une courte pièce inventée et validée, où toutes les règles ci-dessous sont appliquées (furigana, lecture irrégulière, didascalie, retour à la ligne, réplique sans rôle dans le script donnée au narrateur, vocabulaire, particules, anglais). C'est un exemple : ne l'ajoute pas à l'app.
 
 Ne modifie rien en dehors du dossier `pieces/` (voir AGENTS.md).
 
 ## Avant de commencer : les outils
 
-Trois outils doivent être installés sur l'ordinateur. Vérifie chacun. S'il manque, dis à la personne ce que tu vas installer et pourquoi, demande son accord, puis installe-le.
+Quatre outils doivent être installés sur l'ordinateur. Vérifie chacun. S'il manque, dis à la personne ce que tu vas installer et pourquoi, demande son accord, puis installe-le.
 
 **Prends chaque outil exactement à la source indiquée ici, et nulle part ailleurs**, même si une recherche en propose une autre. Lors du premier essai réel (2026-11-11, sur un Mac), l'assistant avait pris une autre version d'AivisSpeech et un autre ffmpeg, et rien ne marchait.
 
@@ -24,6 +24,9 @@ Commence par savoir sur quel ordinateur tu es : Windows, Mac à puce Apple (`una
 | Node.js | vérifier la pièce, préparer les voix | `node --version` | `winget install --id OpenJS.NodeJS.LTS --exact` | `brew install node` |
 | ffmpeg | enregistrer les voix en MP3 | `ffmpeg -hide_banner -encoders` doit citer `libmp3lame` | `winget install --id Gyan.FFmpeg --exact` | `brew install ffmpeg` |
 | AivisSpeech | fabriquer les voix japonaises | voir ci-dessous | voir ci-dessous | voir ci-dessous |
+| Poppler | lire le PDF : son texte (`pdftotext`) et ses pages en image (`pdftoppm`) | `pdftotext -v` | `winget install --id oschwartz10612.Poppler --exact` | `brew install poppler` |
+
+**Poppler** n'est utile que si tu ne sais pas déjà lire un PDF et en voir les pages en image par tes propres moyens. Sur Mac Intel, Homebrew n'en a pas de version prête (seulement pour les Mac à puce Apple) : il la fabrique sur place, ce qui prend plus longtemps.
 
 **ffmpeg sur Mac : uniquement par Homebrew.** Ne le télécharge pas depuis un site : ceux que propose ffmpeg.org pour le Mac ne conviennent pas (evermeet.cx ne fait que des versions pour Mac Intel, osxexperts.net des versions non signées que macOS bloque). `brew install ffmpeg` prend plusieurs minutes (il installe beaucoup de dépendances) : lance-le dès le début, en arrière-plan, pendant que tu t'occupes d'AivisSpeech.
 
@@ -49,7 +52,7 @@ Commence par savoir sur quel ordinateur tu es : Windows, Mac à puce Apple (`una
 
 **Sur Mac, Node.js et ffmpeg s'installent avec Homebrew** (`brew install node ffmpeg`), le gestionnaire de programmes de référence sur Mac. Si la commande `brew` n'existe pas, tu ne peux pas l'installer toi-même : son installation demande le mot de passe de l'ordinateur. Demande à la personne d'ouvrir l'application Terminal, d'y coller la commande donnée sur https://brew.sh, de taper son mot de passe quand il est demandé (rien ne s'affiche pendant la frappe, c'est normal), puis de coller aussi les lignes que Homebrew affiche à la fin (« Next steps »). Si `git` manque, `git --version` propose de l'installer.
 
-Après une installation par winget (Windows) ou Homebrew (Mac), le programme n'est connu que des terminaux ouverts ensuite : si `node` ou `ffmpeg` reste introuvable, ouvre un nouveau terminal, ou appelle-le par son chemin complet (Homebrew les range dans `/opt/homebrew/bin` sur les Mac récents).
+Après une installation par winget (Windows) ou Homebrew (Mac), le programme n'est connu que des terminaux ouverts ensuite : si `node`, `ffmpeg` ou `pdftotext` reste introuvable, ouvre un nouveau terminal, ou appelle-le par son chemin complet (Homebrew les range dans `/opt/homebrew/bin` sur les Mac à puce Apple, `/usr/local/bin` sur les Mac Intel ; sur Windows, cherche le dossier où winget l'a installé).
 
 ## Les langues de traduction
 
@@ -61,8 +64,8 @@ La traduction que donne le PDF, quelle que soit sa langue, se recopie telle quel
 
 ## Les étapes
 
-1. Lis le PDF, en texte ET en image des pages pour vérifier. Attention : certains PDF ont une police mal encodée où des hiragana sortent en caractères CJK rares : 䛸=と 䛾=の 䛿=は 䛷=で 䛺=な 䛻=に 䜀=ば 䛶=て 䛹=ど. Corrige-les, et vérifie avec les images qu'il ne reste aucun caractère bizarre.
-2. Structure la pièce exactement comme le modèle : rôles avec un id court en ascii, scènes, répliques numérotées comme dans le PDF, role à null quand le PDF n'indique pas de rôle. Recopie la traduction du PDF telle quelle, dans les champs de sa langue (ne corrige pas le texte du script, signale seulement les coquilles).
+1. Lis le PDF, en texte ET en image des pages pour vérifier (avec Poppler, voir « Les outils », si tu n'as pas d'autre moyen). Attention : certains PDF ont une police mal encodée où des hiragana sortent en caractères CJK rares : 䛸=と 䛾=の 䛿=は 䛷=で 䛺=な 䛻=に 䜀=ば 䛶=て 䛹=ど. Corrige-les, et vérifie avec les images qu'il ne reste aucun caractère bizarre.
+2. Structure la pièce exactement comme le modèle : rôles avec un id court en ascii, scènes, répliques numérotées comme dans le PDF. Une réplique sans rôle dans le PDF (récit seul, didascalie seule) va au narrateur quand la pièce en a un ; sans narrateur, role à null. Recopie la traduction du PDF telle quelle, dans les champs de sa langue (ne corrige pas le texte du script, signale seulement les coquilles).
    - Les liens du PDF (vidéos, pages) concernent la pièce, même quand la mise en page les place sur la ligne d'un rôle : mets-les tous dans `liens`, dans l'ordre du PDF, y compris ceux qui ne s'ouvrent pas. Signale ceux-là à la personne (vidéo privée, page disparue). Un lien ne va sur un rôle (`lien`) que si le PDF dit clairement qu'il est pour ce rôle.
    - D'autres liens peuvent exister hors du PDF : en même temps que la question des langues, avant de commencer, demande à la personne s'il y en a d'autres utiles pour cette pièce (dossier partagé, vidéos, enregistrements). Ajoute-les à `liens`, après ceux du PDF, et vérifie que chacun s'ouvre sans compte.
 3. Furigana : chaque kanji du japonais (titre, noms de rôles, titres de scènes, répliques) au format [漢字|よみ].
@@ -80,5 +83,5 @@ La traduction que donne le PDF, quelle que soit sa langue, se recopie telle quel
 4. Vérifie avec `node outils/verifier-piece.mjs <id>` (mêmes règles que l'app) jusqu'à « Pièce valide. », toutes les répliques découpées, aucun morceau japonais sans mot et aucun mot inutilisé ; relis la ligne « Particules » qu'il affiche, pour qu'il n'en manque aucune. Vérifie aussi : numéros continus, chaque role existe dans roles. Relis toutes les lectures et liste à la personne celles qui ont plusieurs lectures possibles (私, 何, 方…) avec le choix que tu as fait, ainsi que les découpages ou traductions de mots qui pourraient se discuter.
 5. Enregistre pieces/<id>.json et ajoute-le à pieces/index.json.
 6. Voix : crée pieces/audio/<id>/voix.json sur le modèle de `exemple/voix.json`, avec une voix par rôle prise sur AivisHub (licence ACML ou CC0, voix bien distinctes entre rôles qui se répondent). Si tu ne parviens pas à consulter AivisHub, reprends des voix déjà éprouvées avec Awaseru, une par rôle, en donnant des voix différentes aux rôles qui se répondent ; chaque voix pèse environ 240 Mo à installer. Ce sont celles de `exemple/voix.json` (阿井田 茂, style Calm ; コハク, styles ノーマル et せつなめ ; morioki, style ノーマル), et aussi : ろてじん（長老ボイス）, modèle `696c98a2-c0b7-4fe7-8cf2-c7e9b8a9bd82`, style ノーマル ; TANAKA, modèle `470a41e2-863f-4bf2-8a20-bf7cde0d8f7b`, styles Anger et Happy ; fumifumi, modèle `71e72188-2726-4739-9aa9-39567396fb2a`, style ノーマル. Démarre le moteur AivisSpeech (voir « Les outils »), lance `node outils/generer-audio.mjs <id>`, puis relis le rapport des lectures. Ajoute à la pièce le champ "audio" avec le crédit des voix. Tu ne peux pas écouter : quand les voix sont choisies, fais écouter un extrait de chaque voix directement dans la conversation, en y envoyant le fichier MP3 (un extrait : une réplique du rôle, fabriquée avec `node outils/generer-audio.mjs <id> <numéro>`). Si ton application ne le permet pas, dis-le franchement.
-7. Augmente VERSION_PIECES dans pieces/version.js (jamais VERSION dans sw.js, qui est celle du code), puis propose de faire le commit et le push pour mettre en ligne.
+7. Augmente VERSION_PIECES dans pieces/version.js (jamais VERSION dans sw.js, qui est celle du code), puis propose de faire le commit et le push pour mettre en ligne (ou fais-les directement si la personne te l'a déjà demandé).
 8. Termine par un résumé : titre, nombre de scènes et de répliques, rôles, voix choisies, points à vérifier. Chacun choisit ses répliques dans l'app : ne présélectionne rien.

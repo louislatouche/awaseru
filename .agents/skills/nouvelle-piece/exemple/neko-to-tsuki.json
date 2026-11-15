@@ -119,7 +119,7 @@
         },
         {
           "numero": 6,
-          "role": null,
+          "role": "narrateur",
           "texte": "（[二人|ふたり]で[歌|うた]う）\nおしまい。",
           "fr": "(Ils chantent à deux) Fin.",
           "en": "(They sing together) The end.",
