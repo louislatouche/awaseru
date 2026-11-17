@@ -237,4 +237,17 @@ export default {
     'V tomto telefonu není žádný japonský hlas. Instalace: Nastavení v systému Android > Převod textu na řeč (někdy v části Usnadnění nebo Obecná správa) > modul Google > Nainstalovat hlasová data > japonština. Potom Awaseru zavři a znovu otevři.',
   'Le navigateur a bloqué la lecture : touche à nouveau un bouton pour la lancer.': 'Prohlížeč zablokoval přehrávání: klepni znovu na tlačítko, aby se spustilo.',
   'La lecture a échoué ({code}).': 'Přehrávání selhalo ({code}).',
+  // Installation sur l'écran d'accueil (2026-11-17)
+  "Installer l'app": "Nainstalovat aplikaci",
+  "Installer Awaseru": "Nainstalovat Awaseru",
+  "Installer Awaseru ?": "Nainstalovat Awaseru?",
+  "Installée, Awaseru s'ouvre depuis l'écran d'accueil comme une vraie app, en plein écran, et marche sans Internet.": "Po instalaci se Awaseru otevírá z plochy jako skutečná aplikace, na celou obrazovku, a funguje bez internetu.",
+  "Sur iPhone, une page ne peut pas s'installer toute seule : dans Safari, touche le bouton Partager (parfois rangé dans le menu « ... »), puis « Sur l'écran d'accueil ».": "Na iPhonu se webová stránka nemůže nainstalovat sama: v Safari klepni na tlačítko Sdílet (někdy v nabídce „...“) a potom na „Přidat na plochu“.",
+  "Dans le menu ⋮ du navigateur, choisis « Installer l'application » ou « Ajouter à l'écran d'accueil ».": "V nabídce ⋮ prohlížeče zvol „Nainstalovat aplikaci“ nebo „Přidat na plochu“.",
+  "Tu pourras aussi le faire plus tard, depuis les Réglages.": "Můžeš to udělat i později, v Nastavení.",
+  "Plus tard": "Později",
+  "Installer": "Nainstalovat",
+  "J'ai compris": "Rozumím",
+  "Awaseru est installée sur ce téléphone.": "Awaseru je na tomto telefonu nainstalovaná.",
+  "Awaseru est installée : retrouve-la sur ton écran d'accueil.": "Awaseru je nainstalovaná: najdeš ji na ploše.",
 };

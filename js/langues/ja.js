@@ -237,4 +237,17 @@ export default {
     'この端末には日本語の音声がありません。Android の設定 > テキスト読み上げ（ユーザー補助や一般管理の中にある場合もあります）> Google のエンジン > 音声データをインストール > 日本語 の順に進み、Awaseru を開き直してください。',
   'Le navigateur a bloqué la lecture : touche à nouveau un bouton pour la lancer.': 'ブラウザが再生をブロックしました。もう一度ボタンをタップしてください。',
   'La lecture a échoué ({code}).': '再生に失敗しました（{code}）。',
+  // Installation sur l'écran d'accueil (2026-11-17)
+  "Installer l'app": "アプリをインストール",
+  "Installer Awaseru": "Awaseru をインストール",
+  "Installer Awaseru ?": "Awaseru をインストールしますか？",
+  "Installée, Awaseru s'ouvre depuis l'écran d'accueil comme une vraie app, en plein écran, et marche sans Internet.": "インストールすると、Awaseru はホーム画面から本物のアプリのように全画面で開き、インターネットなしでも使えます。",
+  "Sur iPhone, une page ne peut pas s'installer toute seule : dans Safari, touche le bouton Partager (parfois rangé dans le menu « ... »), puis « Sur l'écran d'accueil ».": "iPhone では、ウェブページが自分でインストールすることはできません。Safari の共有ボタン（「...」メニューの中にあることもあります）をタップし、「ホーム画面に追加」を選んでください。",
+  "Dans le menu ⋮ du navigateur, choisis « Installer l'application » ou « Ajouter à l'écran d'accueil ».": "ブラウザの ⋮ メニューで「アプリをインストール」または「ホーム画面に追加」を選んでください。",
+  "Tu pourras aussi le faire plus tard, depuis les Réglages.": "あとで「設定」からインストールすることもできます。",
+  "Plus tard": "あとで",
+  "Installer": "インストール",
+  "J'ai compris": "わかりました",
+  "Awaseru est installée sur ce téléphone.": "Awaseru はこの端末にインストールされています。",
+  "Awaseru est installée : retrouve-la sur ton écran d'accueil.": "Awaseru をインストールしました。ホーム画面から開けます。",
 };

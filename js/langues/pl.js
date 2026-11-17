@@ -237,4 +237,17 @@ export default {
     'Brak japońskiego głosu na tym telefonie. Aby go zainstalować: Ustawienia w systemie Android > Zamiana tekstu na mowę (czasem w Ułatwieniach dostępu lub Zarządzaniu ogólnym) > mechanizm Google > Zainstaluj dane głosowe > japoński. Potem zamknij i otwórz Awaseru ponownie.',
   'Le navigateur a bloqué la lecture : touche à nouveau un bouton pour la lancer.': 'Przeglądarka zablokowała odtwarzanie: dotknij przycisku jeszcze raz, aby je uruchomić.',
   'La lecture a échoué ({code}).': 'Odtwarzanie nie powiodło się ({code}).',
+  // Installation sur l'écran d'accueil (2026-11-17)
+  "Installer l'app": "Zainstaluj aplikację",
+  "Installer Awaseru": "Zainstaluj Awaseru",
+  "Installer Awaseru ?": "Zainstalować Awaseru?",
+  "Installée, Awaseru s'ouvre depuis l'écran d'accueil comme une vraie app, en plein écran, et marche sans Internet.": "Po instalacji Awaseru otwiera się z ekranu głównego jak prawdziwa aplikacja, na pełnym ekranie, i działa bez internetu.",
+  "Sur iPhone, une page ne peut pas s'installer toute seule : dans Safari, touche le bouton Partager (parfois rangé dans le menu « ... »), puis « Sur l'écran d'accueil ».": "Na iPhonie strona internetowa nie może zainstalować się sama: w Safari dotknij przycisku Udostępnij (czasem w menu „...”), a potem „Do ekranu początkowego”.",
+  "Dans le menu ⋮ du navigateur, choisis « Installer l'application » ou « Ajouter à l'écran d'accueil ».": "W menu ⋮ przeglądarki wybierz „Zainstaluj aplikację” lub „Dodaj do ekranu głównego”.",
+  "Tu pourras aussi le faire plus tard, depuis les Réglages.": "Możesz to też zrobić później, w Ustawieniach.",
+  "Plus tard": "Później",
+  "Installer": "Zainstaluj",
+  "J'ai compris": "Rozumiem",
+  "Awaseru est installée sur ce téléphone.": "Awaseru jest zainstalowana na tym telefonie.",
+  "Awaseru est installée : retrouve-la sur ton écran d'accueil.": "Awaseru jest zainstalowana: znajdziesz ją na ekranie głównym.",
 };

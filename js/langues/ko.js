@@ -236,4 +236,17 @@ export default {
     '이 휴대폰에는 일본어 음성이 없어요. 설치하려면 Android 설정 > 텍스트 음성 변환(접근성이나 일반 안에 있는 경우도 있어요) > Google 엔진 > 음성 데이터 설치 > 일본어 순서로 진행한 다음, Awaseru을 닫았다가 다시 열어 주세요.',
   'Le navigateur a bloqué la lecture : touche à nouveau un bouton pour la lancer.': '브라우저가 재생을 막았어요. 버튼을 한 번 더 눌러 주세요.',
   'La lecture a échoué ({code}).': '재생하지 못했어요 ({code}).',
+  // Installation sur l'écran d'accueil (2026-11-17)
+  "Installer l'app": "앱 설치",
+  "Installer Awaseru": "Awaseru 설치",
+  "Installer Awaseru ?": "Awaseru를 설치할까요?",
+  "Installée, Awaseru s'ouvre depuis l'écran d'accueil comme une vraie app, en plein écran, et marche sans Internet.": "설치하면 Awaseru가 홈 화면에서 진짜 앱처럼 전체 화면으로 열리고, 인터넷 없이도 작동합니다.",
+  "Sur iPhone, une page ne peut pas s'installer toute seule : dans Safari, touche le bouton Partager (parfois rangé dans le menu « ... »), puis « Sur l'écran d'accueil ».": "iPhone에서는 웹페이지가 스스로 설치될 수 없습니다. Safari에서 공유 버튼(가끔 '...' 메뉴 안에 있음)을 누른 다음 '홈 화면에 추가'를 누르세요.",
+  "Dans le menu ⋮ du navigateur, choisis « Installer l'application » ou « Ajouter à l'écran d'accueil ».": "브라우저의 ⋮ 메뉴에서 '앱 설치' 또는 '홈 화면에 추가'를 선택하세요.",
+  "Tu pourras aussi le faire plus tard, depuis les Réglages.": "나중에 설정에서 할 수도 있습니다.",
+  "Plus tard": "나중에",
+  "Installer": "설치",
+  "J'ai compris": "알겠어요",
+  "Awaseru est installée sur ce téléphone.": "Awaseru가 이 휴대폰에 설치되어 있습니다.",
+  "Awaseru est installée : retrouve-la sur ton écran d'accueil.": "Awaseru가 설치되었습니다. 홈 화면에서 찾을 수 있어요.",
 };

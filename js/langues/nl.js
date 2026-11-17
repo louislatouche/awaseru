@@ -236,4 +236,17 @@ export default {
     'Geen Japanse stem op deze telefoon. Zo installeer je er een: Android-instellingen > Tekst-naar-spraak (soms onder Toegankelijkheid of Algemeen beheer) > Google-engine > Spraakgegevens installeren > Japans. Sluit Awaseru daarna en open de app opnieuw.',
   'Le navigateur a bloqué la lecture : touche à nouveau un bouton pour la lancer.': 'De browser heeft het afspelen geblokkeerd: tik nog een keer op een knop om te starten.',
   'La lecture a échoué ({code}).': 'Afspelen mislukt ({code}).',
+  // Installation sur l'écran d'accueil (2026-11-17)
+  "Installer l'app": "App installeren",
+  "Installer Awaseru": "Awaseru installeren",
+  "Installer Awaseru ?": "Awaseru installeren?",
+  "Installée, Awaseru s'ouvre depuis l'écran d'accueil comme une vraie app, en plein écran, et marche sans Internet.": "Eenmaal geïnstalleerd opent Awaseru vanaf je beginscherm als een echte app, schermvullend, en werkt het zonder internet.",
+  "Sur iPhone, une page ne peut pas s'installer toute seule : dans Safari, touche le bouton Partager (parfois rangé dans le menu « ... »), puis « Sur l'écran d'accueil ».": "Op een iPhone kan een webpagina zichzelf niet installeren: tik in Safari op de deelknop (soms in het menu ‘...’) en daarna op ‘Zet op beginscherm’.",
+  "Dans le menu ⋮ du navigateur, choisis « Installer l'application » ou « Ajouter à l'écran d'accueil ».": "Kies in het menu ⋮ van de browser ‘App installeren’ of ‘Toevoegen aan startscherm’.",
+  "Tu pourras aussi le faire plus tard, depuis les Réglages.": "Je kunt het ook later doen, via Instellingen.",
+  "Plus tard": "Later",
+  "Installer": "Installeren",
+  "J'ai compris": "Begrepen",
+  "Awaseru est installée sur ce téléphone.": "Awaseru is geïnstalleerd op deze telefoon.",
+  "Awaseru est installée : retrouve-la sur ton écran d'accueil.": "Awaseru is geïnstalleerd: je vindt de app op je beginscherm.",
 };

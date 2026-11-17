@@ -237,4 +237,17 @@ export default {
     'Δεν υπάρχει ιαπωνική φωνή σε αυτό το τηλέφωνο. Για να την εγκαταστήσεις: Ρυθμίσεις Android > Μετατροπή κειμένου σε ομιλία (μερικές φορές στην Προσβασιμότητα ή στη Γενική διαχείριση) > μηχανή Google > εγκατάσταση δεδομένων φωνής > Ιαπωνικά. Μετά κλείσε και άνοιξε ξανά το Awaseru.',
   'Le navigateur a bloqué la lecture : touche à nouveau un bouton pour la lancer.': 'Το πρόγραμμα περιήγησης μπλόκαρε την αναπαραγωγή: άγγιξε ξανά ένα κουμπί για να ξεκινήσει.',
   'La lecture a échoué ({code}).': 'Η αναπαραγωγή απέτυχε ({code}).',
+  // Installation sur l'écran d'accueil (2026-11-17)
+  "Installer l'app": "Εγκατάσταση εφαρμογής",
+  "Installer Awaseru": "Εγκατάσταση του Awaseru",
+  "Installer Awaseru ?": "Να εγκατασταθεί το Awaseru;",
+  "Installée, Awaseru s'ouvre depuis l'écran d'accueil comme une vraie app, en plein écran, et marche sans Internet.": "Μετά την εγκατάσταση, το Awaseru ανοίγει από την αρχική οθόνη σαν κανονική εφαρμογή, σε πλήρη οθόνη, και λειτουργεί χωρίς Internet.",
+  "Sur iPhone, une page ne peut pas s'installer toute seule : dans Safari, touche le bouton Partager (parfois rangé dans le menu « ... »), puis « Sur l'écran d'accueil ».": "Στο iPhone μια ιστοσελίδα δεν μπορεί να εγκατασταθεί μόνη της: στο Safari πάτησε το κουμπί Κοινή χρήση (μερικές φορές μέσα στο μενού «...») και μετά «Προσθήκη στην οθόνη Αφετηρίας».",
+  "Dans le menu ⋮ du navigateur, choisis « Installer l'application » ou « Ajouter à l'écran d'accueil ».": "Στο μενού ⋮ του προγράμματος περιήγησης, επίλεξε «Εγκατάσταση εφαρμογής» ή «Προσθήκη στην αρχική οθόνη».",
+  "Tu pourras aussi le faire plus tard, depuis les Réglages.": "Μπορείς να το κάνεις και αργότερα, από τις Ρυθμίσεις.",
+  "Plus tard": "Αργότερα",
+  "Installer": "Εγκατάσταση",
+  "J'ai compris": "Κατάλαβα",
+  "Awaseru est installée sur ce téléphone.": "Το Awaseru είναι εγκατεστημένο σε αυτό το τηλέφωνο.",
+  "Awaseru est installée : retrouve-la sur ton écran d'accueil.": "Το Awaseru εγκαταστάθηκε: θα το βρεις στην αρχική οθόνη.",
 };

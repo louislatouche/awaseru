@@ -12,6 +12,7 @@ import { texteBrut } from '../texte.js';
 import { changerReglage, effacerProgression, lireReglages, remplacerToutesLesDonnees } from '../stockage.js';
 import { voixJaponaises, voixPretes } from '../voix.js';
 import { nouvelleVersionEnAttente, proposerRechargement, versionEnCours } from '../version.js';
+import { creerInstallation } from '../installation.js';
 
 const PHRASE_ESSAI = { texte: 'むかしむかし、あるところに、[優|やさ]しいおじいさんがいました。' };
 
@@ -319,6 +320,7 @@ export async function afficherReglages(racine) {
       creerDidascalies()),
     creerAffichageGeneral(),
     creerNavigation(),
+    creerInstallation(),
     el('section', { className: 'card pile' },
       el('h2', { className: 'titre-section' }, t('Progression')),
       trierParUtilisation([...fournies, ...importees]).map(creerRemiseAZero)),

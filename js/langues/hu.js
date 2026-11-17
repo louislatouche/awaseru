@@ -237,4 +237,17 @@ export default {
     'Ezen a telefonon nincs japán hang. Telepítéséhez: az Android Beállítások > Szövegfelolvasó (néha a Kisegítő lehetőségek vagy az Általános kezelés alatt) > Google-motor > Hangadatok telepítése > japán. Utána zárd be, majd nyisd meg újra a Awaseru appot.',
   'Le navigateur a bloqué la lecture : touche à nouveau un bouton pour la lancer.': 'A böngésző letiltotta a lejátszást: koppints újra egy gombra az indításhoz.',
   'La lecture a échoué ({code}).': 'A lejátszás nem sikerült ({code}).',
+  // Installation sur l'écran d'accueil (2026-11-17)
+  "Installer l'app": "Alkalmazás telepítése",
+  "Installer Awaseru": "Awaseru telepítése",
+  "Installer Awaseru ?": "Telepíted az Awaserut?",
+  "Installée, Awaseru s'ouvre depuis l'écran d'accueil comme une vraie app, en plein écran, et marche sans Internet.": "Telepítés után az Awaseru igazi alkalmazásként nyílik meg a kezdőképernyőről, teljes képernyőn, és internet nélkül is működik.",
+  "Sur iPhone, une page ne peut pas s'installer toute seule : dans Safari, touche le bouton Partager (parfois rangé dans le menu « ... »), puis « Sur l'écran d'accueil ».": "iPhone-on egy weboldal nem tudja magát telepíteni: a Safariban koppints a Megosztás gombra (néha a „...” menüben), majd a „Főképernyőhöz adás” lehetőségre.",
+  "Dans le menu ⋮ du navigateur, choisis « Installer l'application » ou « Ajouter à l'écran d'accueil ».": "A böngésző ⋮ menüjében válaszd az „Alkalmazás telepítése” vagy a „Hozzáadás a kezdőképernyőhöz” lehetőséget.",
+  "Tu pourras aussi le faire plus tard, depuis les Réglages.": "Később is megteheted, a Beállításokban.",
+  "Plus tard": "Később",
+  "Installer": "Telepítés",
+  "J'ai compris": "Értem",
+  "Awaseru est installée sur ce téléphone.": "Az Awaseru telepítve van ezen a telefonon.",
+  "Awaseru est installée : retrouve-la sur ton écran d'accueil.": "Az Awaseru telepítve van: a kezdőképernyőn találod.",
 };

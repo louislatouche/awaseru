@@ -237,4 +237,17 @@ export default {
     'Tässä puhelimessa ei ole japanin kielen ääntä. Asennus: Android-asetukset > Tekstistä puheeksi (löytyy joskus kohdasta Esteettömyys tai Yleinen hallinta) > Google-moottori > Asenna äänitiedot > japani. Sulje sitten Awaseru ja avaa se uudelleen.',
   'Le navigateur a bloqué la lecture : touche à nouveau un bouton pour la lancer.': 'Selain esti toiston: napauta painiketta uudelleen aloittaaksesi sen.',
   'La lecture a échoué ({code}).': 'Toisto epäonnistui ({code}).',
+  // Installation sur l'écran d'accueil (2026-11-17)
+  "Installer l'app": "Asenna sovellus",
+  "Installer Awaseru": "Asenna Awaseru",
+  "Installer Awaseru ?": "Asennetaanko Awaseru?",
+  "Installée, Awaseru s'ouvre depuis l'écran d'accueil comme une vraie app, en plein écran, et marche sans Internet.": "Asennettuna Awaseru avautuu aloitusnäytöltä kuin oikea sovellus, koko näytöllä, ja toimii ilman internetiä.",
+  "Sur iPhone, une page ne peut pas s'installer toute seule : dans Safari, touche le bouton Partager (parfois rangé dans le menu « ... »), puis « Sur l'écran d'accueil ».": "iPhonessa verkkosivu ei voi asentaa itseään: napauta Safarissa Jaa-painiketta (joskus ”...”-valikossa) ja sitten ”Lisää Koti-valikkoon”.",
+  "Dans le menu ⋮ du navigateur, choisis « Installer l'application » ou « Ajouter à l'écran d'accueil ».": "Valitse selaimen valikosta ⋮ ”Asenna sovellus” tai ”Lisää aloitusnäytölle”.",
+  "Tu pourras aussi le faire plus tard, depuis les Réglages.": "Voit tehdä sen myös myöhemmin Asetuksista.",
+  "Plus tard": "Myöhemmin",
+  "Installer": "Asenna",
+  "J'ai compris": "Selvä",
+  "Awaseru est installée sur ce téléphone.": "Awaseru on asennettu tähän puhelimeen.",
+  "Awaseru est installée : retrouve-la sur ton écran d'accueil.": "Awaseru on asennettu: löydät sen aloitusnäytöltä.",
 };

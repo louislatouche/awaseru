@@ -12,6 +12,7 @@ import {
 import { noterUtilisation } from '../stockage.js';
 import { peutRetirer, piecesRetirees, retelechargerPiece, retirerPiece } from '../telechargement.js';
 import { montrerGestes, proposerTuto } from '../tuto.js';
+import { proposerInstallation } from '../installation.js';
 
 function texteProgression({ total, sues, aRevoir }) {
   if (total === 0) return t('Aucune réplique choisie');
@@ -226,4 +227,6 @@ export async function afficherBibliotheque(racine) {
 
   remplacer(racine, creerTitreVue(t('Mes pièces')), zoneListe);
   cascade(zoneListe);
+  // Au premier lancement, une feuille propose d'installer l'app (une seule fois, voir installation.js).
+  proposerInstallation();
 }

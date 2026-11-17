@@ -236,4 +236,17 @@ export default {
     'Ingen japansk stemme på denne telefonen. Slik installerer du en: Android-innstillinger > Tekst til tale (noen ganger under Tilgjengelighet eller Generell administrasjon) > Google-motor > Installer taledata > Japansk. Lukk deretter Awaseru og åpne appen på nytt.',
   'Le navigateur a bloqué la lecture : touche à nouveau un bouton pour la lancer.': 'Nettleseren blokkerte avspillingen: trykk på en knapp igjen for å starte den.',
   'La lecture a échoué ({code}).': 'Avspillingen mislyktes ({code}).',
+  // Installation sur l'écran d'accueil (2026-11-17)
+  "Installer l'app": "Installer appen",
+  "Installer Awaseru": "Installer Awaseru",
+  "Installer Awaseru ?": "Vil du installere Awaseru?",
+  "Installée, Awaseru s'ouvre depuis l'écran d'accueil comme une vraie app, en plein écran, et marche sans Internet.": "Når Awaseru er installert, åpnes den fra startskjermen som en ekte app, i fullskjerm, og fungerer uten internett.",
+  "Sur iPhone, une page ne peut pas s'installer toute seule : dans Safari, touche le bouton Partager (parfois rangé dans le menu « ... »), puis « Sur l'écran d'accueil ».": "På iPhone kan ikke en nettside installere seg selv: trykk på Del-knappen i Safari (noen ganger i menyen «...»), og deretter på «Legg til på Hjem-skjerm».",
+  "Dans le menu ⋮ du navigateur, choisis « Installer l'application » ou « Ajouter à l'écran d'accueil ».": "Velg «Installer appen» eller «Legg til på startskjermen» i nettleserens meny ⋮.",
+  "Tu pourras aussi le faire plus tard, depuis les Réglages.": "Du kan også gjøre det senere, under Innstillinger.",
+  "Plus tard": "Senere",
+  "Installer": "Installer",
+  "J'ai compris": "Skjønner",
+  "Awaseru est installée sur ce téléphone.": "Awaseru er installert på denne telefonen.",
+  "Awaseru est installée : retrouve-la sur ton écran d'accueil.": "Awaseru er installert: du finner den på startskjermen.",
 };

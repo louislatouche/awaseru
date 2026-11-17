@@ -236,4 +236,17 @@ export default {
     'Nu există nicio voce japoneză pe acest telefon. Pentru a o instala: Setări Android > Ieșire text-to-speech (uneori în Accesibilitate sau Administrare generală) > motorul Google > instalează datele vocale > japoneză. Apoi închide și redeschide Awaseru.',
   'Le navigateur a bloqué la lecture : touche à nouveau un bouton pour la lancer.': 'Browserul a blocat redarea: atinge din nou un buton pentru a o porni.',
   'La lecture a échoué ({code}).': 'Redarea a eșuat ({code}).',
+  // Installation sur l'écran d'accueil (2026-11-17)
+  "Installer l'app": "Instalează aplicația",
+  "Installer Awaseru": "Instalează Awaseru",
+  "Installer Awaseru ?": "Instalezi Awaseru?",
+  "Installée, Awaseru s'ouvre depuis l'écran d'accueil comme une vraie app, en plein écran, et marche sans Internet.": "Odată instalată, Awaseru se deschide de pe ecranul principal ca o aplicație adevărată, pe tot ecranul, și funcționează fără internet.",
+  "Sur iPhone, une page ne peut pas s'installer toute seule : dans Safari, touche le bouton Partager (parfois rangé dans le menu « ... »), puis « Sur l'écran d'accueil ».": "Pe iPhone, o pagină web nu se poate instala singură: în Safari, atinge butonul Partajează (uneori în meniul „...”), apoi „Adaugă pe ecranul principal”.",
+  "Dans le menu ⋮ du navigateur, choisis « Installer l'application » ou « Ajouter à l'écran d'accueil ».": "În meniul ⋮ al browserului, alege „Instalează aplicația” sau „Adaugă pe ecranul de pornire”.",
+  "Tu pourras aussi le faire plus tard, depuis les Réglages.": "Poți face asta și mai târziu, din Setări.",
+  "Plus tard": "Mai târziu",
+  "Installer": "Instalează",
+  "J'ai compris": "Am înțeles",
+  "Awaseru est installée sur ce téléphone.": "Awaseru este instalată pe acest telefon.",
+  "Awaseru est installée : retrouve-la sur ton écran d'accueil.": "Awaseru este instalată: o găsești pe ecranul principal.",
 };

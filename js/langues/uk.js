@@ -236,4 +236,17 @@ export default {
     'На цьому телефоні немає японського голосу. Щоб його встановити: Налаштування Android > Перетворення тексту на мовлення (іноді в розділі «Спеціальні можливості» або «Загальне керування») > механізм Google > Установити голосові дані > японська. Потім закрий і знову відкрий Awaseru.',
   'Le navigateur a bloqué la lecture : touche à nouveau un bouton pour la lancer.': 'Браузер заблокував відтворення: торкнись будь-якої кнопки ще раз, щоб запустити його.',
   'La lecture a échoué ({code}).': 'Не вдалося відтворити ({code}).',
+  // Installation sur l'écran d'accueil (2026-11-17)
+  "Installer l'app": "Встановити застосунок",
+  "Installer Awaseru": "Встановити Awaseru",
+  "Installer Awaseru ?": "Встановити Awaseru?",
+  "Installée, Awaseru s'ouvre depuis l'écran d'accueil comme une vraie app, en plein écran, et marche sans Internet.": "Після встановлення Awaseru відкривається з головного екрана як справжній застосунок, на весь екран, і працює без інтернету.",
+  "Sur iPhone, une page ne peut pas s'installer toute seule : dans Safari, touche le bouton Partager (parfois rangé dans le menu « ... »), puis « Sur l'écran d'accueil ».": "На iPhone вебсторінка не може встановитися сама: у Safari торкнися кнопки «Поширити» (іноді вона в меню «...»), а потім «На екран „Додому“».",
+  "Dans le menu ⋮ du navigateur, choisis « Installer l'application » ou « Ajouter à l'écran d'accueil ».": "У меню ⋮ браузера вибери «Встановити застосунок» або «Додати на головний екран».",
+  "Tu pourras aussi le faire plus tard, depuis les Réglages.": "Ти зможеш зробити це й пізніше, у Налаштуваннях.",
+  "Plus tard": "Пізніше",
+  "Installer": "Встановити",
+  "J'ai compris": "Зрозуміло",
+  "Awaseru est installée sur ce téléphone.": "Awaseru встановлено на цьому телефоні.",
+  "Awaseru est installée : retrouve-la sur ton écran d'accueil.": "Awaseru встановлено: шукай його на головному екрані.",
 };

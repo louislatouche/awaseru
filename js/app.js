@@ -15,6 +15,7 @@ import { texteBrut } from './texte.js';
 import { arreterVoix, changerSon, voixPretes } from './voix.js';
 import { adresseAReprendre, noterAdresse, terminerReprise } from './reprise.js';
 import { proposerRechargement } from './version.js';
+import { ecouterInstallation } from './installation.js';
 import { afficherBibliotheque } from './ecrans/bibliotheque.js';
 import { afficherFiches } from './ecrans/fiches.js';
 import { afficherFilage } from './ecrans/filage.js';
@@ -246,6 +247,8 @@ function enregistrerServiceWorker() {
 // Sur Chrome, une lecture peut survivre à un rechargement de page : on repart du silence.
 if ('speechSynthesis' in window) window.speechSynthesis.cancel();
 
+// Tout de suite : Chrome peut annoncer très tôt que l'app est installable (voir installation.js).
+ecouterInstallation();
 await chargerLangue(); // avant tout affichage : le premier écran est déjà dans la bonne langue
 appliquerAffichage();
 voixPretes();
