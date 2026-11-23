@@ -45,7 +45,9 @@ const REGLAGES_PAR_DEFAUT = {
   vitesse: 0.9,
   langue: null, // null = la langue du téléphone
   voix: null, // null = choix automatique
-  lireDidascalies: false,
+  // Activé par défaut depuis le 2026-11-23 (demande de Louis) : certaines répliques du narrateur ne
+  // sont qu'une didascalie, et restaient muettes. Voir didascaliesActiveesUneFois plus bas.
+  lireDidascalies: true,
   voixEnregistrees: true, // les voix par rôle des pièces fournies, plutôt que celle du téléphone
   muet: false, // le bouton de l'en-tête coupe le son de toute l'app (voir changerSon dans voix.js)
   furigana: true,
@@ -64,7 +66,16 @@ const REGLAGES_PAR_DEFAUT = {
 export function lireReglages() {
   // Le ... fusionne : les réglages enregistrés écrasent les valeurs par défaut,
   // et un réglage ajouté dans une future version aura quand même sa valeur par défaut.
-  return { ...REGLAGES_PAR_DEFAUT, ...lire('reglages', {}) };
+  const reglages = { ...REGLAGES_PAR_DEFAUT, ...lire('reglages', {}) };
+  // Les téléphones qui utilisaient déjà l'app ont enregistré « lireDidascalies: false » avec tous
+  // leurs réglages (changerReglage écrit le tout), sans que personne l'ait choisi : le nouveau défaut
+  // ne les atteindrait pas. On l'active donc une fois, ici. Après, le choix de chacun est respecté.
+  if (!reglages.didascaliesActiveesUneFois) {
+    reglages.lireDidascalies = true;
+    reglages.didascaliesActiveesUneFois = true;
+    try { ecrire('reglages', reglages); } catch { /* stockage plein ou bloqué : on réessaiera */ }
+  }
+  return reglages;
 }
 
 export function changerReglage(nom, valeur) {
