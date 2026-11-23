@@ -5403,9 +5403,9 @@
         {
           "numero": 62,
           "role": "narrateur",
-          "texte": "[鶴|つる]はよさくの[家|いえ]の[上|うえ]を[三度|さんど]ゆっくりと[回|まわ]り、[悲|かな]しそうに[鳴|な]きながら、[静|しず]かに[遠|とお]い[空|そら]の[向|む]こうへ[消|き]えていきました。",
-          "fr": "La grue tourna lentement trois fois au-dessus de la maison de Yosaku, et poussant des cris pleins de tristesse, elle disparut doucement au loin dans le ciel.",
-          "en": "The crane slowly circled three times above Yosaku's house and, crying sadly, quietly vanished beyond the distant sky.",
+          "texte": "[鶴|つる]はよさくの[家|いえ]の[上|うえ]を[三度|さんど]ゆっくりと[回|まわ]り、[悲|かな]しそうに[鳴|な]きながら、[静|しず]かに[遠|とお]い[雪空|ゆきぞら]の[向|む]こうへ[消|き]えていきました。",
+          "fr": "La grue tourna lentement trois fois au-dessus de la maison de Yosaku, et poussant des cris pleins de tristesse, elle disparut doucement au loin dans le ciel de neige.",
+          "en": "The crane slowly circled three times above Yosaku's house and, crying sadly, quietly vanished beyond the distant snowy sky.",
           "mots": [
             {
               "t": "[鶴|つる]",
@@ -5482,8 +5482,8 @@
               "v": "tooi"
             },
             {
-              "t": "[空|そら]",
-              "v": "sora"
+              "t": "[雪空|ゆきぞら]",
+              "v": "yukizora"
             },
             {
               "t": "の",
@@ -6037,6 +6037,12 @@
       "mot": "[空|そら]",
       "fr": "ciel",
       "en": "sky"
+    },
+    {
+      "id": "yukizora",
+      "mot": "[雪空|ゆきぞら]",
+      "fr": "ciel de neige, ciel enneigé",
+      "en": "snowy sky"
     },
     {
       "id": "e",
