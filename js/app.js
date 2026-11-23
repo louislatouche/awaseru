@@ -14,6 +14,7 @@ import { trouverPiece } from './pieces.js';
 import { texteBrut } from './texte.js';
 import { arreterVoix, changerSon, voixPretes } from './voix.js';
 import { adresseAReprendre, noterAdresse, terminerReprise } from './reprise.js';
+import { lectureActive } from './session-media.js';
 import { proposerRechargement } from './version.js';
 import { ecouterInstallation } from './installation.js';
 import { afficherBibliotheque } from './ecrans/bibliotheque.js';
@@ -210,6 +211,8 @@ function enregistrerServiceWorker() {
 
   // Une nouvelle version s'est installée pendant que la page tournait : son code attend un rechargement.
   let versionPrete = false;
+  // Arrivée pendant une lecture écran éteint : le bandeau « recharger » s'affichera au retour.
+  let bandeauAuRetour = false;
 
   // Le navigateur ne cherche une nouvelle version qu'au démarrage de l'app. Or Android garde souvent
   // l'app en arrière-plan : quand on y revient, il la réveille sans la recharger, et ne vérifie rien.
@@ -219,9 +222,14 @@ function enregistrerServiceWorker() {
   document.addEventListener('visibilitychange', async () => {
     // En quittant l'app, si une nouvelle version attend, on recharge maintenant, sans que cela se
     // voie : au retour, le nouveau code est là, et reprise.js remet à la même fiche ou réplique.
+    // Sauf pendant une lecture écran éteint : recharger couperait la voix. Ce sera au prochain départ.
     if (document.hidden) {
-      if (versionPrete) location.reload();
+      if (versionPrete && !lectureActive()) location.reload();
       return;
+    }
+    if (bandeauAuRetour) {
+      bandeauAuRetour = false;
+      proposerRechargement();
     }
     if (Date.now() - derniereVerification < 60_000) return;
     derniereVerification = Date.now();
@@ -237,8 +245,9 @@ function enregistrerServiceWorker() {
     versionPrete = true;
     // App en arrière-plan : on recharge tout de suite. Sinon on ne coupe rien (un filage, une fiche) :
     // un bandeau propose de recharger, et à défaut l'app le fera quand on la quittera.
-    if (document.hidden) location.reload();
-    else proposerRechargement();
+    if (!document.hidden) proposerRechargement();
+    else if (lectureActive()) bandeauAuRetour = true;
+    else location.reload();
   });
 }
 

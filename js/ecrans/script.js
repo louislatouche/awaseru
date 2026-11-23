@@ -1,6 +1,8 @@
 // Écran 2 : la pièce complète, scène par scène. Toucher une réplique lance la lecture à voix haute :
 // celle-ci, puis toutes les suivantes, l'une après l'autre, jusqu'à la fin de la pièce.
 // Toucher la réplique lue la met en pause, puis la reprend ; garder le doigt sur une carte arrête tout.
+// Écran éteint, la lecture continue (demande de Louis, 2026-11-23), pilotable depuis l'écran de
+// verrouillage et les écouteurs : voir session-media.js.
 
 import { cascade, el, icone, remplacer } from '../dom.js';
 import {
@@ -10,9 +12,10 @@ import { t, traduire } from '../langues.js';
 import { arreterVoix, mettreEnPauseVoix, reprendreVoix } from '../voix.js';
 import { brancherGestes } from '../gestes.js';
 import { lignesDe } from '../pieces.js';
-import { creerJaponais, texteAParler } from '../texte.js';
+import { creerJaponais, texteAParler, texteBrut } from '../texte.js';
 import { lireReglages, lireSelection, lireStatuts } from '../stockage.js';
 import { montrerGestes, proposerTuto, tutoAVoir } from '../tuto.js';
+import { fermerSession, ouvrirSession, sessionEnLecture, sessionEnPause } from '../session-media.js';
 
 // Les mêmes respirations que le filage : un court silence entre deux répliques, et le temps de lire
 // une ligne qui n'est qu'une didascalie quand on ne les fait pas lire à voix haute.
@@ -42,6 +45,7 @@ export function afficherScript(racine, piece) {
     carteActive = carte;
     etat = 'lecture';
     carte.classList.add('en-lecture');
+    sessionEnLecture();
   }
 
   function eteindre() {
@@ -72,11 +76,25 @@ export function afficherScript(racine, piece) {
     arreterVoix();
     eteindre();
     libererEcran();
+    fermerSession();
   }
 
   // Lit la réplique de rang « depart », puis les suivantes, jusqu'à la fin ou jusqu'à un arrêt.
   async function lireAPartirDe(depart) {
     const moi = ++jeton;
+    ouvrirSession({
+      titre: traduire(piece, 'titre_fr') || texteBrut(piece.titre),
+      sousTitre: t('Script'),
+      actions: {
+        lecture: () => { if (etat === 'pause') reprendre(); },
+        pause: () => { if (etat === 'lecture') mettreEnPause(); },
+        // Suivant : la lecture repart de la réplique d'après celle qui se lit.
+        suivant: () => {
+          const rang = lignes.findIndex((ligne) => cartes.get(ligne) === carteActive);
+          if (rang >= 0 && rang + 1 < lignes.length) lireAPartirDe(rang + 1);
+        },
+      },
+    });
     for (let rang = depart; rang < lignes.length; rang += 1) {
       const ligne = lignes[rang];
       const carte = cartes.get(ligne);
@@ -103,6 +121,7 @@ export function afficherScript(racine, piece) {
     }
     eteindre();
     libererEcran();
+    fermerSession();
   }
 
   // Pause : avec les voix enregistrées, la réplique garde sa place. La voix du téléphone, elle,
@@ -112,6 +131,7 @@ export function afficherScript(racine, piece) {
     mettreEnPauseVoix();
     etat = 'pause';
     libererEcran();
+    sessionEnPause();
   }
 
   function reprendre() {
@@ -120,6 +140,7 @@ export function afficherScript(racine, piece) {
     // la boucle de lireAPartirDe voit la reprise et passe d'elle-même à la suivante.
     reprendreVoix();
     garderEcranAllume();
+    sessionEnLecture();
   }
 
   function surTouche(evenement, ligne) {
@@ -130,10 +151,10 @@ export function afficherScript(racine, piece) {
     else reprendre();
   }
 
-  // Quitter l'app ou éteindre l'écran met la lecture en pause, comme le filage :
-  // elle ne doit pas continuer dans une poche, mais on doit pouvoir la reprendre.
+  // Écran éteint ou autre app : la lecture continue (avant le 2026-11-23, elle se mettait en pause).
+  // Le verrou d'écran est relâché tout seul quand la page est masquée : on le redemande au retour.
   function surVisibilite() {
-    if (document.hidden && etat === 'lecture') mettreEnPause();
+    if (!document.hidden && etat === 'lecture') garderEcranAllume();
   }
   document.addEventListener('visibilitychange', surVisibilite);
 

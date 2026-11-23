@@ -7,7 +7,7 @@ import { creerJaponais, texteAParler } from './texte.js';
 import { changerAffichagePiece, changerReglage, lireAffichage, lireReglages } from './stockage.js';
 import { roleDe } from './pieces.js';
 import {
-  aideInstallation, arreterVoix, jouerFichier, lectureDisponible, messagePourResultat, mettreEnPauseVoix, parler,
+  aideInstallation, arreterVoix, dureeFichier, jouerFichier, lectureDisponible, messagePourResultat, mettreEnPauseVoix, parler,
   progressionVoix, reprendreVoix, voixJaponaises, voixPretes,
 } from './voix.js';
 
@@ -142,6 +142,22 @@ export async function lireReplique(ligne) {
   const message = messagePourResultat(resultat);
   if (message) signaler(message, 9000);
   return resultat;
+}
+
+// Le temps qu'il faut pour dire une réplique, en millisecondes, à la vitesse réglée. Sert au filage
+// écran éteint : ma réplique y devient un silence de cette durée (voir filage.js). La durée vient de
+// son fichier audio quand il existe ; sinon, une estimation d'après le texte (environ 7 caractères
+// japonais par seconde, un débit de lecture posé).
+export async function dureeReplique(ligne) {
+  const { lireDidascalies, voixEnregistrees, vitesse } = lireReglages();
+  const texte = texteAParler(ligne.texte, lireDidascalies) ?? '';
+  let secondes = null;
+  if (ligne.audio && voixEnregistrees && texte) {
+    const avecDidascalie = texte !== texteAParler(ligne.texte, false);
+    secondes = await dureeFichier(`${ligne.audio}${avecDidascalie ? '-didascalies' : ''}.mp3`);
+  }
+  secondes ??= texte.length / 7;
+  return (secondes * 1000) / vitesse;
 }
 
 // Un bouton à icône. Son nom reste dans aria-label (lu par les lecteurs d'écran) et dans title

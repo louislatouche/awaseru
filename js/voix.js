@@ -128,6 +128,27 @@ export function jouerFichier(url) {
   });
 }
 
+// La durée d'un fichier audio, en secondes, sans le jouer. null si on ne peut pas la connaître.
+// Même chemin que jouerFichier (fetch puis blob), pour marcher aussi hors ligne.
+export async function dureeFichier(url) {
+  try {
+    const reponse = await fetch(url);
+    if (!reponse.ok) return null;
+    const adresse = URL.createObjectURL(await reponse.blob());
+    const audio = new Audio();
+    audio.preload = 'metadata';
+    const duree = await new Promise((resolve) => {
+      audio.onloadedmetadata = () => resolve(audio.duration);
+      audio.onerror = () => resolve(null);
+      audio.src = adresse;
+    });
+    URL.revokeObjectURL(adresse);
+    return Number.isFinite(duree) ? duree : null;
+  } catch {
+    return null;
+  }
+}
+
 // Met en pause le fichier audio en cours sans le perdre : reprendreVoix() repartira du même endroit.
 // La voix du téléphone, elle, n'a pas de pause fiable sur Android (voir mettreEnPause dans filage.js) :
 // dans ce cas, on l'arrête, et la fonction renvoie false pour prévenir que la place est perdue.

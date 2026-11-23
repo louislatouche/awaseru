@@ -5,7 +5,7 @@
 //   lecture  : l'app lit une réplique des autres
 //   a-moi    : c'est ma réplique, l'app attend
 //   manuel   : pas de voix japonaise, l'app attend aussi sur les répliques des autres
-//   pause    : arrêté par l'utilisateur (ou parce que l'écran s'est éteint)
+//   pause    : arrêté par l'utilisateur
 //   fin      : la pièce est terminée
 //   complet  : le filage complet (voir plus bas), qui a sa propre lecture en continu
 //
@@ -15,29 +15,39 @@
 //
 // Le filage complet, lui, affiche toutes les répliques d'un coup et les lit toutes à la suite, les
 // miennes comprises, sans s'arrêter : pour suivre le texte pendant que les voix jouent.
+//
+// Écran éteint (demande de Louis, 2026-11-23), la lecture continue au lieu de se mettre en pause.
+// Dans le filage, ma réplique devient alors un silence de sa durée, le temps de la dire de mémoire,
+// puis la suite s'enchaîne. Les commandes de l'écran de verrouillage et des écouteurs (lecture,
+// pause, suivant) pilotent le filage : voir session-media.js.
 
 import { cascade, definirRetour, el, hautDePage, remplacer } from '../dom.js';
 import {
-  audioActif, creerAvisEnchainement, creerAvisVoix, creerChoixUnique, creerEcoute,
+  audioActif, creerAvisEnchainement, creerAvisVoix, creerChoixUnique, creerEcoute, dureeReplique,
   creerInterrupteurs, creerReplique, creerTitreScene, creerTitreVue, lireReplique, suivreLecture,
 } from '../affichage.js';
 import { t, traduire } from '../langues.js';
 import { enchainementsDe, lignesDe } from '../pieces.js';
 import { lireReglages, lireSelection, lireStatuts } from '../stockage.js';
-import { creerJaponais, texteAParler } from '../texte.js';
+import { creerJaponais, texteAParler, texteBrut } from '../texte.js';
 import { arreterVoix, mettreEnPauseVoix, reprendreVoix, voixJaponaises, voixPretes } from '../voix.js';
 import { noterPosition, oublierPosition, positionAReprendre } from '../reprise.js';
 import { brancherBalayage, brancherGestes } from '../gestes.js';
 import { montrerGestes, proposerTuto, tutoAVoir } from '../tuto.js';
+import { fermerSession, ouvrirSession, sessionEnLecture, sessionEnPause } from '../session-media.js';
 
 const SILENCE_ENTRE_REPLIQUES = 350; // millisecondes, pour que ça respire
 const DUREE_LIGNE_MUETTE = 1500;     // le temps de lire une ligne qui n'est qu'une didascalie
+// Écran éteint, ma réplique est un silence de sa durée, plus ce petit temps pour la commencer.
+const MARGE_MA_REPLIQUE = 1500;      // millisecondes
 
 const attendre = (duree) => new Promise((resolve) => { setTimeout(resolve, duree); });
 
 export function afficherFilage(racine, piece) {
   const lignes = lignesDe(piece);
   const selection = lireSelection(piece);
+  // Le titre montré sur l'écran de verrouillage : la traduction, sinon le titre japonais sans furigana.
+  const titreSession = traduire(piece, 'titre_fr') || texteBrut(piece.titre);
 
   let etat = 'depart';
   let position = 0;
@@ -97,6 +107,31 @@ export function afficherFilage(racine, piece) {
     remplacer(commandes);
     commandes.hidden = true;
     if (recentrer) amenerAuCentre(carteCourante);
+    // L'écran de verrouillage montre Pause tant que le filage avance, Lecture quand il est arrêté.
+    if (etat === 'pause') sessionEnPause();
+    else sessionEnLecture();
+  }
+
+  // Les commandes de l'écran de verrouillage et des écouteurs, pour le filage pas à pas.
+  function ouvrirSessionFilage() {
+    ouvrirSession({
+      titre: titreSession,
+      sousTitre: t('Filage'),
+      actions: {
+        lecture: () => { if (etat === 'pause') reprendre(); },
+        pause: () => { if (etat === 'lecture') mettreEnPause(); },
+        suivant: () => { if (etat !== 'depart' && etat !== 'fin' && etat !== 'complet') avancer(); },
+      },
+    });
+  }
+
+  // Écran éteint, c'est mon tour : un silence de la durée de ma réplique, puis la suite, toute seule.
+  // Si l'écran se rallume pendant le silence, le filage attend, comme d'habitude, le geste vers le haut.
+  async function passerMaRepliqueEnSilence() {
+    const moi = jeton;
+    const duree = await dureeReplique(lignes[position]);
+    await attendre(duree + MARGE_MA_REPLIQUE);
+    if (moi === jeton && etat === 'a-moi' && document.hidden) avancer();
   }
 
   // Ma réplique se dévoile quand je touche sa carte. Elle se lit aussitôt, pour que je compare ce
@@ -211,6 +246,7 @@ export function afficherFilage(racine, piece) {
     if (selection.has(ligne.numero)) {
       etat = 'a-moi';
       afficherCommandes();
+      if (document.hidden) passerMaRepliqueEnSilence();
       return;
     }
     if (sansVoix) {
@@ -340,6 +376,7 @@ export function afficherFilage(racine, piece) {
     carteCourante = null;
     oublierPosition();
     libererEcran();
+    fermerSession();
     const fin = el('p', { className: 'avis fin-piece' }, t('Fin de la pièce.'));
     journal.append(fin);
     remplacer(commandes, el('button', { type: 'button', className: 'btn', onclick: ecranDepart }, t('Recommencer un filage')));
@@ -347,19 +384,22 @@ export function afficherFilage(racine, piece) {
     amenerAuCentre(fin);
   }
 
-  // Si l'utilisateur quitte l'app ou éteint l'écran, on se met en pause plutôt que de continuer
-  // dans le vide. Le verrou d'écran, lui, est relâché tout seul quand la page est masquée :
-  // il faut le redemander au retour.
+  // Écran éteint ou autre app : la lecture continue (avant le 2026-11-23, elle se mettait en pause).
+  // Le verrou d'écran, lui, est relâché tout seul quand la page est masquée : il faut le redemander
+  // au retour.
   function surVisibilite() {
-    // Filage complet : comme dans le Script, une simple pause, que l'on reprend en touchant la carte.
+    // Filage complet : la lecture continue, rien à faire en partant.
     if (etat === 'complet') {
-      if (document.hidden && lectureComplete === 'lecture') pauseComplete();
+      if (!document.hidden && lectureComplete === 'lecture') garderEcranAllume();
       return;
     }
     if (document.hidden) {
-      if (etat === 'lecture') mettreEnPause();
-      else if (!pauseFichier) arreterVoix(); // un fichier en pause garde sa place pour la reprise
-    } else if (etat === 'a-moi' || etat === 'manuel') {
+      if (etat === 'lecture') return; // la réplique des autres continue, puis la suite
+      // Ce qui se lisait à côté (une réplique passée qu'on relisait, l'écoute de la mienne) s'arrête.
+      // Un fichier en pause garde sa place pour la reprise.
+      if (!pauseFichier) arreterVoix();
+      if (etat === 'a-moi') passerMaRepliqueEnSilence();
+    } else if (etat === 'a-moi' || etat === 'manuel' || etat === 'lecture') {
       garderEcranAllume();
     }
   }
@@ -393,6 +433,7 @@ export function afficherFilage(racine, piece) {
       journal,
       commandes,
     );
+    ouvrirSessionFilage();
     if (!repris) {
       garderEcranAllume();
       jouerEtape();
@@ -495,6 +536,7 @@ export function afficherFilage(racine, piece) {
     carteLue = carte;
     lectureComplete = 'lecture';
     carte.classList.add('en-lecture');
+    sessionEnLecture();
   }
 
   function eteindre() {
@@ -507,6 +549,19 @@ export function afficherFilage(racine, piece) {
   async function lireEnContinu(debut) {
     jeton += 1;
     const moi = jeton;
+    ouvrirSession({
+      titre: titreSession,
+      sousTitre: t('Filage'),
+      actions: {
+        lecture: () => { if (lectureComplete === 'pause') repriseComplete(); },
+        pause: () => { if (lectureComplete === 'lecture') pauseComplete(); },
+        // Suivant : la lecture repart de la réplique d'après celle qui se lit.
+        suivant: () => {
+          const rang = suiteComplete.findIndex((ligne) => cartesCompletes.get(ligne) === carteLue);
+          if (rang >= 0 && rang + 1 < suiteComplete.length) lireEnContinu(rang + 1);
+        },
+      },
+    });
     for (let rang = debut; rang < suiteComplete.length; rang += 1) {
       const ligne = suiteComplete[rang];
       const carte = cartesCompletes.get(ligne);
@@ -533,6 +588,7 @@ export function afficherFilage(racine, piece) {
     }
     eteindre();
     libererEcran();
+    fermerSession();
   }
 
   // Pause : avec les voix enregistrées, la réplique garde sa place. La voix du téléphone, elle,
@@ -542,6 +598,7 @@ export function afficherFilage(racine, piece) {
     mettreEnPauseVoix();
     lectureComplete = 'pause';
     libererEcran();
+    sessionEnPause();
   }
 
   function repriseComplete() {
@@ -550,6 +607,7 @@ export function afficherFilage(racine, piece) {
     // la boucle de lireEnContinu voit la reprise et passe d'elle-même à la suivante.
     reprendreVoix();
     garderEcranAllume();
+    sessionEnLecture();
   }
 
   function arreterComplet() {
@@ -557,6 +615,7 @@ export function afficherFilage(racine, piece) {
     arreterVoix();
     eteindre();
     libererEcran();
+    fermerSession();
   }
 
   function toucherComplet(evenement, ligne) {
@@ -575,6 +634,7 @@ export function afficherFilage(racine, piece) {
     oublierPosition(); // pas de filage en cours : rien à reprendre si l'app est relancée
     definirRetour(null); // la flèche de retour quitte alors le filage
     libererEcran();
+    fermerSession();
 
     // Le départ est la position de la première réplique de la scène choisie, dans la liste à plat.
     let depart = 0;
@@ -628,5 +688,6 @@ export function afficherFilage(racine, piece) {
     document.removeEventListener('visibilitychange', surVisibilite);
     balayage.arreter();
     libererEcran();
+    fermerSession();
   };
 }
