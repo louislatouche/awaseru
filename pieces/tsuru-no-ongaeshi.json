@@ -4187,6 +4187,62 @@
         },
         {
           "numero": 49,
+          "role": "narrateur",
+          "texte": "（[舞台|ぶたい][暗転|あんてん]、または[照明|しょうめい]を[変|か]えて[機織|はたお]りのシーン）",
+          "fr": "(Noir sur scène, ou changement d'éclairage : scène du tissage)",
+          "en": "(Blackout on stage, or a lighting change: the weaving scene)",
+          "mots": [
+            {
+              "t": "（"
+            },
+            {
+              "t": "[舞台|ぶたい]",
+              "v": "butai"
+            },
+            {
+              "t": "[暗転|あんてん]",
+              "v": "anten"
+            },
+            {
+              "t": "、"
+            },
+            {
+              "t": "または",
+              "v": "matawa"
+            },
+            {
+              "t": "[照明|しょうめい]",
+              "v": "shoumei"
+            },
+            {
+              "t": "を",
+              "v": "wo"
+            },
+            {
+              "t": "[変|か]えて",
+              "v": "kaeru-changer",
+              "fr": "en changeant",
+              "en": "changing"
+            },
+            {
+              "t": "[機織|はたお]り",
+              "v": "hataori"
+            },
+            {
+              "t": "の",
+              "v": "no"
+            },
+            {
+              "t": "シーン",
+              "v": "shiin"
+            },
+            {
+              "t": "）"
+            }
+          ]
+        },
+        {
+          "numero": 50,
           "role": "yosaku",
           "texte": "あっ……！ つう……！？",
           "fr": "Ah... ! Tsuu... !?",
@@ -4218,7 +4274,7 @@
           ]
         },
         {
-          "numero": 50,
+          "numero": 51,
           "role": "narrateur",
           "texte": "そこにいたのは、あの[時|とき][助|たす]けた[一羽|いちわ]の「[白|しろ]い[鶴|つる]」でした。[鶴|つる]は、[自分|じぶん]の[身体|からだ]から[一本|いっぽん]、また[一本|いっぽん]と[真|ま]っ[白|しろ]な[羽|はね]をくちばしで[抜|ぬ]き[取|と]り、[血|ち]を[流|なが]しながらはたおり[機|き]に[糸|いと]として[織|お]り[込|こ]んでいたのです。",
           "fr": "Ce qui se trouvait là était la « grue blanche » qu'il avait sauvée ce jour-là. La grue arrachait de son bec ses propres plumes d'un blanc pur, une à une, et les tissait en fils sur le métier, tout en saignant.",
@@ -4423,7 +4479,7 @@
           ]
         },
         {
-          "numero": 51,
+          "numero": 52,
           "role": "yosaku",
           "texte": "ああ……[自分|じぶん]の[羽|はね]を[抜|ぬ]いて、あんなに[美|うつく]しい[布|ぬの]を……！ なんということをしてしまったんだ！",
           "fr": "Ah... Arracher ses propres plumes pour faire un tissu si magnifique... ! Mais qu'ai-je fait !",
@@ -4518,7 +4574,7 @@
           ]
         },
         {
-          "numero": 52,
+          "numero": 53,
           "role": "narrateur",
           "texte": "（つう、さびしげな[表情|ひょうじょう]で[部屋|へや]から[出|で]てくる。[背中|せなか]に[羽|はね]を[残|のこ]して）",
           "fr": "(Tsuu sort de la pièce, l'air triste, gardant des plumes sur le dos)",
@@ -4593,7 +4649,7 @@
           ]
         },
         {
-          "numero": 53,
+          "numero": 54,
           "role": "tsuu",
           "texte": "あなた。[見|み]ないでと[約束|やくそく]したのに。",
           "fr": "Mon cher mari... Je vous avais pourtant demandé de ne pas regarder.",
@@ -4638,7 +4694,7 @@
           ]
         },
         {
-          "numero": 54,
+          "numero": 55,
           "role": "yosaku",
           "texte": "つう！ ごめんなさい！ [私|わたし]が[悪|わる]かった！ゆるしておくれ！",
           "fr": "Tsuu ! Je suis tellement désolé ! C'était ma faute ! Pardonne-moi !",
@@ -4699,7 +4755,7 @@
           ]
         },
         {
-          "numero": 55,
+          "numero": 56,
           "role": "tsuu",
           "texte": "[私|わたし]は、あの[冬|ふゆ]の[日|ひ]に[命|いのち]を[助|たす]けていただいた[鶴|つる]です。[優|やさ]しいあなたに[恩返|おんがえ]しがしたくて、[人間|にんげん]の[姿|すがた]になってまいりました。",
           "fr": "Je suis la grue dont vous avez sauvé la vie en ce jour d'hiver. Voulant exprimer ma gratitude envers un homme aussi bon que vous, j'ai pris une forme humaine.",
@@ -4818,7 +4874,7 @@
           ]
         },
         {
-          "numero": 56,
+          "numero": 57,
           "role": "tsuu",
           "texte": "[自分|じぶん]の[羽|はね]で[織|お]る[布|ぬの]は、[一度|いちど][正体|しょうたい]を[見|み]られてしまったら、もう[織|お]ることができません。そして……[正体|しょうたい]を[知|し]られた[以上|いじょう]、[私|わたし]はもうここにはいられません。",
           "fr": "Le tissu tissé avec mes propres plumes ne peut plus être produit dès lors qu'on découvre ma véritable identité. Et... maintenant que vous savez qui je suis, je ne peux plus rester ici.",
@@ -4973,7 +5029,7 @@
           ]
         },
         {
-          "numero": 57,
+          "numero": 58,
           "role": "yosaku",
           "texte": "（つうにしがみつきながら）[行|い]かないでくれ、つう！ [金|かね]なんていらない！ [布|ぬの]もいらない！ お[前|まえ]と[一緒|いっしょ]に[暮|く]らせれば、それだけでいいんだ！",
           "fr": "(En s'accrochant à Tsuu) Ne pars pas, Tsuu ! Je m'en fiche de l'argent ! Je m'en fiche du tissu ! Tout ce que je veux, c'est vivre avec toi !",
@@ -5119,7 +5175,7 @@
           ]
         },
         {
-          "numero": 58,
+          "numero": 59,
           "role": "tsuu",
           "texte": "あなた、あたたかいお[心|こころ]、[本当|ほんとう]にありがとうございました。[私|わたし]はずっと、あなたをおしたいしておりました。……さようなら。",
           "fr": "Mon cher mari, merci du fond du cœur pour votre chaleur humaine. Je vous ai aimé de tout mon être... Au revoir.",
@@ -5207,7 +5263,7 @@
           ]
         },
         {
-          "numero": 59,
+          "numero": 60,
           "role": "narrateur",
           "texte": "つうが[悲|かな]しく「カァー」と[鳴|な]くと、その[姿|すがた]は[一羽|いちわ]の[白|しろ]い[鶴|つる]に[戻|もど]り、[空|そら]へと[舞|ま]い[上|あ]がりました。",
           "fr": "Lorsque Tsuu poussa un cri triste, sa forme redevenant celle d'une grue blanche, elle s'envola vers les cieux.",
@@ -5315,7 +5371,7 @@
           ]
         },
         {
-          "numero": 60,
+          "numero": 61,
           "role": "yosaku",
           "texte": "つうーーーっ！！ つうーーーっ！！",
           "fr": "Tsuuーーー ! Tsuuーーー !",
@@ -5345,7 +5401,7 @@
           ]
         },
         {
-          "numero": 61,
+          "numero": 62,
           "role": "narrateur",
           "texte": "[鶴|つる]はよさくの[家|いえ]の[上|うえ]を[三度|さんど]ゆっくりと[回|まわ]り、[悲|かな]しそうに[鳴|な]きながら、[静|しず]かに[遠|とお]い[空|そら]の[向|む]こうへ[消|き]えていきました。",
           "fr": "La grue tourna lentement trois fois au-dessus de la maison de Yosaku, et poussant des cris pleins de tristesse, elle disparut doucement au loin dans le ciel.",
@@ -5453,7 +5509,7 @@
           ]
         },
         {
-          "numero": 62,
+          "numero": 63,
           "role": "narrateur",
           "texte": "よさくは、つうが[残|のこ]していった[温|あたた]かい[一枚|いちまい]の[布|ぬの]を[抱|だ]きしめ、いつまでも、いつまでも[泣|な]き[続|つづ]けました。",
           "fr": "Yosaku serra très fort contre lui le chaud tissu que Tsuu avait laissé derrière elle, et ne cessa de pleurer, encore et encore.",
@@ -7397,6 +7453,42 @@
       "mot": "[流|なが]す",
       "fr": "faire couler, verser",
       "en": "to shed, to let flow"
+    },
+    {
+      "id": "butai",
+      "mot": "[舞台|ぶたい]",
+      "fr": "scène (de théâtre)",
+      "en": "stage"
+    },
+    {
+      "id": "anten",
+      "mot": "[暗転|あんてん]",
+      "fr": "noir (changement dans l'obscurité)",
+      "en": "blackout (scene change in the dark)"
+    },
+    {
+      "id": "matawa",
+      "mot": "または",
+      "fr": "ou bien",
+      "en": "or"
+    },
+    {
+      "id": "shoumei",
+      "mot": "[照明|しょうめい]",
+      "fr": "éclairage",
+      "en": "lighting"
+    },
+    {
+      "id": "kaeru-changer",
+      "mot": "[変|か]える",
+      "fr": "changer (quelque chose)",
+      "en": "to change (something)"
+    },
+    {
+      "id": "shiin",
+      "mot": "シーン",
+      "fr": "scène (moment de la pièce)",
+      "en": "scene"
     },
     {
       "id": "hataoriki",
