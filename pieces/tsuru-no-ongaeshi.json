@@ -62,7 +62,7 @@
         {
           "numero": 1,
           "role": "narrateur",
-          "texte": "むかしむかし、[深|ふか]い[山|やま]の[中|なか]の[小|ちい]さな[村|むら]に、よさくという[心|こころ]が[優|やさ]しく[貧|まず]しい[青年|せいねん]が[住|す]んでいました。",
+          "texte": "むかしむかし、 [深|ふか]い [山|やま]の [中|なか]の [小|ちい]さな [村|むら]に、 よさくという [心|こころ]が [優|やさ]しく [貧|まず]しい [青年|せいねん]が [住|す]んでいました。",
           "fr": "Il y avait autrefois, dans un petit village au cœur d'une profonde montagne, un jeune homme pauvre et au cœur tendre nommé Yosaku.",
           "en": "Long ago, in a small village deep in the mountains, there lived a poor young man with a kind heart named Yosaku.",
           "mots": [
@@ -74,8 +74,14 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[深|ふか]い",
               "v": "fukai"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[山|やま]",
@@ -84,6 +90,9 @@
             {
               "t": "の",
               "v": "no"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[中|なか]",
@@ -96,8 +105,14 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[小|ちい]さな",
               "v": "chiisana"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[村|むら]",
@@ -111,12 +126,18 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "よさく",
               "v": "yosaku"
             },
             {
               "t": "という",
               "v": "toiu"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[心|こころ]",
@@ -127,14 +148,23 @@
               "v": "ga"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[優|やさ]しく",
               "v": "yasashii",
               "fr": "gentil (et)",
               "en": "kind (and)"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[貧|まず]しい",
               "v": "mazushii"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[青年|せいねん]",
@@ -143,6 +173,9 @@
             {
               "t": "が",
               "v": "ga"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[住|す]んでいました",
@@ -158,7 +191,7 @@
         {
           "numero": 2,
           "role": "narrateur",
-          "texte": "ある[冬|ふゆ]の[日|ひ]、[山|やま]ははげしい[吹雪|ふぶき]にみまわれました。",
+          "texte": "ある [冬|ふゆ]の [日|ひ]、 [山|やま]は はげしい [吹雪|ふぶき]に みまわれました。",
           "fr": "Un jour d'hiver, la montagne fut frappée par une violente tempête de neige.",
           "en": "One winter day, a fierce snowstorm struck the mountain.",
           "mots": [
@@ -169,6 +202,9 @@
               "en": "one"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[冬|ふゆ]",
               "v": "fuyu"
             },
@@ -177,11 +213,17 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[日|ひ]",
               "v": "hi"
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[山|やま]",
@@ -192,8 +234,14 @@
               "v": "wa"
             },
             {
+              "t": " "
+            },
+            {
               "t": "はげしい",
               "v": "hageshii"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[吹雪|ふぶき]",
@@ -204,6 +252,9 @@
               "v": "ni",
               "fr": "par",
               "en": "by"
+            },
+            {
+              "t": " "
             },
             {
               "t": "みまわれました",
@@ -219,7 +270,7 @@
         {
           "numero": 3,
           "role": "yosaku",
-          "texte": "うう、[寒|さむ]い、[寒|さむ]い……。[早|はや]く[家|いえ]に[帰|かえ]ってまきをくべよう。……ん？ なんだあれは？",
+          "texte": "うう、 [寒|さむ]い、 [寒|さむ]い……。 [早|はや]く [家|いえ]に [帰|かえ]って まきを くべよう。…… ん？ なんだ あれは？",
           "fr": "Brrr, qu'est-ce qu'il fait froid, qu'est-ce qu'il fait froid... Je vais vite rentrer chez moi mettre du bois dans le feu. ...Hmm ? Qu'est-ce que c'est que ça ?",
           "en": "Brrr, it's cold, so cold... I'll hurry home and put some wood on the fire. ...Hm? What's that?",
           "mots": [
@@ -231,11 +282,17 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[寒|さむ]い",
               "v": "samui"
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[寒|さむ]い",
@@ -248,10 +305,16 @@
               "t": "。"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[早|はや]く",
               "v": "hayai",
               "fr": "vite",
               "en": "quickly"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[家|いえ]",
@@ -262,10 +325,16 @@
               "v": "ni"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[帰|かえ]って",
               "v": "kaeru",
               "fr": "rentrer et",
               "en": "go home and"
+            },
+            {
+              "t": " "
             },
             {
               "t": "まき",
@@ -274,6 +343,9 @@
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "くべよう",
@@ -286,6 +358,9 @@
             },
             {
               "t": "……"
+            },
+            {
+              "t": " "
             },
             {
               "t": "ん",
@@ -306,6 +381,9 @@
               "v": "da"
             },
             {
+              "t": " "
+            },
+            {
               "t": "あれ",
               "v": "are"
             },
@@ -321,7 +399,7 @@
         {
           "numero": 4,
           "role": "narrateur",
-          "texte": "よさくが[雪道|ゆきみち]を[進|すす]むと、[真|ま]っ[白|しろ]な[雪|ゆき]の[中|なか]で、[一羽|いちわ]の[大|おお]きな[鶴|つる]がバタバタとあばれていました。[足|あし]にわなが[深|ふか]くささっていたのです。",
+          "texte": "よさくが [雪道|ゆきみち]を [進|すす]むと、 [真|ま]っ[白|しろ]な [雪|ゆき]の [中|なか]で、 [一羽|いちわ]の [大|おお]きな [鶴|つる]が バタバタと あばれていました。 [足|あし]に わなが [深|ふか]く ささっていたのです。",
           "fr": "Alors que Yosaku avançait sur le chemin enneigé, une grande grue toute blanche se débattait au milieu de la neige. Une patte était profondément coincée dans un piège.",
           "en": "As Yosaku made his way along the snowy path, a large crane, pure white, was thrashing about in the snow. A trap had bitten deep into its leg.",
           "mots": [
@@ -334,12 +412,18 @@
               "v": "ga"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[雪道|ゆきみち]",
               "v": "yukimichi"
             },
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[進|すす]む",
@@ -355,8 +439,14 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[真|ま]っ[白|しろ]な",
               "v": "masshiro"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[雪|ゆき]",
@@ -365,6 +455,9 @@
             {
               "t": "の",
               "v": "no"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[中|なか]",
@@ -378,6 +471,9 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[一羽|いちわ]",
               "v": "ichiwa"
             },
@@ -386,8 +482,14 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[大|おお]きな",
               "v": "ookina"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[鶴|つる]",
@@ -398,8 +500,14 @@
               "v": "ga"
             },
             {
+              "t": " "
+            },
+            {
               "t": "バタバタと",
               "v": "batabata"
+            },
+            {
+              "t": " "
             },
             {
               "t": "あばれていました",
@@ -411,12 +519,18 @@
               "t": "。"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[足|あし]",
               "v": "ashi"
             },
             {
               "t": "に",
               "v": "ni"
+            },
+            {
+              "t": " "
             },
             {
               "t": "わな",
@@ -427,10 +541,16 @@
               "v": "ga"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[深|ふか]く",
               "v": "fukai",
               "fr": "profondément",
               "en": "deeply"
+            },
+            {
+              "t": " "
             },
             {
               "t": "ささっていた",
@@ -454,7 +574,7 @@
         {
           "numero": 5,
           "role": "yosaku",
-          "texte": "おやおや！ かわいそうに、こんな[冷|つめ]たい[雪|ゆき]の[中|なか]でわなにかかってしまったのか。[痛|いた]かったろう、[痛|いた]かったろう。[今|いま]、[助|たす]けてあげるから[動|うご]かないでおくれ。\n（わなをとってやる）",
+          "texte": "おやおや！ かわいそうに、 こんな [冷|つめ]たい [雪|ゆき]の [中|なか]で わなに かかってしまったのか。 [痛|いた]かったろう、 [痛|いた]かったろう。 [今|いま]、 [助|たす]けてあげるから [動|うご]かないで おくれ。\n（わなを とってやる）",
           "fr": "Oh là là ! Ma pauvre, tu t'es faite attraper par un piège dans cette neige si glaciale ? Tu as dû avoir mal, tu as dû avoir mal. Attends, je vais t'aider, ne bouge pas. (Yosaku retire doucement le piège)",
           "en": "Oh my! You poor thing, did you get caught in a trap in this freezing snow? It must have hurt, it must have hurt. Hold on, I'll help you, so don't move. (He takes off the trap)",
           "mots": [
@@ -478,12 +598,21 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "こんな",
               "v": "konna"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[冷|つめ]たい",
               "v": "tsumetai"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[雪|ゆき]",
@@ -494,6 +623,9 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[中|なか]",
               "v": "naka"
             },
@@ -502,12 +634,18 @@
               "v": "de"
             },
             {
+              "t": " "
+            },
+            {
               "t": "わな",
               "v": "wana"
             },
             {
               "t": "に",
               "v": "ni"
+            },
+            {
+              "t": " "
             },
             {
               "t": "かかってしまった",
@@ -527,6 +665,9 @@
               "t": "。"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[痛|いた]かったろう",
               "v": "itai",
               "fr": "tu as dû avoir mal",
@@ -534,6 +675,9 @@
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[痛|いた]かったろう",
@@ -545,11 +689,17 @@
               "t": "。"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[今|いま]",
               "v": "ima"
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[助|たす]けてあげる",
@@ -562,10 +712,16 @@
               "v": "kara-car"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[動|うご]かないで",
               "v": "ugoku",
               "fr": "ne bouge pas",
               "en": "don't move"
+            },
+            {
+              "t": " "
             },
             {
               "t": "おくれ",
@@ -591,6 +747,9 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "とってやる",
               "v": "toru",
               "fr": "retire (pour elle)",
@@ -604,7 +763,7 @@
         {
           "numero": 6,
           "role": "yosaku",
-          "texte": "よし、これで[自由|じゆう]だ。けがはないかい？ さあ、[早|はや]く[空|そら]へお[帰|かえ]り。",
+          "texte": "よし、 これで [自由|じゆう]だ。 けがはないかい？ さあ、 [早|はや]く [空|そら]へ お[帰|かえ]り。",
           "fr": "Voilà, tu es libre ! Tu n'es pas blessée ? Allez, retourne vite dans le ciel.",
           "en": "There, you're free! You're not hurt? Go on, hurry back to the sky.",
           "mots": [
@@ -614,6 +773,9 @@
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "これ",
@@ -626,6 +788,9 @@
               "en": "with (this)"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[自由|じゆう]",
               "v": "jiyuu"
             },
@@ -635,6 +800,9 @@
             },
             {
               "t": "。"
+            },
+            {
+              "t": " "
             },
             {
               "t": "けが",
@@ -666,10 +834,16 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[早|はや]く",
               "v": "hayai",
               "fr": "vite",
               "en": "quickly"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[空|そら]",
@@ -678,6 +852,9 @@
             {
               "t": "へ",
               "v": "e"
+            },
+            {
+              "t": " "
             },
             {
               "t": "お[帰|かえ]り",
@@ -693,7 +870,7 @@
         {
           "numero": 7,
           "role": "narrateur",
-          "texte": "[鶴|つる]はよさくの[顔|かお]をじっと[見|み]つめ、「カァー、カァー」といとおしそうに[二度|にど][鳴|な]くと、[空|そら][高|たか]く[飛|と]んでいきました。",
+          "texte": "[鶴|つる]は よさくの [顔|かお]を じっと [見|み]つめ、 「カァー、 カァー」と いとおしそうに [二度|にど] [鳴|な]くと、 [空|そら] [高|たか]く [飛|と]んでいきました。",
           "fr": "La grue fixa intensément le visage de Yosaku. Elle poussa deux cris tendres « Caa-caa », puis s'envola très haut dans le ciel.",
           "en": "The crane gazed intently at Yosaku's face, cried \"Kaa, kaa\" twice tenderly, and flew high up into the sky.",
           "mots": [
@@ -706,12 +883,18 @@
               "v": "wa"
             },
             {
+              "t": " "
+            },
+            {
               "t": "よさく",
               "v": "yosaku"
             },
             {
               "t": "の",
               "v": "no"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[顔|かお]",
@@ -722,8 +905,14 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "じっと",
               "v": "jitto"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[見|み]つめ",
@@ -735,6 +924,9 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "「"
             },
             {
@@ -743,6 +935,9 @@
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "カァー",
@@ -756,14 +951,23 @@
               "v": "to-citation"
             },
             {
+              "t": " "
+            },
+            {
               "t": "いとおしそうに",
               "v": "itooshii",
               "fr": "tendrement",
               "en": "tenderly"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[二度|にど]",
               "v": "nido"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[鳴|な]く",
@@ -779,14 +983,23 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[空|そら]",
               "v": "sora"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[高|たか]く",
               "v": "takai",
               "fr": "haut",
               "en": "high"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[飛|と]んでいきました",
@@ -802,7 +1015,7 @@
         {
           "numero": 8,
           "role": "yosaku",
-          "texte": "（[手|て]をふりながら）[元気|げんき]でな！ [二度|にど]とわなにかかるんじゃないぞ！",
+          "texte": "（[手|て]を ふりながら） [元気|げんき]でな！ [二度|にど]と わなに かかるんじゃないぞ！",
           "fr": "(En faisant un signe de la main) Prends soin de toi ! Ne te fais plus jamais attraper par un piège !",
           "en": "(Waving) Take care! Don't you ever get caught in a trap again!",
           "mots": [
@@ -818,6 +1031,9 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "ふりながら",
               "v": "furu",
               "fr": "en agitant",
@@ -825,6 +1041,9 @@
             },
             {
               "t": "）"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[元気|げんき]で",
@@ -847,12 +1066,18 @@
               "v": "nidoto"
             },
             {
+              "t": " "
+            },
+            {
               "t": "わな",
               "v": "wana"
             },
             {
               "t": "に",
               "v": "ni"
+            },
+            {
+              "t": " "
             },
             {
               "t": "かかる",
@@ -884,7 +1109,7 @@
         {
           "numero": 9,
           "role": "narrateur",
-          "texte": "その[夜|よる]、[吹雪|ふぶき]はさらに[強|つよ]くなりました。\nよさくが[一人|ひとり]でいろりにあたっていると、トントン、と[静|しず]かに[戸|と]をたたく[音|おと]がしました。",
+          "texte": "その [夜|よる]、 [吹雪|ふぶき]は さらに [強|つよ]く なりました。\nよさくが [一人|ひとり]で いろりに あたっていると、 トントン、と [静|しず]かに [戸|と]を たたく [音|おと]が しました。",
           "fr": "Ce soir-là, la tempête de neige devint encore plus violente. Alors que Yosaku se réchauffait seul près du feu, on frappa doucement à la porte : Toc, toc.",
           "en": "That night, the snowstorm grew even stronger. As Yosaku sat alone warming himself by the hearth, there came a quiet knock at the door: knock, knock.",
           "mots": [
@@ -893,11 +1118,17 @@
               "v": "sono"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[夜|よる]",
               "v": "yoru"
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[吹雪|ふぶき]",
@@ -908,14 +1139,23 @@
               "v": "wa"
             },
             {
+              "t": " "
+            },
+            {
               "t": "さらに",
               "v": "sarani"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[強|つよ]く",
               "v": "tsuyoi",
               "fr": "fort",
               "en": "strong"
+            },
+            {
+              "t": " "
             },
             {
               "t": "なりました",
@@ -938,6 +1178,9 @@
               "v": "ga"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[一人|ひとり]",
               "v": "hitori"
             },
@@ -948,12 +1191,18 @@
               "en": "alone"
             },
             {
+              "t": " "
+            },
+            {
               "t": "いろり",
               "v": "irori"
             },
             {
               "t": "に",
               "v": "ni"
+            },
+            {
+              "t": " "
             },
             {
               "t": "あたっている",
@@ -969,6 +1218,9 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "トントン",
               "v": "tonton"
             },
@@ -980,10 +1232,16 @@
               "v": "to-citation"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[静|しず]かに",
               "v": "shizuka",
               "fr": "doucement",
               "en": "quietly"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[戸|と]",
@@ -994,10 +1252,16 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "たたく",
               "v": "tataku",
               "fr": "frapper",
               "en": "knocking"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[音|おと]",
@@ -1006,6 +1270,9 @@
             {
               "t": "が",
               "v": "ga"
+            },
+            {
+              "t": " "
             },
             {
               "t": "しました",
@@ -1021,7 +1288,7 @@
         {
           "numero": 10,
           "role": "yosaku",
-          "texte": "こんなよふけに[誰|だれ]だろう？ ……はい、どなたですか？",
+          "texte": "こんな よふけに [誰|だれ]だろう？ …… はい、 どなたですか？",
           "fr": "Qui cela peut-il bien être à une heure si tardive ? ... Oui, qui est-ce ?",
           "en": "Who could it be so late at night? ...Yes, who is it?",
           "mots": [
@@ -1030,12 +1297,18 @@
               "v": "konna"
             },
             {
+              "t": " "
+            },
+            {
               "t": "よふけ",
               "v": "yofuke"
             },
             {
               "t": "に",
               "v": "ni"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[誰|だれ]",
@@ -1055,11 +1328,17 @@
               "t": "……"
             },
             {
+              "t": " "
+            },
+            {
               "t": "はい",
               "v": "hai-oui"
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "どなた",
@@ -1081,7 +1360,7 @@
         {
           "numero": 11,
           "role": "narrateur",
-          "texte": "（[戸|と]を[開|あ]けると、うすい[着物|きもの]を[着|き]た[美|うつく]しい[娘|むすめ]が[立|た]っている）",
+          "texte": "（[戸|と]を [開|あ]けると、 うすい [着物|きもの]を [着|き]た [美|うつく]しい [娘|むすめ]が [立|た]っている）",
           "fr": "(Il ouvre la porte, une belle jeune fille portant un fin kimono se tient là)",
           "en": "(He opens the door: a beautiful young woman in a thin kimono is standing there)",
           "mots": [
@@ -1097,6 +1376,9 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[開|あ]ける",
               "v": "akeru",
               "fr": "ouvre",
@@ -1110,8 +1392,14 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "うすい",
               "v": "usui"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[着物|きもの]",
@@ -1122,14 +1410,23 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[着|き]た",
               "v": "kiru-vetement",
               "fr": "portant",
               "en": "wearing"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[美|うつく]しい",
               "v": "utsukushii"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[娘|むすめ]",
@@ -1138,6 +1435,9 @@
             {
               "t": "が",
               "v": "ga"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[立|た]っている",
@@ -1153,7 +1453,7 @@
         {
           "numero": 12,
           "role": "tsuu",
-          "texte": "こんばんは。[夜分|やぶん][遅|おそ]くに[申|もう]し[訳|わけ]ありません。[吹雪|ふぶき]で[道|みち]に[迷|まよ]ってしまい、[凍|こご]えてしまいそうなのです。どうか[一晩|ひとばん]、[泊|と]めていただけないでしょうか。",
+          "texte": "こんばんは。 [夜分|やぶん] [遅|おそ]くに [申|もう]し[訳|わけ]ありません。 [吹雪|ふぶき]で [道|みち]に [迷|まよ]ってしまい、 [凍|こご]えてしまいそうなのです。 どうか [一晩|ひとばん]、 [泊|と]めていただけないでしょうか。",
           "fr": "Bonsoir. Veuillez me pardonner de vous déranger si tard. Je me suis perdue dans la tempête et je suis sur le point de geler. Auriez-vous la gentillesse de m'héberger pour la nuit ?",
           "en": "Good evening. I'm terribly sorry to disturb you so late. I lost my way in the snowstorm and I'm about to freeze. Would you be so kind as to let me stay for one night?",
           "mots": [
@@ -1165,8 +1465,14 @@
               "t": "。"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[夜分|やぶん]",
               "v": "yabun"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[遅|おそ]く",
@@ -1179,11 +1485,17 @@
               "v": "ni"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[申|もう]し[訳|わけ]ありません",
               "v": "moushiwakearimasen"
             },
             {
               "t": "。"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[吹雪|ふぶき]",
@@ -1196,12 +1508,18 @@
               "en": "because of"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[道|みち]",
               "v": "michi"
             },
             {
               "t": "に",
               "v": "ni"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[迷|まよ]ってしまい",
@@ -1211,6 +1529,9 @@
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[凍|こご]えてしまいそうな",
@@ -1230,8 +1551,14 @@
               "t": "。"
             },
             {
+              "t": " "
+            },
+            {
               "t": "どうか",
               "v": "douka"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[一晩|ひとばん]",
@@ -1239,6 +1566,9 @@
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[泊|と]めていただけない",
@@ -1262,7 +1592,7 @@
         {
           "numero": 13,
           "role": "yosaku",
-          "texte": "それは[大変|たいへん]だ！ さあさあ、[中|なか]に[入|はい]りなさい。",
+          "texte": "それは [大変|たいへん]だ！ さあさあ、 [中|なか]に [入|はい]りなさい。",
           "fr": "Oh, c'est terrible ! Allez, entrez vite !",
           "en": "Oh, that's terrible! Come, come, come inside!",
           "mots": [
@@ -1273,6 +1603,9 @@
             {
               "t": "は",
               "v": "wa"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[大変|たいへん]",
@@ -1296,12 +1629,18 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[中|なか]",
               "v": "naka"
             },
             {
               "t": "に",
               "v": "ni"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[入|はい]りなさい",
@@ -1335,7 +1674,7 @@
         {
           "numero": 15,
           "role": "yosaku",
-          "texte": "[火|ひ]にあたって、この[温|あたた]かいかゆをお[食|た]べなさい。",
+          "texte": "[火|ひ]に あたって、 この [温|あたた]かい かゆを お[食|た]べなさい。",
           "fr": "Réchauffez-vous près du feu et mangez ce bouillon de riz chaud.",
           "en": "Warm yourself by the fire and eat this hot rice porridge.",
           "mots": [
@@ -1348,6 +1687,9 @@
               "v": "ni"
             },
             {
+              "t": " "
+            },
+            {
               "t": "あたって",
               "v": "ataru",
               "fr": "réchauffez-vous et",
@@ -1357,12 +1699,21 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "この",
               "v": "kono"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[温|あたた]かい",
               "v": "atatakai"
+            },
+            {
+              "t": " "
             },
             {
               "t": "かゆ",
@@ -1371,6 +1722,9 @@
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "お[食|た]べなさい",
@@ -1386,7 +1740,7 @@
         {
           "numero": 16,
           "role": "tsuu",
-          "texte": "よさく[様|さま]は[本当|ほんとう]に[優|やさ]しいお[方|かた]ですね……。\n（[火|ひ]にあたり、かゆを[食|た]べる）",
+          "texte": "よさく[様|さま]は [本当|ほんとう]に [優|やさ]しい お[方|かた]ですね……。\n（[火|ひ]に あたり、 かゆを [食|た]べる）",
           "fr": "Yosaku-sama, vous êtes vraiment une personne d'une grande gentillesse... (Elle se réchauffe et mange le bouillon)",
           "en": "Yosaku-sama, you are truly a kind person... (She warms herself and eats the porridge)",
           "mots": [
@@ -1403,14 +1757,23 @@
               "v": "wa"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[本当|ほんとう]に",
               "v": "hontou",
               "fr": "vraiment",
               "en": "truly"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[優|やさ]しい",
               "v": "yasashii"
+            },
+            {
+              "t": " "
             },
             {
               "t": "お[方|かた]",
@@ -1445,6 +1808,9 @@
               "v": "ni"
             },
             {
+              "t": " "
+            },
+            {
               "t": "あたり",
               "v": "ataru",
               "fr": "se réchauffe et",
@@ -1454,12 +1820,18 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "かゆ",
               "v": "kayu"
             },
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[食|た]べる",
@@ -1475,7 +1847,7 @@
         {
           "numero": 17,
           "role": "tsuu",
-          "texte": "[実|じつ]は[私|わたし]、[親|おや]も[家|いえ]もなく、[行|い]くあてがありません。\nもしよろしければ、ここにおいていただけないでしょうか。あなたのお[世話|せわ]をさせてください。",
+          "texte": "[実|じつ]は [私|わたし]、 [親|おや]も [家|いえ]もなく、 [行|い]く あてが ありません。\nもし よろしければ、 ここに おいていただけないでしょうか。 あなたの お[世話|せわ]を させて ください。",
           "fr": "En réalité, je n'ai ni parents, ni maison, ni endroit où aller. Si vous le voulez bien, me permettriez-vous de rester ici ? Laissez-moi prendre soin de vous.",
           "en": "The truth is, I have no parents, no home, and nowhere to go. If you would allow it, could you let me stay here? Please let me take care of you.",
           "mots": [
@@ -1484,11 +1856,17 @@
               "v": "jitsuwa"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[私|わたし]",
               "v": "watashi"
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[親|おや]",
@@ -1499,6 +1877,9 @@
               "v": "mo",
               "fr": "ni",
               "en": "neither"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[家|いえ]",
@@ -1520,10 +1901,16 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[行|い]く",
               "v": "iku",
               "fr": "aller",
               "en": "to go"
+            },
+            {
+              "t": " "
             },
             {
               "t": "あて",
@@ -1532,6 +1919,9 @@
             {
               "t": "が",
               "v": "ga"
+            },
+            {
+              "t": " "
             },
             {
               "t": "ありません",
@@ -1550,6 +1940,9 @@
               "v": "moshi"
             },
             {
+              "t": " "
+            },
+            {
               "t": "よろしければ",
               "v": "yoroshii",
               "fr": "si cela vous convient",
@@ -1559,12 +1952,18 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "ここ",
               "v": "koko"
             },
             {
               "t": "に",
               "v": "ni"
+            },
+            {
+              "t": " "
             },
             {
               "t": "おいていただけない",
@@ -1584,12 +1983,18 @@
               "t": "。"
             },
             {
+              "t": " "
+            },
+            {
               "t": "あなた",
               "v": "anata"
             },
             {
               "t": "の",
               "v": "no"
+            },
+            {
+              "t": " "
             },
             {
               "t": "お[世話|せわ]",
@@ -1600,10 +2005,16 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "させて",
               "v": "suru",
               "fr": "laissez-moi faire",
               "en": "let me do"
+            },
+            {
+              "t": " "
             },
             {
               "t": "ください",
@@ -1617,7 +2028,7 @@
         {
           "numero": 18,
           "role": "yosaku",
-          "texte": "ええ！？ [私|わたし]のような[貧|まず]しい[男|おとこ]の[家|いえ]に？\n[食|た]べるものも[十分|じゅうぶん]にありませんよ。",
+          "texte": "ええ！？ [私|わたし]のような [貧|まず]しい [男|おとこ]の [家|いえ]に？\n[食|た]べる ものも [十分|じゅうぶん]に ありませんよ。",
           "fr": "Hein !? Dans la maison d'un homme aussi pauvre que moi ? Je n'ai même pas assez à manger !",
           "en": "What!? In the house of a poor man like me? I don't even have enough to eat!",
           "mots": [
@@ -1644,8 +2055,14 @@
               "v": "youna"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[貧|まず]しい",
               "v": "mazushii"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[男|おとこ]",
@@ -1654,6 +2071,9 @@
             {
               "t": "の",
               "v": "no"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[家|いえ]",
@@ -1674,6 +2094,9 @@
               "v": "taberu"
             },
             {
+              "t": " "
+            },
+            {
               "t": "もの",
               "v": "mono"
             },
@@ -1684,10 +2107,16 @@
               "en": "even"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[十分|じゅうぶん]に",
               "v": "juubun",
               "fr": "assez",
               "en": "enough"
+            },
+            {
+              "t": " "
             },
             {
               "t": "ありません",
@@ -1707,7 +2136,7 @@
         {
           "numero": 19,
           "role": "tsuu",
-          "texte": "いいえ、[私|わたし]はあまり[食|た]べません。よさく[様|さま]と[一緒|いっしょ]にいられるだけで、[私|わたし]は[幸|しあわ]せです。",
+          "texte": "いいえ、 [私|わたし]は あまり [食|た]べません。 よさく[様|さま]と [一緒|いっしょ]に いられるだけで、 [私|わたし]は [幸|しあわ]せです。",
           "fr": "Non, je ne mange pas beaucoup. Être à vos côtés me suffit pour être heureuse.",
           "en": "No, I don't eat much. Just being with you, Yosaku-sama, makes me happy.",
           "mots": [
@@ -1719,6 +2148,9 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[私|わたし]",
               "v": "watashi"
             },
@@ -1727,8 +2159,14 @@
               "v": "wa"
             },
             {
+              "t": " "
+            },
+            {
               "t": "あまり",
               "v": "amari"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[食|た]べません",
@@ -1738,6 +2176,9 @@
             },
             {
               "t": "。"
+            },
+            {
+              "t": " "
             },
             {
               "t": "よさく",
@@ -1754,8 +2195,14 @@
               "en": "with"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[一緒|いっしょ]に",
               "v": "issho"
+            },
+            {
+              "t": " "
             },
             {
               "t": "いられる",
@@ -1777,12 +2224,18 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[私|わたし]",
               "v": "watashi"
             },
             {
               "t": "は",
               "v": "wa"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[幸|しあわ]せ",
@@ -1800,13 +2253,16 @@
         {
           "numero": 20,
           "role": "narrateur",
-          "texte": "こうして[二人|ふたり]は[夫婦|ふうふ]になり、[貧|まず]しくてもとても[幸|しあわ]せな[日々|ひび]を[過|す]ごしました。",
+          "texte": "こうして [二人|ふたり]は [夫婦|ふうふ]に なり、 [貧|まず]しくても とても [幸|しあわ]せな [日々|ひび]を [過|す]ごしました。",
           "fr": "C'est ainsi qu'ils devinrent mari et femme, et bien que pauvres, ils passèrent des jours très heureux.",
           "en": "And so the two became husband and wife, and though they were poor, they spent very happy days together.",
           "mots": [
             {
               "t": "こうして",
               "v": "koushite"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[二人|ふたり]",
@@ -1817,12 +2273,18 @@
               "v": "wa"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[夫婦|ふうふ]",
               "v": "fuufu"
             },
             {
               "t": "に",
               "v": "ni"
+            },
+            {
+              "t": " "
             },
             {
               "t": "なり",
@@ -1834,18 +2296,30 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[貧|まず]しくても",
               "v": "mazushii",
               "fr": "même pauvres",
               "en": "even though poor"
             },
             {
+              "t": " "
+            },
+            {
               "t": "とても",
               "v": "totemo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[幸|しあわ]せな",
               "v": "shiawase"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[日々|ひび]",
@@ -1854,6 +2328,9 @@
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[過|す]ごしました",
@@ -1877,13 +2354,16 @@
         {
           "numero": 21,
           "role": "narrateur",
-          "texte": "やがて[冬|ふゆ]が[本格的|ほんかくてき]になり、よさくの[家|いえ]には[食|た]べるものがなくなってきました。\nすると、つうが[静|しず]かに[切|き]り[出|だ]しました。",
+          "texte": "やがて [冬|ふゆ]が [本格的|ほんかくてき]に なり、 よさくの [家|いえ]には [食|た]べる ものが なくなってきました。\nすると、 つうが [静|しず]かに [切|き]り[出|だ]しました。",
           "fr": "Bientôt, l'hiver s'installa pour de bon et il n'y eut plus rien à manger dans la maison de Yosaku. C'est alors que Tsuu lui parla doucement.",
           "en": "Before long, winter set in for good, and Yosaku's house began to run out of food. Then Tsuu quietly spoke up.",
           "mots": [
             {
               "t": "やがて",
               "v": "yagate"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[冬|ふゆ]",
@@ -1894,12 +2374,18 @@
               "v": "ga"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[本格的|ほんかくてき]",
               "v": "honkakuteki"
             },
             {
               "t": "に",
               "v": "ni"
+            },
+            {
+              "t": " "
             },
             {
               "t": "なり",
@@ -1911,12 +2397,18 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "よさく",
               "v": "yosaku"
             },
             {
               "t": "の",
               "v": "no"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[家|いえ]",
@@ -1931,8 +2423,14 @@
               "v": "wa"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[食|た]べる",
               "v": "taberu"
+            },
+            {
+              "t": " "
             },
             {
               "t": "もの",
@@ -1941,6 +2439,9 @@
             {
               "t": "が",
               "v": "ga"
+            },
+            {
+              "t": " "
             },
             {
               "t": "なくなってきました",
@@ -1962,6 +2463,9 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "つう",
               "v": "tsuu"
             },
@@ -1970,10 +2474,16 @@
               "v": "ga"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[静|しず]かに",
               "v": "shizuka",
               "fr": "doucement",
               "en": "quietly"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[切|き]り[出|だ]しました",
@@ -1989,7 +2499,7 @@
         {
           "numero": 22,
           "role": "tsuu",
-          "texte": "あなた、[奥|おく]の[部屋|へや]で[布|ぬの]を[織|お]ろうと[思|おも]います。その[布|ぬの]を[町|まち]で[売|う]って、[食|た]べ[物|もの]を[買|か]ってください。",
+          "texte": "あなた、 [奥|おく]の [部屋|へや]で [布|ぬの]を [織|お]ろうと [思|おも]います。 その [布|ぬの]を [町|まち]で [売|う]って、 [食|た]べ[物|もの]を [買|か]って ください。",
           "fr": "Mon cher mari, je vais tisser du tissu dans la pièce du fond. Vendez ce tissu en ville pour acheter de la nourriture.",
           "en": "My dear husband, I am going to weave cloth in the back room. Please sell the cloth in town and buy food with it.",
           "mots": [
@@ -2003,12 +2513,18 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[奥|おく]",
               "v": "oku-fond"
             },
             {
               "t": "の",
               "v": "no"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[部屋|へや]",
@@ -2019,12 +2535,18 @@
               "v": "de"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[布|ぬの]",
               "v": "nuno"
             },
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[織|お]ろう",
@@ -2037,6 +2559,9 @@
               "v": "to-citation"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[思|おも]います",
               "v": "omou",
               "fr": "je pense (que je vais)",
@@ -2046,8 +2571,14 @@
               "t": "。"
             },
             {
+              "t": " "
+            },
+            {
               "t": "その",
               "v": "sono"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[布|ぬの]",
@@ -2058,12 +2589,18 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[町|まち]",
               "v": "machi"
             },
             {
               "t": "で",
               "v": "de"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[売|う]って",
@@ -2075,6 +2612,9 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[食|た]べ[物|もの]",
               "v": "tabemono"
             },
@@ -2083,10 +2623,16 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[買|か]って",
               "v": "kau",
               "fr": "achetez",
               "en": "buy"
+            },
+            {
+              "t": " "
             },
             {
               "t": "ください",
@@ -2100,7 +2646,7 @@
         {
           "numero": 23,
           "role": "yosaku",
-          "texte": "[布|ぬの]を？ つう、お[前|まえ]はおりものができるのか？",
+          "texte": "[布|ぬの]を？ つう、 お[前|まえ]は おりものが できるのか？",
           "fr": "Du tissu ? Tsuu, tu sais tisser ?",
           "en": "Cloth? Tsuu, you know how to weave?",
           "mots": [
@@ -2126,6 +2672,9 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "お[前|まえ]",
               "v": "omae"
             },
@@ -2134,12 +2683,18 @@
               "v": "wa"
             },
             {
+              "t": " "
+            },
+            {
               "t": "おりもの",
               "v": "orimono"
             },
             {
               "t": "が",
               "v": "ga"
+            },
+            {
+              "t": " "
             },
             {
               "t": "できる",
@@ -2163,7 +2718,7 @@
         {
           "numero": 24,
           "role": "tsuu",
-          "texte": "はい。ですが、[一|ひと]つだけ[固|かた]い[約束|やくそく]をしてください。",
+          "texte": "はい。 ですが、 [一|ひと]つだけ [固|かた]い [約束|やくそく]を して ください。",
           "fr": "Oui. Mais promettez-moi une chose sacrée.",
           "en": "Yes. But you must make me one solemn promise.",
           "mots": [
@@ -2175,11 +2730,17 @@
               "t": "。"
             },
             {
+              "t": " "
+            },
+            {
               "t": "ですが",
               "v": "desuga"
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[一|ひと]つ",
@@ -2190,8 +2751,14 @@
               "v": "dake"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[固|かた]い",
               "v": "katai"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[約束|やくそく]",
@@ -2202,10 +2769,16 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "して",
               "v": "suru",
               "fr": "faites",
               "en": "make"
+            },
+            {
+              "t": " "
             },
             {
               "t": "ください",
@@ -2219,7 +2792,7 @@
         {
           "numero": 25,
           "role": "yosaku",
-          "texte": "[約束|やくそく]？ ああ、[分|わ]かったよ。",
+          "texte": "[約束|やくそく]？ ああ、 [分|わ]かったよ。",
           "fr": "Une promesse ? Oui, d'accord.",
           "en": "A promise? Yes, all right.",
           "mots": [
@@ -2241,6 +2814,9 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[分|わ]かった",
               "v": "wakaru",
               "fr": "c'est compris",
@@ -2258,7 +2834,7 @@
         {
           "numero": 26,
           "role": "tsuu",
-          "texte": "[私|わたし]が[布|ぬの]を[織|お]っている[間|あいだ]、[絶対|ぜったい]に、[絶対|ぜったい]に[部屋|へや]の[中|なか]をのぞかない、と。",
+          "texte": "[私|わたし]が [布|ぬの]を [織|お]っている [間|あいだ]、 [絶対|ぜったい]に、 [絶対|ぜったい]に [部屋|へや]の [中|なか]を のぞかない、と。",
           "fr": "Pendant que je tisse le tissu, vous ne devez absolument, absolument pas regarder à l'intérieur de la pièce.",
           "en": "While I am weaving the cloth, you must never, ever look inside the room.",
           "mots": [
@@ -2271,6 +2847,9 @@
               "v": "ga"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[布|ぬの]",
               "v": "nuno"
             },
@@ -2279,10 +2858,16 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[織|お]っている",
               "v": "oru",
               "fr": "tisse",
               "en": "am weaving"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[間|あいだ]",
@@ -2292,6 +2877,9 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[絶対|ぜったい]に",
               "v": "zettai"
             },
@@ -2299,8 +2887,14 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[絶対|ぜったい]に",
               "v": "zettai"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[部屋|へや]",
@@ -2311,12 +2905,18 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[中|なか]",
               "v": "naka"
             },
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "のぞかない",
@@ -2339,7 +2939,7 @@
         {
           "numero": 27,
           "role": "yosaku",
-          "texte": "お[前|まえ]が「[見|み]るな」と[言|い]うなら、[絶対|ぜったい]にのぞかないとも。",
+          "texte": "お[前|まえ]が 「[見|み]るな」と [言|い]うなら、 [絶対|ぜったい]に のぞかないとも。",
           "fr": "Si tu me dis de ne pas regarder, je te promets que je ne regarderai sous aucun prétexte.",
           "en": "If you tell me not to look, then of course I will never look.",
           "mots": [
@@ -2350,6 +2950,9 @@
             {
               "t": "が",
               "v": "ga"
+            },
+            {
+              "t": " "
             },
             {
               "t": "「"
@@ -2368,6 +2971,9 @@
               "v": "to-citation"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[言|い]う",
               "v": "iu",
               "fr": "dis",
@@ -2381,8 +2987,14 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[絶対|ぜったい]に",
               "v": "zettai"
+            },
+            {
+              "t": " "
             },
             {
               "t": "のぞかない",
@@ -2402,7 +3014,7 @@
         {
           "numero": 28,
           "role": "tsuu",
-          "texte": "ありがとう。では、[始|はじ]めますね。",
+          "texte": "ありがとう。 では、 [始|はじ]めますね。",
           "fr": "Merci. Alors, je commence.",
           "en": "Thank you. Well then, I'll begin.",
           "mots": [
@@ -2414,11 +3026,17 @@
               "t": "。"
             },
             {
+              "t": " "
+            },
+            {
               "t": "では",
               "v": "dewa"
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[始|はじ]めます",
@@ -2438,7 +3056,7 @@
         {
           "numero": 29,
           "role": "narrateur",
-          "texte": "つうは[部屋|へや]に[入|はい]り、しっかりと[戸|と]を[閉|し]めました。",
+          "texte": "つうは [部屋|へや]に [入|はい]り、 しっかりと [戸|と]を [閉|し]めました。",
           "fr": "Tsuu entra dans la pièce et ferma fermement la porte.",
           "en": "Tsuu went into the room and shut the door tight.",
           "mots": [
@@ -2451,12 +3069,18 @@
               "v": "wa"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[部屋|へや]",
               "v": "heya"
             },
             {
               "t": "に",
               "v": "ni"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[入|はい]り",
@@ -2468,8 +3092,14 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "しっかりと",
               "v": "shikkari"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[戸|と]",
@@ -2478,6 +3108,9 @@
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[閉|し]めました",
@@ -2493,7 +3126,7 @@
         {
           "numero": 30,
           "role": "narrateur",
-          "texte": "トントンカラリ、トントンカラリ。\nつうのはたおりの[音|おと]が、しんしんと[降|ふ]る[雪|ゆき]の[夜|よる]にひびきわたります。\nトントンカラリ、トントンカラリ……。",
+          "texte": "トントンカラリ、 トントンカラリ。\nつうの はたおりの [音|おと]が、 しんしんと [降|ふ]る [雪|ゆき]の [夜|よる]に ひびきわたります。\nトントンカラリ、 トントンカラリ……。",
           "fr": "Ton-ton-karari, ton-ton-karari... Le son du métier à tisser de Tsuu résonnait dans la nuit où la neige tombait en silence. Ton-ton-karari, ton-ton-karari...",
           "en": "Ton-ton-karari, ton-ton-karari... The sound of Tsuu's loom echoed through the night as the snow fell silently. Ton-ton-karari, ton-ton-karari...",
           "mots": [
@@ -2503,6 +3136,9 @@
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "トントンカラリ",
@@ -2523,12 +3159,18 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "はたおり",
               "v": "hataori"
             },
             {
               "t": "の",
               "v": "no"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[音|おと]",
@@ -2542,14 +3184,23 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "しんしんと",
               "v": "shinshin"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[降|ふ]る",
               "v": "furu-tomber",
               "fr": "qui tombe",
               "en": "falling"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[雪|ゆき]",
@@ -2560,12 +3211,18 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[夜|よる]",
               "v": "yoru"
             },
             {
               "t": "に",
               "v": "ni"
+            },
+            {
+              "t": " "
             },
             {
               "t": "ひびきわたります",
@@ -2585,6 +3242,9 @@
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "トントンカラリ",
@@ -2633,7 +3293,7 @@
         {
           "numero": 32,
           "role": "narrateur",
-          "texte": "（[翌朝|よくあさ]、つうが[青|あお]ざめた[顔|かお]で[美|うつく]しい[布|ぬの]を[持|も]って[出|で]てくる）",
+          "texte": "（[翌朝|よくあさ]、 つうが [青|あお]ざめた [顔|かお]で [美|うつく]しい [布|ぬの]を [持|も]って [出|で]てくる）",
           "fr": "(Au matin, Tsuu sort, le visage très pâle, tenant un magnifique tissu)",
           "en": "(The next morning, Tsuu comes out, her face deathly pale, holding a beautiful cloth)",
           "mots": [
@@ -2648,6 +3308,9 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "つう",
               "v": "tsuu"
             },
@@ -2656,10 +3319,16 @@
               "v": "ga"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[青|あお]ざめた",
               "v": "aozameru",
               "fr": "pâle",
               "en": "pale"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[顔|かお]",
@@ -2672,8 +3341,14 @@
               "en": "with"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[美|うつく]しい",
               "v": "utsukushii"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[布|ぬの]",
@@ -2684,10 +3359,16 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[持|も]って",
               "v": "motsu",
               "fr": "en tenant",
               "en": "holding"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[出|で]てくる",
@@ -2703,7 +3384,7 @@
         {
           "numero": 33,
           "role": "tsuu",
-          "texte": "あなた……[布|ぬの]ができました。これを[町|まち]で[売|う]ってきてください。",
+          "texte": "あなた…… [布|ぬの]が できました。 これを [町|まち]で [売|う]ってきて ください。",
           "fr": "Mon cher mari... Le tissu est prêt. Allez le vendre en ville, s'il vous plaît.",
           "en": "My dear husband... the cloth is ready. Please go and sell it in town.",
           "mots": [
@@ -2717,12 +3398,18 @@
               "t": "……"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[布|ぬの]",
               "v": "nuno"
             },
             {
               "t": "が",
               "v": "ga"
+            },
+            {
+              "t": " "
             },
             {
               "t": "できました",
@@ -2734,12 +3421,18 @@
               "t": "。"
             },
             {
+              "t": " "
+            },
+            {
               "t": "これ",
               "v": "kore"
             },
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[町|まち]",
@@ -2750,10 +3443,16 @@
               "v": "de"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[売|う]ってきて",
               "v": "uru",
               "fr": "allez vendre",
               "en": "go and sell"
+            },
+            {
+              "t": " "
             },
             {
               "t": "ください",
@@ -2767,7 +3466,7 @@
         {
           "numero": 34,
           "role": "yosaku",
-          "texte": "つう！ なんて[素晴|すば]らしい[布|ぬの]なんだ！ [光|ひかり]のかげんで[色|いろ]が[変|か]わる、[見|み]たこともない[布|ぬの]だ！ でも……なんだか[少|すこ]しやせたのではないか？",
+          "texte": "つう！ なんて [素晴|すば]らしい [布|ぬの]なんだ！ [光|ひかり]の かげんで [色|いろ]が [変|か]わる、 [見|み]た こともない [布|ぬの]だ！ でも…… なんだか [少|すこ]し やせたのではないか？",
           "fr": "Tsuu ! Quel tissu extraordinaire ! Sa couleur change selon la lumière, je n'ai jamais rien vu de tel ! Mais... n'as-tu pas un peu maigri ?",
           "en": "Tsuu! What a wonderful cloth! Its colour changes with the light, I've never seen anything like it! But... haven't you grown a little thinner?",
           "mots": [
@@ -2786,8 +3485,14 @@
               "v": "nante"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[素晴|すば]らしい",
               "v": "subarashii"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[布|ぬの]",
@@ -2822,6 +3527,9 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "かげん",
               "v": "kagen"
             },
@@ -2832,12 +3540,18 @@
               "en": "depending on"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[色|いろ]",
               "v": "iro"
             },
             {
               "t": "が",
               "v": "ga"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[変|か]わる",
@@ -2849,10 +3563,16 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[見|み]た",
               "v": "miru",
               "fr": "vu",
               "en": "seen"
+            },
+            {
+              "t": " "
             },
             {
               "t": "こと",
@@ -2869,6 +3589,9 @@
               "v": "nai",
               "fr": "jamais",
               "en": "never"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[布|ぬの]",
@@ -2892,12 +3615,21 @@
               "t": "……"
             },
             {
+              "t": " "
+            },
+            {
               "t": "なんだか",
               "v": "nandaka"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[少|すこ]し",
               "v": "sukoshi"
+            },
+            {
+              "t": " "
             },
             {
               "t": "やせた",
@@ -2925,7 +3657,7 @@
         {
           "numero": 35,
           "role": "tsuu",
-          "texte": "[大丈夫|だいじょうぶ]です。あなたのためなら。",
+          "texte": "[大丈夫|だいじょうぶ]です。 あなたの ためなら。",
           "fr": "Tout va bien. Si c'est pour vous...",
           "en": "I'm all right. If it is for you...",
           "mots": [
@@ -2941,12 +3673,18 @@
               "t": "。"
             },
             {
+              "t": " "
+            },
+            {
               "t": "あなた",
               "v": "anata"
             },
             {
               "t": "の",
               "v": "no"
+            },
+            {
+              "t": " "
             },
             {
               "t": "ため",
@@ -2972,7 +3710,7 @@
         {
           "numero": 36,
           "role": "narrateur",
-          "texte": "よさくが[町|まち]へ[出向|でむ]くと、その[布|ぬの]は「[千羽鶴|せんばづる]の[織物|おりもの]」と[呼|よ]ばれ、おどろくほどの[高値|たかね]で[売|う]れました。",
+          "texte": "よさくが [町|まち]へ [出向|でむ]くと、 その [布|ぬの]は 「[千羽鶴|せんばづる]の [織物|おりもの]」と [呼|よ]ばれ、 おどろくほどの [高値|たかね]で [売|う]れました。",
           "fr": "Lorsque Yosaku se rendit en ville, ce tissu fut appelé « le tissu aux mille grues » et se vendit à un prix d'une valeur incroyable.",
           "en": "When Yosaku went to town, the cloth was called \"the cloth of a thousand cranes\" and sold for an astonishingly high price.",
           "mots": [
@@ -2985,12 +3723,18 @@
               "v": "ga"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[町|まち]",
               "v": "machi"
             },
             {
               "t": "へ",
               "v": "e"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[出向|でむ]く",
@@ -3006,8 +3750,14 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "その",
               "v": "sono"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[布|ぬの]",
@@ -3016,6 +3766,9 @@
             {
               "t": "は",
               "v": "wa"
+            },
+            {
+              "t": " "
             },
             {
               "t": "「"
@@ -3029,6 +3782,9 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[織物|おりもの]",
               "v": "orimono"
             },
@@ -3040,6 +3796,9 @@
               "v": "to-citation"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[呼|よ]ばれ",
               "v": "yobu",
               "fr": "fut appelé et",
@@ -3047,6 +3806,9 @@
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "おどろく",
@@ -3063,12 +3825,18 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[高値|たかね]",
               "v": "takane"
             },
             {
               "t": "で",
               "v": "de"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[売|う]れました",
@@ -3084,7 +3852,7 @@
         {
           "numero": 37,
           "role": "narrateur",
-          "texte": "それを[知|し]った[隣人|りんじん]のごんたとおよねが、[家|いえ]にやってきました。",
+          "texte": "それを [知|し]った [隣人|りんじん]の ごんたと およねが、 [家|いえ]に やってきました。",
           "fr": "En apprenant cela, leurs voisins, Gonta et Oyone, vinrent à sa maison.",
           "en": "Hearing of this, their neighbours Gonta and Oyone came to the house.",
           "mots": [
@@ -3097,10 +3865,16 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[知|し]った",
               "v": "shiru",
               "fr": "ayant appris",
               "en": "having learned"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[隣人|りんじん]",
@@ -3113,12 +3887,18 @@
               "en": "(apposition: the neighbours)"
             },
             {
+              "t": " "
+            },
+            {
               "t": "ごんた",
               "v": "gonta"
             },
             {
               "t": "と",
               "v": "to"
+            },
+            {
+              "t": " "
             },
             {
               "t": "およね",
@@ -3132,12 +3912,18 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[家|いえ]",
               "v": "ie"
             },
             {
               "t": "に",
               "v": "ni"
+            },
+            {
+              "t": " "
             },
             {
               "t": "やってきました",
@@ -3153,7 +3939,7 @@
         {
           "numero": 38,
           "role": "gonta",
-          "texte": "やあやあ、よさくさん！ [聞|き]いたぞ！\nあの[布|ぬの]が[高|たか]く[売|う]れたんだってな！",
+          "texte": "やあやあ、 よさくさん！ [聞|き]いたぞ！\nあの [布|ぬの]が [高|たか]く [売|う]れたん だってな！",
           "fr": "Hé hé, Yosaku ! J'ai entendu la nouvelle ! On dit que ce tissu s'est vendu très cher !",
           "en": "Well, well, Yosaku! I heard all about it! They say that cloth sold for a lot of money!",
           "mots": [
@@ -3163,6 +3949,9 @@
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "よさく",
@@ -3199,6 +3988,9 @@
               "v": "ano"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[布|ぬの]",
               "v": "nuno"
             },
@@ -3207,10 +3999,16 @@
               "v": "ga"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[高|たか]く",
               "v": "takai",
               "fr": "cher",
               "en": "for a high price"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[売|う]れた",
@@ -3221,6 +4019,9 @@
             {
               "t": "ん",
               "v": "no-explication"
+            },
+            {
+              "t": " "
             },
             {
               "t": "だって",
@@ -3238,7 +4039,7 @@
         {
           "numero": 39,
           "role": "oyone",
-          "texte": "ねえ よさくさん、あんないい[布|ぬの]、[奥|おく]さんはどうやって[織|お]っているの？ どんな[糸|いと]を[使|つか]っているの？",
+          "texte": "ねえ よさくさん、 あんな いい [布|ぬの]、 [奥|おく]さんは どうやって [織|お]っているの？ どんな [糸|いと]を [使|つか]っているの？",
           "fr": "Dites-moi, Yosaku, un si beau tissu, comment votre femme le tisse-t-elle ? Quel genre de fil utilise-t-elle ?",
           "en": "Say, Yosaku, such fine cloth, how does your wife weave it? What kind of thread does she use?",
           "mots": [
@@ -3261,12 +4062,21 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "あんな",
               "v": "anna"
             },
             {
+              "t": " "
+            },
+            {
               "t": "いい",
               "v": "ii"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[布|ぬの]",
@@ -3274,6 +4084,9 @@
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[奥|おく]さん",
@@ -3284,8 +4097,14 @@
               "v": "wa"
             },
             {
+              "t": " "
+            },
+            {
               "t": "どうやって",
               "v": "douyatte"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[織|お]っている",
@@ -3308,12 +4127,18 @@
               "v": "donna"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[糸|いと]",
               "v": "ito"
             },
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[使|つか]っている",
@@ -3333,7 +4158,7 @@
         {
           "numero": 40,
           "role": "yosaku",
-          "texte": "それは……おれにも[分|わ]からないんだ。「[絶対|ぜったい]にのぞいてはいけない」と[約束|やくそく]しているからね。",
+          "texte": "それは…… おれにも [分|わ]からないんだ。 「[絶対|ぜったい]に のぞいてはいけない」と [約束|やくそく] しているからね。",
           "fr": "Eh bien... je n'en sais rien moi-même. J'ai promis de ne « jamais regarder ».",
           "en": "Well... I don't know myself. I promised that I would \"never look\".",
           "mots": [
@@ -3349,6 +4174,9 @@
               "t": "……"
             },
             {
+              "t": " "
+            },
+            {
               "t": "おれ",
               "v": "ore"
             },
@@ -3359,6 +4187,9 @@
             {
               "t": "も",
               "v": "mo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[分|わ]からない",
@@ -3378,11 +4209,17 @@
               "t": "。"
             },
             {
+              "t": " "
+            },
+            {
               "t": "「"
             },
             {
               "t": "[絶対|ぜったい]に",
               "v": "zettai"
+            },
+            {
+              "t": " "
             },
             {
               "t": "のぞいてはいけない",
@@ -3398,8 +4235,14 @@
               "v": "to-citation"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[約束|やくそく]",
               "v": "yakusoku"
+            },
+            {
+              "t": " "
             },
             {
               "t": "している",
@@ -3423,7 +4266,7 @@
         {
           "numero": 41,
           "role": "gonta",
-          "texte": "なんだって！？ [自分|じぶん]の[女房|にょうぼう]が[部屋|へや]で[何|なに]をしているか[知|し]らないだと？ あやしいぞ！ もしかしたら[魔法|まほう]でも[使|つか]っているんじゃないか？",
+          "texte": "なんだって！？ [自分|じぶん]の [女房|にょうぼう]が [部屋|へや]で [何|なに]を しているか [知|し]らないだと？ あやしいぞ！ もしかしたら [魔法|まほう] でも [使|つか]っているんじゃないか？",
           "fr": "Pardon !? Tu ne sais pas ce que fait ta propre femme dans la pièce ? C'est louche ! Elle utilise peut-être de la magie ?",
           "en": "What!? You don't know what your own wife is doing in that room? That's fishy! Maybe she's using magic or something?",
           "mots": [
@@ -3446,12 +4289,18 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[女房|にょうぼう]",
               "v": "nyoubou"
             },
             {
               "t": "が",
               "v": "ga"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[部屋|へや]",
@@ -3462,12 +4311,18 @@
               "v": "de"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[何|なに]",
               "v": "nani"
             },
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "している",
@@ -3478,6 +4333,9 @@
             {
               "t": "か",
               "v": "ka"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[知|し]らない",
@@ -3518,12 +4376,21 @@
               "v": "moshikashitara"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[魔法|まほう]",
               "v": "mahou"
             },
             {
+              "t": " "
+            },
+            {
               "t": "でも",
               "v": "demo-exemple"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[使|つか]っている",
@@ -3547,7 +4414,7 @@
         {
           "numero": 42,
           "role": "oyone",
-          "texte": "そうよそうよ！ ちょっと のぞくだけなら ばれないわよ。ねえ、[見|み]ましょうよ！",
+          "texte": "そうよ そうよ！ ちょっと のぞくだけなら ばれないわよ。 ねえ、 [見|み]ましょうよ！",
           "fr": "Mais oui, tout à fait ! Si on jette juste un petit coup d'œil, elle ne s'en rendra pas compte. Allez, regardons !",
           "en": "That's right, that's right! If we just take a little peek, she'll never know. Come on, let's look!",
           "mots": [
@@ -3560,6 +4427,9 @@
             {
               "t": "よ",
               "v": "yo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "そう",
@@ -3619,11 +4489,17 @@
               "t": "。"
             },
             {
+              "t": " "
+            },
+            {
               "t": "ねえ",
               "v": "nee"
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[見|み]ましょう",
@@ -3643,7 +4519,7 @@
         {
           "numero": 43,
           "role": "yosaku",
-          "texte": "やめてくれ！ つうとの[大切|たいせつ]な[約束|やくそく]なんだ！ [絶対|ぜったい]に[見|み]ちゃダメだ！",
+          "texte": "やめて くれ！ つうとの [大切|たいせつ]な [約束|やくそく]なんだ！ [絶対|ぜったい]に [見|み]ちゃ ダメだ！",
           "fr": "Arrêtez ! C'est une promesse très importante avec Tsuu ! Il ne faut absolument pas regarder !",
           "en": "Stop it! It's a very important promise I made to Tsuu! You absolutely must not look!",
           "mots": [
@@ -3652,6 +4528,9 @@
               "v": "yameru",
               "fr": "arrêtez",
               "en": "stop"
+            },
+            {
+              "t": " "
             },
             {
               "t": "くれ",
@@ -3678,8 +4557,14 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[大切|たいせつ]な",
               "v": "taisetsu"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[約束|やくそく]",
@@ -3710,10 +4595,16 @@
               "v": "zettai"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[見|み]ちゃ",
               "v": "miru",
               "fr": "regarder (si on regarde)",
               "en": "looking"
+            },
+            {
+              "t": " "
             },
             {
               "t": "ダメ",
@@ -3731,7 +4622,7 @@
         {
           "numero": 44,
           "role": "gonta",
-          "texte": "[固|かた]いこと[言|い]うなよ！ ほら、もう[一枚|いちまい][織|お]らせて、もっと[金|かね]もうけしようぜ！",
+          "texte": "[固|かた]い こと [言|い]うなよ！ ほら、 もう [一枚|いちまい] [織|お]らせて、 もっと [金|かね]もうけ しようぜ！",
           "fr": "Ne sois pas si rigide ! Fais-lui en tisser un autre pour qu'on gagne encore plus d'argent !",
           "en": "Don't be so stiff! Come on, get her to weave another one and let's make even more money!",
           "mots": [
@@ -3742,8 +4633,14 @@
               "en": "rigid"
             },
             {
+              "t": " "
+            },
+            {
               "t": "こと",
               "v": "koto"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[言|い]うな",
@@ -3769,12 +4666,21 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "もう",
               "v": "mou"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[一枚|いちまい]",
               "v": "ichimai"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[織|お]らせて",
@@ -3786,12 +4692,21 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "もっと",
               "v": "motto"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[金|かね]もうけ",
               "v": "kanemouke"
+            },
+            {
+              "t": " "
             },
             {
               "t": "しよう",
@@ -3811,7 +4726,7 @@
         {
           "numero": 45,
           "role": "oyone",
-          "texte": "ほら、よさくさん、ちょっとだけ！\n（むりやり よさくを[部屋|へや]の[前|まえ]にひっぱっていく）",
+          "texte": "ほら、 よさくさん、 ちょっとだけ！\n（むりやり よさくを [部屋|へや]の [前|まえ]に ひっぱっていく）",
           "fr": "Allez Yosaku, juste un tout petit coup d'œil ! (Ils traînent de force Yosaku devant la pièce)",
           "en": "Come on, Yosaku, just a little peek! (They drag Yosaku by force to the front of the room)",
           "mots": [
@@ -3823,6 +4738,9 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "よさく",
               "v": "yosaku"
             },
@@ -3832,6 +4750,9 @@
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "ちょっと",
@@ -3866,6 +4787,9 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[部屋|へや]",
               "v": "heya"
             },
@@ -3874,12 +4798,18 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[前|まえ]",
               "v": "mae"
             },
             {
               "t": "に",
               "v": "ni"
+            },
+            {
+              "t": " "
             },
             {
               "t": "ひっぱっていく",
@@ -3895,7 +4825,7 @@
         {
           "numero": 46,
           "role": "yosaku",
-          "texte": "ああ……ダメだ、ダメだと[思|おも]っても……つうは[一体|いったい][部屋|へや]の[中|なか]で[何|なに]をしているんだろう……？",
+          "texte": "ああ…… ダメだ、 ダメだと [思|おも]っても…… つうは [一体|いったい] [部屋|へや]の [中|なか]で [何|なに]を しているんだろう……？",
           "fr": "Ah... Je sais que c'est mal, je sais que je ne devrais pas... Mais qu'est-ce que Tsuu peut bien faire là-dedans... ?",
           "en": "Ah... I know I mustn't, I know I mustn't... but what on earth is Tsuu doing in that room...?",
           "mots": [
@@ -3907,6 +4837,9 @@
               "t": "……"
             },
             {
+              "t": " "
+            },
+            {
               "t": "ダメ",
               "v": "dame"
             },
@@ -3916,6 +4849,9 @@
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "ダメ",
@@ -3930,6 +4866,9 @@
               "v": "to-citation"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[思|おも]っても",
               "v": "omou",
               "fr": "même si je pense",
@@ -3937,6 +4876,9 @@
             },
             {
               "t": "……"
+            },
+            {
+              "t": " "
             },
             {
               "t": "つう",
@@ -3947,8 +4889,14 @@
               "v": "wa"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[一体|いったい]",
               "v": "ittai"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[部屋|へや]",
@@ -3959,6 +4907,9 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[中|なか]",
               "v": "naka"
             },
@@ -3967,12 +4918,18 @@
               "v": "de"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[何|なに]",
               "v": "nani"
             },
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "している",
@@ -3999,7 +4956,7 @@
         {
           "numero": 47,
           "role": "narrateur",
-          "texte": "[欲望|よくぼう]と[好奇心|こうきしん]に[負|ま]けた よさくは、ついに[部屋|へや]の[戸|と]を[少|すこ]しだけ[開|あ]けてしまいました。",
+          "texte": "[欲望|よくぼう]と [好奇心|こうきしん]に [負|ま]けた よさくは、 ついに [部屋|へや]の [戸|と]を [少|すこ]しだけ [開|あ]けてしまいました。",
           "fr": "Cédant à la cupidité et à la curiosité, Yosaku finit par entrebâiller doucement la porte de la pièce.",
           "en": "Giving in to greed and curiosity, Yosaku finally opened the door of the room just a crack.",
           "mots": [
@@ -4012,12 +4969,18 @@
               "v": "to"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[好奇心|こうきしん]",
               "v": "koukishin"
             },
             {
               "t": "に",
               "v": "ni"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[負|ま]けた",
@@ -4040,8 +5003,14 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "ついに",
               "v": "tsuini"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[部屋|へや]",
@@ -4052,6 +5021,9 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[戸|と]",
               "v": "to-porte"
             },
@@ -4060,12 +5032,18 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[少|すこ]し",
               "v": "sukoshi"
             },
             {
               "t": "だけ",
               "v": "dake"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[開|あ]けてしまいました",
@@ -4089,7 +5067,7 @@
         {
           "numero": 48,
           "role": "narrateur",
-          "texte": "[部屋|へや]の[中|なか]を[見|み]た[三人|さんにん]は、[息|いき]をのみました。そこにいたのは、[人間|にんげん]ではありませんでした。",
+          "texte": "[部屋|へや]の [中|なか]を [見|み]た [三人|さんにん]は、 [息|いき]を のみました。 そこに いたのは、 [人間|にんげん]ではありませんでした。",
           "fr": "En regardant à l'intérieur de la pièce, tous les trois en eurent le souffle coupé. Ce qui se trouvait là n'était pas un être humain.",
           "en": "Looking into the room, all three of them gasped. What was there was not a human being.",
           "mots": [
@@ -4102,6 +5080,9 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[中|なか]",
               "v": "naka"
             },
@@ -4110,10 +5091,16 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[見|み]た",
               "v": "miru",
               "fr": "ayant regardé",
               "en": "having looked"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[三人|さんにん]",
@@ -4127,12 +5114,18 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[息|いき]",
               "v": "iki"
             },
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "のみました",
@@ -4144,12 +5137,18 @@
               "t": "。"
             },
             {
+              "t": " "
+            },
+            {
               "t": "そこ",
               "v": "soko"
             },
             {
               "t": "に",
               "v": "ni"
+            },
+            {
+              "t": " "
             },
             {
               "t": "いた",
@@ -4171,6 +5170,9 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[人間|にんげん]",
               "v": "ningen"
             },
@@ -4188,7 +5190,7 @@
         {
           "numero": 49,
           "role": "narrateur",
-          "texte": "（[舞台|ぶたい][暗転|あんてん]、または[照明|しょうめい]を[変|か]えて[機織|はたお]りのシーン）",
+          "texte": "（[舞台|ぶたい] [暗転|あんてん]、 または [照明|しょうめい]を [変|か]えて [機織|はたお]りの シーン）",
           "fr": "(Noir sur scène, ou changement d'éclairage : scène du tissage)",
           "en": "(Blackout on stage, or a lighting change: the weaving scene)",
           "mots": [
@@ -4200,6 +5202,9 @@
               "v": "butai"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[暗転|あんてん]",
               "v": "anten"
             },
@@ -4207,8 +5212,14 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "または",
               "v": "matawa"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[照明|しょうめい]",
@@ -4219,10 +5230,16 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[変|か]えて",
               "v": "kaeru-changer",
               "fr": "en changeant",
               "en": "changing"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[機織|はたお]り",
@@ -4231,6 +5248,9 @@
             {
               "t": "の",
               "v": "no"
+            },
+            {
+              "t": " "
             },
             {
               "t": "シーン",
@@ -4276,7 +5296,7 @@
         {
           "numero": 51,
           "role": "narrateur",
-          "texte": "そこにいたのは、あの[時|とき][助|たす]けた[一羽|いちわ]の「[白|しろ]い[鶴|つる]」でした。[鶴|つる]は、[自分|じぶん]の[身体|からだ]から[一本|いっぽん]、また[一本|いっぽん]と[真|ま]っ[白|しろ]な[羽|はね]をくちばしで[抜|ぬ]き[取|と]り、[血|ち]を[流|なが]しながらはたおり[機|き]に[糸|いと]として[織|お]り[込|こ]んでいたのです。",
+          "texte": "そこに いたのは、 あの [時|とき] [助|たす]けた [一羽|いちわ]の 「[白|しろ]い [鶴|つる]」でした。 [鶴|つる]は、 [自分|じぶん]の [身体|からだ]から [一本|いっぽん]、 また [一本|いっぽん]と [真|ま]っ[白|しろ]な [羽|はね]を くちばしで [抜|ぬ]き[取|と]り、 [血|ち]を [流|なが]しながら はたおり[機|き]に [糸|いと]として [織|お]り[込|こ]んでいたのです。",
           "fr": "Ce qui se trouvait là était la « grue blanche » qu'il avait sauvée ce jour-là. La grue arrachait de son bec ses propres plumes d'un blanc pur, une à une, et les tissait en fils sur le métier, tout en saignant.",
           "en": "There was the \"white crane\" he had saved that day. One feather after another, the crane was plucking its own pure white feathers with its beak and, bleeding, weaving them into the loom as thread.",
           "mots": [
@@ -4287,6 +5307,9 @@
             {
               "t": "に",
               "v": "ni"
+            },
+            {
+              "t": " "
             },
             {
               "t": "いた",
@@ -4308,18 +5331,30 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "あの",
               "v": "ano"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[時|とき]",
               "v": "toki"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[助|たす]けた",
               "v": "tasukeru",
               "fr": "avait sauvée",
               "en": "had saved"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[一羽|いちわ]",
@@ -4330,11 +5365,17 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "「"
             },
             {
               "t": "[白|しろ]い",
               "v": "shiroi"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[鶴|つる]",
@@ -4353,6 +5394,9 @@
               "t": "。"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[鶴|つる]",
               "v": "tsuru"
             },
@@ -4364,12 +5408,18 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[自分|じぶん]",
               "v": "jibun"
             },
             {
               "t": "の",
               "v": "no"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[身体|からだ]",
@@ -4380,6 +5430,9 @@
               "v": "kara"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[一本|いっぽん]",
               "v": "ippon"
             },
@@ -4387,8 +5440,14 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "また",
               "v": "mata"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[一本|いっぽん]",
@@ -4401,8 +5460,14 @@
               "en": "(one by one)"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[真|ま]っ[白|しろ]な",
               "v": "masshiro"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[羽|はね]",
@@ -4413,12 +5478,18 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "くちばし",
               "v": "kuchibashi"
             },
             {
               "t": "で",
               "v": "de"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[抜|ぬ]き[取|と]り",
@@ -4430,6 +5501,9 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[血|ち]",
               "v": "chi"
             },
@@ -4438,10 +5512,16 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[流|なが]しながら",
               "v": "nagasu",
               "fr": "en faisant couler",
               "en": "while shedding"
+            },
+            {
+              "t": " "
             },
             {
               "t": "はたおり[機|き]",
@@ -4452,12 +5532,18 @@
               "v": "ni"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[糸|いと]",
               "v": "ito"
             },
             {
               "t": "として",
               "v": "toshite"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[織|お]り[込|こ]んでいた",
@@ -4481,7 +5567,7 @@
         {
           "numero": 52,
           "role": "yosaku",
-          "texte": "ああ……[自分|じぶん]の[羽|はね]を[抜|ぬ]いて、あんなに[美|うつく]しい[布|ぬの]を……！ なんということをしてしまったんだ！",
+          "texte": "ああ…… [自分|じぶん]の [羽|はね]を [抜|ぬ]いて、 あんなに [美|うつく]しい [布|ぬの]を……！ なんという ことを してしまったんだ！",
           "fr": "Ah... Arracher ses propres plumes pour faire un tissu si magnifique... ! Mais qu'ai-je fait !",
           "en": "Ah... plucking out her own feathers to make such beautiful cloth...! What have I done!",
           "mots": [
@@ -4493,6 +5579,9 @@
               "t": "……"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[自分|じぶん]",
               "v": "jibun"
             },
@@ -4501,12 +5590,18 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[羽|はね]",
               "v": "hane"
             },
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[抜|ぬ]いて",
@@ -4518,12 +5613,21 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "あんなに",
               "v": "annani"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[美|うつく]しい",
               "v": "utsukushii"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[布|ぬの]",
@@ -4547,12 +5651,18 @@
               "v": "nantoiu"
             },
             {
+              "t": " "
+            },
+            {
               "t": "こと",
               "v": "koto"
             },
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "してしまった",
@@ -4576,7 +5686,7 @@
         {
           "numero": 53,
           "role": "narrateur",
-          "texte": "（つう、さびしげな[表情|ひょうじょう]で[部屋|へや]から[出|で]てくる。[背中|せなか]に[羽|はね]を[残|のこ]して）",
+          "texte": "（つう、 さびしげな [表情|ひょうじょう]で [部屋|へや]から [出|で]てくる。 [背中|せなか]に [羽|はね]を [残|のこ]して）",
           "fr": "(Tsuu sort de la pièce, l'air triste, gardant des plumes sur le dos)",
           "en": "(Tsuu comes out of the room looking sad, feathers still on her back)",
           "mots": [
@@ -4591,8 +5701,14 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "さびしげな",
               "v": "sabishige"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[表情|ひょうじょう]",
@@ -4605,12 +5721,18 @@
               "en": "with"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[部屋|へや]",
               "v": "heya"
             },
             {
               "t": "から",
               "v": "kara"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[出|で]てくる",
@@ -4622,6 +5744,9 @@
               "t": "。"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[背中|せなか]",
               "v": "senaka"
             },
@@ -4630,12 +5755,18 @@
               "v": "ni"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[羽|はね]",
               "v": "hane"
             },
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[残|のこ]して",
@@ -4651,7 +5782,7 @@
         {
           "numero": 54,
           "role": "tsuu",
-          "texte": "あなた。[見|み]ないでと[約束|やくそく]したのに。",
+          "texte": "あなた。 [見|み]ないでと [約束|やくそく] したのに。",
           "fr": "Mon cher mari... Je vous avais pourtant demandé de ne pas regarder.",
           "en": "My dear husband... I made you promise not to look.",
           "mots": [
@@ -4665,6 +5796,9 @@
               "t": "。"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[見|み]ないで",
               "v": "miru",
               "fr": "ne regardez pas",
@@ -4675,8 +5809,14 @@
               "v": "to-citation"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[約束|やくそく]",
               "v": "yakusoku"
+            },
+            {
+              "t": " "
             },
             {
               "t": "した",
@@ -4696,7 +5836,7 @@
         {
           "numero": 55,
           "role": "yosaku",
-          "texte": "つう！ ごめんなさい！ [私|わたし]が[悪|わる]かった！ゆるしておくれ！",
+          "texte": "つう！ ごめんなさい！ [私|わたし]が [悪|わる]かった！ ゆるして おくれ！",
           "fr": "Tsuu ! Je suis tellement désolé ! C'était ma faute ! Pardonne-moi !",
           "en": "Tsuu! I'm so sorry! It was my fault! Forgive me!",
           "mots": [
@@ -4729,6 +5869,9 @@
               "v": "ga"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[悪|わる]かった",
               "v": "warui",
               "fr": "avais tort",
@@ -4738,10 +5881,16 @@
               "t": "！"
             },
             {
+              "t": " "
+            },
+            {
               "t": "ゆるして",
               "v": "yurusu",
               "fr": "pardonne",
               "en": "forgive"
+            },
+            {
+              "t": " "
             },
             {
               "t": "おくれ",
@@ -4757,7 +5906,7 @@
         {
           "numero": 56,
           "role": "tsuu",
-          "texte": "[私|わたし]は、あの[冬|ふゆ]の[日|ひ]に[命|いのち]を[助|たす]けていただいた[鶴|つる]です。[優|やさ]しいあなたに[恩返|おんがえ]しがしたくて、[人間|にんげん]の[姿|すがた]になってまいりました。",
+          "texte": "[私|わたし]は、 あの [冬|ふゆ]の [日|ひ]に [命|いのち]を [助|たす]けていただいた [鶴|つる]です。 [優|やさ]しい あなたに [恩返|おんがえ]しが したくて、 [人間|にんげん]の [姿|すがた]に なってまいりました。",
           "fr": "Je suis la grue dont vous avez sauvé la vie en ce jour d'hiver. Voulant exprimer ma gratitude envers un homme aussi bon que vous, j'ai pris une forme humaine.",
           "en": "I am the crane whose life you saved on that winter day. Wishing to repay a man as kind as you, I came to you in human form.",
           "mots": [
@@ -4773,8 +5922,14 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "あの",
               "v": "ano"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[冬|ふゆ]",
@@ -4785,12 +5940,18 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[日|ひ]",
               "v": "hi"
             },
             {
               "t": "に",
               "v": "ni"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[命|いのち]",
@@ -4801,10 +5962,16 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[助|たす]けていただいた",
               "v": "tasukeru",
               "fr": "que vous avez sauvé",
               "en": "whom you saved"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[鶴|つる]",
@@ -4818,8 +5985,14 @@
               "t": "。"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[優|やさ]しい",
               "v": "yasashii"
+            },
+            {
+              "t": " "
             },
             {
               "t": "あなた",
@@ -4830,12 +6003,18 @@
               "v": "ni"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[恩返|おんがえ]し",
               "v": "ongaeshi"
             },
             {
               "t": "が",
               "v": "ga"
+            },
+            {
+              "t": " "
             },
             {
               "t": "したくて",
@@ -4847,6 +6026,9 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[人間|にんげん]",
               "v": "ningen"
             },
@@ -4855,12 +6037,18 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[姿|すがた]",
               "v": "sugata"
             },
             {
               "t": "に",
               "v": "ni"
+            },
+            {
+              "t": " "
             },
             {
               "t": "なってまいりました",
@@ -4876,7 +6064,7 @@
         {
           "numero": 57,
           "role": "tsuu",
-          "texte": "[自分|じぶん]の[羽|はね]で[織|お]る[布|ぬの]は、[一度|いちど][正体|しょうたい]を[見|み]られてしまったら、もう[織|お]ることができません。そして……[正体|しょうたい]を[知|し]られた[以上|いじょう]、[私|わたし]はもうここにはいられません。",
+          "texte": "[自分|じぶん]の [羽|はね]で [織|お]る [布|ぬの]は、 [一度|いちど] [正体|しょうたい]を [見|み]られてしまったら、 もう [織|お]る ことが できません。 そして…… [正体|しょうたい]を [知|し]られた [以上|いじょう]、 [私|わたし]は もう ここには いられません。",
           "fr": "Le tissu tissé avec mes propres plumes ne peut plus être produit dès lors qu'on découvre ma véritable identité. Et... maintenant que vous savez qui je suis, je ne peux plus rester ici.",
           "en": "Cloth woven from my own feathers can no longer be woven once my true form has been seen. And... now that you know who I am, I can no longer stay here.",
           "mots": [
@@ -4889,6 +6077,9 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[羽|はね]",
               "v": "hane"
             },
@@ -4897,10 +6088,16 @@
               "v": "de"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[織|お]る",
               "v": "oru",
               "fr": "tissé",
               "en": "woven"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[布|ぬの]",
@@ -4914,8 +6111,14 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[一度|いちど]",
               "v": "ichido"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[正体|しょうたい]",
@@ -4924,6 +6127,9 @@
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[見|み]られてしまったら",
@@ -4935,10 +6141,16 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "もう",
               "v": "mou",
               "fr": "(ne...) plus",
               "en": "no longer"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[織|お]る",
@@ -4947,12 +6159,18 @@
               "en": "weave"
             },
             {
+              "t": " "
+            },
+            {
               "t": "こと",
               "v": "koto"
             },
             {
               "t": "が",
               "v": "ga"
+            },
+            {
+              "t": " "
             },
             {
               "t": "できません",
@@ -4964,11 +6182,17 @@
               "t": "。"
             },
             {
+              "t": " "
+            },
+            {
               "t": "そして",
               "v": "soshite"
             },
             {
               "t": "……"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[正体|しょうたい]",
@@ -4979,10 +6203,16 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[知|し]られた",
               "v": "shiru",
               "fr": "connue",
               "en": "known"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[以上|いじょう]",
@@ -4990,6 +6220,9 @@
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[私|わたし]",
@@ -5000,10 +6233,16 @@
               "v": "wa"
             },
             {
+              "t": " "
+            },
+            {
               "t": "もう",
               "v": "mou",
               "fr": "(ne...) plus",
               "en": "no longer"
+            },
+            {
+              "t": " "
             },
             {
               "t": "ここ",
@@ -5016,6 +6255,9 @@
             {
               "t": "は",
               "v": "wa"
+            },
+            {
+              "t": " "
             },
             {
               "t": "いられません",
@@ -5031,7 +6273,7 @@
         {
           "numero": 58,
           "role": "yosaku",
-          "texte": "（つうにしがみつきながら）[行|い]かないでくれ、つう！ [金|かね]なんていらない！ [布|ぬの]もいらない！ お[前|まえ]と[一緒|いっしょ]に[暮|く]らせれば、それだけでいいんだ！",
+          "texte": "（つうに しがみつきながら） [行|い]かないで くれ、 つう！ [金|かね] なんて いらない！ [布|ぬの]も いらない！ お[前|まえ]と [一緒|いっしょ]に [暮|く]らせれば、 それだけで いいんだ！",
           "fr": "(En s'accrochant à Tsuu) Ne pars pas, Tsuu ! Je m'en fiche de l'argent ! Je m'en fiche du tissu ! Tout ce que je veux, c'est vivre avec toi !",
           "en": "(Clinging to Tsuu) Don't go, Tsuu! I don't need money! I don't need the cloth! As long as I can live with you, that's all I want!",
           "mots": [
@@ -5047,6 +6289,9 @@
               "v": "ni"
             },
             {
+              "t": " "
+            },
+            {
               "t": "しがみつきながら",
               "v": "shigamitsuku",
               "fr": "en s'accrochant",
@@ -5056,10 +6301,16 @@
               "t": "）"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[行|い]かないで",
               "v": "iku",
               "fr": "ne pars pas",
               "en": "don't go"
+            },
+            {
+              "t": " "
             },
             {
               "t": "くれ",
@@ -5067,6 +6318,9 @@
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "つう",
@@ -5083,8 +6337,14 @@
               "v": "kane"
             },
             {
+              "t": " "
+            },
+            {
               "t": "なんて",
               "v": "nante-mepris"
+            },
+            {
+              "t": " "
             },
             {
               "t": "いらない",
@@ -5105,6 +6365,9 @@
             {
               "t": "も",
               "v": "mo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "いらない",
@@ -5129,8 +6392,14 @@
               "en": "with"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[一緒|いっしょ]に",
               "v": "issho"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[暮|く]らせれば",
@@ -5140,6 +6409,9 @@
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "それ",
@@ -5154,6 +6426,9 @@
               "v": "de",
               "fr": "(rien qu')avec",
               "en": "(just) with"
+            },
+            {
+              "t": " "
             },
             {
               "t": "いい",
@@ -5177,7 +6452,7 @@
         {
           "numero": 59,
           "role": "tsuu",
-          "texte": "あなた、あたたかいお[心|こころ]、[本当|ほんとう]にありがとうございました。[私|わたし]はずっと、あなたをおしたいしておりました。……さようなら。",
+          "texte": "あなた、 あたたかい お[心|こころ]、 [本当|ほんとう]に ありがとうございました。 [私|わたし]は ずっと、 あなたを おしたいしておりました。…… さようなら。",
           "fr": "Mon cher mari, merci du fond du cœur pour votre chaleur humaine. Je vous ai aimé de tout mon être... Au revoir.",
           "en": "My dear husband, thank you truly for your warm heart. I have always loved you dearly... Farewell.",
           "mots": [
@@ -5191,8 +6466,14 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "あたたかい",
               "v": "atatakai"
+            },
+            {
+              "t": " "
             },
             {
               "t": "お[心|こころ]",
@@ -5204,10 +6485,16 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[本当|ほんとう]に",
               "v": "hontou",
               "fr": "vraiment",
               "en": "truly"
+            },
+            {
+              "t": " "
             },
             {
               "t": "ありがとうございました",
@@ -5219,12 +6506,18 @@
               "t": "。"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[私|わたし]",
               "v": "watashi"
             },
             {
               "t": "は",
               "v": "wa"
+            },
+            {
+              "t": " "
             },
             {
               "t": "ずっと",
@@ -5234,12 +6527,18 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "あなた",
               "v": "anata"
             },
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "おしたいしておりました",
@@ -5254,6 +6553,9 @@
               "t": "……"
             },
             {
+              "t": " "
+            },
+            {
               "t": "さようなら",
               "v": "sayounara"
             },
@@ -5265,7 +6567,7 @@
         {
           "numero": 60,
           "role": "narrateur",
-          "texte": "つうが[悲|かな]しく「カァー」と[鳴|な]くと、その[姿|すがた]は[一羽|いちわ]の[白|しろ]い[鶴|つる]に[戻|もど]り、[空|そら]へと[舞|ま]い[上|あ]がりました。",
+          "texte": "つうが [悲|かな]しく 「カァー」と [鳴|な]くと、 その [姿|すがた]は [一羽|いちわ]の [白|しろ]い [鶴|つる]に [戻|もど]り、 [空|そら]へと [舞|ま]い[上|あ]がりました。",
           "fr": "Lorsque Tsuu poussa un cri triste, sa forme redevenant celle d'une grue blanche, elle s'envola vers les cieux.",
           "en": "When Tsuu gave a sad cry of \"Kaa\", she turned back into a white crane and soared up into the sky.",
           "mots": [
@@ -5278,10 +6580,16 @@
               "v": "ga"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[悲|かな]しく",
               "v": "kanashii",
               "fr": "tristement",
               "en": "sadly"
+            },
+            {
+              "t": " "
             },
             {
               "t": "「"
@@ -5298,6 +6606,9 @@
               "v": "to-citation"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[鳴|な]く",
               "v": "naku-cri",
               "fr": "pousse un cri",
@@ -5311,8 +6622,14 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "その",
               "v": "sono"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[姿|すがた]",
@@ -5323,6 +6640,9 @@
               "v": "wa"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[一羽|いちわ]",
               "v": "ichiwa"
             },
@@ -5331,8 +6651,14 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[白|しろ]い",
               "v": "shiroi"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[鶴|つる]",
@@ -5341,6 +6667,9 @@
             {
               "t": "に",
               "v": "ni"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[戻|もど]り",
@@ -5352,12 +6681,18 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[空|そら]",
               "v": "sora"
             },
             {
               "t": "へと",
               "v": "e"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[舞|ま]い[上|あ]がりました",
@@ -5403,7 +6738,7 @@
         {
           "numero": 62,
           "role": "narrateur",
-          "texte": "[鶴|つる]はよさくの[家|いえ]の[上|うえ]を[三度|さんど]ゆっくりと[回|まわ]り、[悲|かな]しそうに[鳴|な]きながら、[静|しず]かに[遠|とお]い[雪空|ゆきぞら]の[向|む]こうへ[消|き]えていきました。",
+          "texte": "[鶴|つる]は よさくの [家|いえ]の [上|うえ]を [三度|さんど] ゆっくりと [回|まわ]り、 [悲|かな]しそうに [鳴|な]きながら、 [静|しず]かに [遠|とお]い [雪空|ゆきぞら]の [向|む]こうへ [消|き]えていきました。",
           "fr": "La grue tourna lentement trois fois au-dessus de la maison de Yosaku, et poussant des cris pleins de tristesse, elle disparut doucement au loin dans le ciel de neige.",
           "en": "The crane slowly circled three times above Yosaku's house and, crying sadly, quietly vanished beyond the distant snowy sky.",
           "mots": [
@@ -5416,12 +6751,18 @@
               "v": "wa"
             },
             {
+              "t": " "
+            },
+            {
               "t": "よさく",
               "v": "yosaku"
             },
             {
               "t": "の",
               "v": "no"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[家|いえ]",
@@ -5432,6 +6773,9 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[上|うえ]",
               "v": "ue"
             },
@@ -5440,12 +6784,21 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[三度|さんど]",
               "v": "sando"
             },
             {
+              "t": " "
+            },
+            {
               "t": "ゆっくりと",
               "v": "yukkuri"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[回|まわ]り",
@@ -5457,10 +6810,16 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[悲|かな]しそうに",
               "v": "kanashii",
               "fr": "tristement",
               "en": "sadly"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[鳴|な]きながら",
@@ -5472,14 +6831,23 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[静|しず]かに",
               "v": "shizuka",
               "fr": "doucement",
               "en": "quietly"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[遠|とお]い",
               "v": "tooi"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[雪空|ゆきぞら]",
@@ -5490,12 +6858,18 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[向|む]こう",
               "v": "mukou"
             },
             {
               "t": "へ",
               "v": "e"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[消|き]えていきました",
@@ -5511,7 +6885,7 @@
         {
           "numero": 63,
           "role": "narrateur",
-          "texte": "よさくは、つうが[残|のこ]していった[温|あたた]かい[一枚|いちまい]の[布|ぬの]を[抱|だ]きしめ、いつまでも、いつまでも[泣|な]き[続|つづ]けました。",
+          "texte": "よさくは、 つうが [残|のこ]していった [温|あたた]かい [一枚|いちまい]の [布|ぬの]を [抱|だ]きしめ、 いつまでも、 いつまでも [泣|な]き[続|つづ]けました。",
           "fr": "Yosaku serra très fort contre lui le chaud tissu que Tsuu avait laissé derrière elle, et ne cessa de pleurer, encore et encore.",
           "en": "Yosaku held tight the warm cloth Tsuu had left behind, and wept on and on, forever.",
           "mots": [
@@ -5527,6 +6901,9 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "つう",
               "v": "tsuu"
             },
@@ -5535,14 +6912,23 @@
               "v": "ga"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[残|のこ]していった",
               "v": "nokosu",
               "fr": "avait laissé",
               "en": "had left behind"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[温|あたた]かい",
               "v": "atatakai"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[一枚|いちまい]",
@@ -5553,12 +6939,18 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[布|ぬの]",
               "v": "nuno"
             },
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[抱|だ]きしめ",
@@ -5570,6 +6962,9 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "いつまでも",
               "v": "itsumademo"
             },
@@ -5577,8 +6972,14 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "いつまでも",
               "v": "itsumademo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[泣|な]き[続|つづ]けました",

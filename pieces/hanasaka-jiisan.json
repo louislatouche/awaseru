@@ -69,7 +69,7 @@
         {
           "numero": 1,
           "role": "narrateur",
-          "texte": "むかしむかし、あるところに、[優|やさ]しいおじいさんとおばあさんが[住|す]んでいました。（えさにおもちをあげる）\n[二人|ふたり]は、[白|しろ]い[犬|いぬ]のシロをとても[可愛|かわい]がっていました。",
+          "texte": "むかしむかし、 ある ところに、 [優|やさ]しい おじいさんと おばあさんが [住|す]んでいました。 （えさに おもちを あげる）\n[二人|ふたり]は、 [白|しろ]い [犬|いぬ]の シロを とても [可愛|かわい]がっていました。",
           "fr": "Il y avait autrefois un gentil vieil homme et une gentille vieille dame. (Ils donnent du Mochi à manger) Tous les deux chérissaient énormément leur chien blanc, Shiro.",
           "en": "Once upon a time, there lived a kind old man and a kind old woman. (They feed him Mochi) The two of them adored their white dog, Shiro.",
           "mots": [
@@ -81,10 +81,16 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "ある",
               "v": "aru-certain",
               "fr": "un certain",
               "en": "a certain"
+            },
+            {
+              "t": " "
             },
             {
               "t": "ところ",
@@ -98,8 +104,14 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[優|やさ]しい",
               "v": "yasashii"
+            },
+            {
+              "t": " "
             },
             {
               "t": "おじいさん",
@@ -112,12 +124,18 @@
               "en": "and"
             },
             {
+              "t": " "
+            },
+            {
               "t": "おばあさん",
               "v": "obaasan"
             },
             {
               "t": "が",
               "v": "ga"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[住|す]んでいました",
@@ -127,6 +145,9 @@
             },
             {
               "t": "。"
+            },
+            {
+              "t": " "
             },
             {
               "t": "（"
@@ -142,12 +163,18 @@
               "en": "as"
             },
             {
+              "t": " "
+            },
+            {
               "t": "おもち",
               "v": "omochi"
             },
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "あげる",
@@ -175,8 +202,14 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[白|しろ]い",
               "v": "shiroi"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[犬|いぬ]",
@@ -189,6 +222,9 @@
               "en": "(apposition) named"
             },
             {
+              "t": " "
+            },
+            {
               "t": "シロ",
               "v": "shiro"
             },
@@ -197,8 +233,14 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "とても",
               "v": "totemo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[可愛|かわい]がっていました",
@@ -214,7 +256,7 @@
         {
           "numero": 2,
           "role": "narrateur",
-          "texte": "ある[日|ひ]、[畑仕事|はたけしごと]に[行|い]くとき、シロが[畑|はたけ]で[吠|ほ]えました。",
+          "texte": "ある [日|ひ]、 [畑仕事|はたけしごと]に [行|い]く とき、 シロが [畑|はたけ]で [吠|ほ]えました。",
           "fr": "Un jour, sur le chemin des champs, Shiro se mit à aboyer.",
           "en": "One day, on the way to the fields, Shiro began to bark.",
           "mots": [
@@ -225,11 +267,17 @@
               "en": "one"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[日|ひ]",
               "v": "hi"
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[畑仕事|はたけしごと]",
@@ -242,8 +290,14 @@
               "en": "for (purpose)"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[行|い]く",
               "v": "iku"
+            },
+            {
+              "t": " "
             },
             {
               "t": "とき",
@@ -251,6 +305,9 @@
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "シロ",
@@ -261,6 +318,9 @@
               "v": "ga"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[畑|はたけ]",
               "v": "hatake"
             },
@@ -269,6 +329,9 @@
               "v": "de",
               "fr": "dans (lieu)",
               "en": "in (place)"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[吠|ほ]えました",
@@ -284,7 +347,7 @@
         {
           "numero": 3,
           "role": "shiro",
-          "texte": "ワンワン！ ここを[掘|ほ]ってください！ ワンワン！",
+          "texte": "ワンワン！ ここを [掘|ほ]って ください！ ワンワン！",
           "fr": "Ouaf ! Ouaf ! Creusez ici, s'il vous plaît ! Ouaf ! Ouaf !",
           "en": "Woof! Woof! Please dig here! Woof! Woof!",
           "mots": [
@@ -307,10 +370,16 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[掘|ほ]って",
               "v": "horu",
               "fr": "creusez",
               "en": "dig"
+            },
+            {
+              "t": " "
             },
             {
               "t": "ください",
@@ -334,7 +403,7 @@
         {
           "numero": 4,
           "role": "ojiisan",
-          "texte": "おや、シロ。ここに[何|なに]かあるのか？ よし、[掘|ほ]ってみよう。\n（ザクザク、ザクザク……。）",
+          "texte": "おや、 シロ。 ここに [何|なに]か あるのか？ よし、 [掘|ほ]ってみよう。\n（ザクザク、 ザクザク……。）",
           "fr": "Tiens, Shiro ? Y a-t-il quelque chose ici ? D'accord, voyons voir ! (Zak-zak, zak-zak... / Bruit de bêche)",
           "en": "Well now, Shiro? Is there something here? All right, let's see! (Zak-zak, zak-zak... / Sound of a spade)",
           "mots": [
@@ -346,11 +415,17 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "シロ",
               "v": "shiro"
             },
             {
               "t": "。"
+            },
+            {
+              "t": " "
             },
             {
               "t": "ここ",
@@ -361,8 +436,14 @@
               "v": "ni"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[何|なに]か",
               "v": "nanika"
+            },
+            {
+              "t": " "
             },
             {
               "t": "ある",
@@ -390,6 +471,9 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[掘|ほ]ってみよう",
               "v": "horu",
               "fr": "creusons pour voir",
@@ -412,6 +496,9 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "ザクザク",
               "v": "zakuzaku"
             },
@@ -429,7 +516,7 @@
         {
           "numero": 5,
           "role": "obaasan",
-          "texte": "わあ、おじいさん！ [見|み]てください。[土|つち]の[中|なか]から、お[金|かね]がたくさん[出|で]てきましたよ！",
+          "texte": "わあ、 おじいさん！ [見|み]て ください。 [土|つち]の [中|なか]から、 お[金|かね]が たくさん [出|で]てきましたよ！",
           "fr": "Oh, mon mari ! Regardez ! Beaucoup de pièces d'or (Oban, Koban) sortent de la terre !",
           "en": "Oh, dear! Look! So many gold coins (Oban, Koban) are coming out of the ground!",
           "mots": [
@@ -439,6 +526,9 @@
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "おじいさん",
@@ -459,11 +549,17 @@
               "en": "look"
             },
             {
+              "t": " "
+            },
+            {
               "t": "ください",
               "v": "kudasai"
             },
             {
               "t": "。"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[土|つち]",
@@ -472,6 +568,9 @@
             {
               "t": "の",
               "v": "no"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[中|なか]",
@@ -485,6 +584,9 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "お[金|かね]",
               "v": "okane"
             },
@@ -493,8 +595,14 @@
               "v": "ga"
             },
             {
+              "t": " "
+            },
+            {
               "t": "たくさん",
               "v": "takusan"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[出|で]てきました",
@@ -514,7 +622,7 @@
         {
           "numero": 6,
           "role": "ojiisan",
-          "texte": "シロ、ありがとう。お[前|まえ]はまほうのような[犬|いぬ]だね。",
+          "texte": "シロ、 ありがとう。 お[前|まえ]は まほうのような [犬|いぬ]だね。",
           "fr": "Merci, Shiro. Tu es un chien magicien !",
           "en": "Thank you, Shiro. You're a magic dog!",
           "mots": [
@@ -526,11 +634,17 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "ありがとう",
               "v": "arigatou"
             },
             {
               "t": "。"
+            },
+            {
+              "t": " "
             },
             {
               "t": "お[前|まえ]",
@@ -539,6 +653,9 @@
             {
               "t": "は",
               "v": "wa"
+            },
+            {
+              "t": " "
             },
             {
               "t": "まほう",
@@ -551,6 +668,9 @@
             {
               "t": "ような",
               "v": "youna"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[犬|いぬ]",
@@ -582,7 +702,7 @@
         {
           "numero": 7,
           "role": "narrateur",
-          "texte": "となりの[家|いえ]に、よくばりで[意地悪|いじわる]なおじいさんが[住|す]んでいました。\n[犬|いぬ]のおかげで[金持|かねも]ちになったのを[見|み]て、シロがほしくなりました。",
+          "texte": "となりの [家|いえ]に、 よくばりで [意地悪|いじわる]な おじいさんが [住|す]んでいました。\n[犬|いぬ]の おかげで [金持|かねも]ちに なったのを [見|み]て、 シロが ほしくなりました。",
           "fr": "Dans la maison voisine habitait un vieil homme avare et méchant.\nEn voyant qu'ils étaient devenus riches grâce au chien, il voulut avoir Shiro.",
           "en": "In the house next door lived a greedy, mean old man.\nSeeing that they had grown rich thanks to the dog, he wanted Shiro for himself.",
           "mots": [
@@ -593,6 +713,9 @@
             {
               "t": "の",
               "v": "no"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[家|いえ]",
@@ -608,14 +731,23 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "よくばりで",
               "v": "yokubari",
               "fr": "avare et",
               "en": "greedy and"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[意地悪|いじわる]な",
               "v": "ijiwaru"
+            },
+            {
+              "t": " "
             },
             {
               "t": "おじいさん",
@@ -624,6 +756,9 @@
             {
               "t": "が",
               "v": "ga"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[住|す]んでいました",
@@ -646,10 +781,16 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "おかげで",
               "v": "okage",
               "fr": "grâce à",
               "en": "thanks to"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[金持|かねも]ち",
@@ -660,6 +801,9 @@
               "v": "ni",
               "fr": "(marque le résultat)",
               "en": "(marks the result)"
+            },
+            {
+              "t": " "
             },
             {
               "t": "なった",
@@ -678,6 +822,9 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[見|み]て",
               "v": "miru",
               "fr": "en voyant",
@@ -687,12 +834,18 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "シロ",
               "v": "shiro"
             },
             {
               "t": "が",
               "v": "ga"
+            },
+            {
+              "t": " "
             },
             {
               "t": "ほしくなりました",
@@ -708,7 +861,7 @@
         {
           "numero": 8,
           "role": "ijiwaru",
-          "texte": "おい、シロをちょっと[貸|か]してくれ。\n（シロを[無理|むり]やり[連|つ]れていきました。）",
+          "texte": "おい、 シロを ちょっと [貸|か]して くれ。\n（シロを [無理|むり]やり [連|つ]れていきました。）",
           "fr": "Hé, prête-moi Shiro un moment ! (Il emmène Shiro de force.)",
           "en": "Hey, lend me Shiro for a while! (He takes Shiro away by force.)",
           "mots": [
@@ -720,6 +873,9 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "シロ",
               "v": "shiro"
             },
@@ -728,14 +884,23 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "ちょっと",
               "v": "chotto"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[貸|か]して",
               "v": "kasu",
               "fr": "prête",
               "en": "lend"
+            },
+            {
+              "t": " "
             },
             {
               "t": "くれ",
@@ -761,8 +926,14 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[無理|むり]やり",
               "v": "muriyari"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[連|つ]れていきました",
@@ -781,7 +952,7 @@
         {
           "numero": 9,
           "role": "ijiwaru",
-          "texte": "おい、[汚|きたな]い[犬|いぬ]！ [俺|おれ]にも[金|かね]を[出|だ]せ！ どこを[掘|ほ]ればいいんだ？ えい、ここか！",
+          "texte": "おい、 [汚|きたな]い [犬|いぬ]！ [俺|おれ]にも [金|かね]を [出|だ]せ！ どこを [掘|ほ]れば いいんだ？ えい、 ここか！",
           "fr": "Hé, sale chien ! Donne-moi de l'argent à moi aussi ! Où dois-je creuser ? Hein, c'est ici ?",
           "en": "Hey, dirty dog! Give me money too! Where do I dig? Huh, is it here?",
           "mots": [
@@ -793,8 +964,14 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[汚|きたな]い",
               "v": "kitanai"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[犬|いぬ]",
@@ -821,12 +998,18 @@
               "v": "mo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[金|かね]",
               "v": "kane"
             },
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[出|だ]せ",
@@ -849,10 +1032,16 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[掘|ほ]れば",
               "v": "horu",
               "fr": "si je creuse",
               "en": "if I dig"
+            },
+            {
+              "t": " "
             },
             {
               "t": "いい",
@@ -886,6 +1075,9 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "ここ",
               "v": "koko"
             },
@@ -901,7 +1093,7 @@
         {
           "numero": 10,
           "role": "shiro",
-          "texte": "（[悲|かな]しそうに）クーン、クーン……。",
+          "texte": "（[悲|かな]しそうに） クーン、 クーン……。",
           "fr": "(Tristement) Ouin... ouin...",
           "en": "(Sadly) Whimper... whimper...",
           "mots": [
@@ -918,11 +1110,17 @@
               "t": "）"
             },
             {
+              "t": " "
+            },
+            {
               "t": "クーン",
               "v": "kuun"
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "クーン",
@@ -939,7 +1137,7 @@
         {
           "numero": 11,
           "role": "ijiwaru",
-          "texte": "よし、[掘|ほ]るぞ。ザクザク、ザクザク……。うわあ！ なんだこれは！ [汚|きたな]いゴミばかりだ！",
+          "texte": "よし、 [掘|ほ]るぞ。 ザクザク、 ザクザク……。 うわあ！ なんだ これは！ [汚|きたな]い ゴミばかりだ！",
           "fr": "Allez, je creuse ! Zak-zak, zak-zak... Argh ! Mais qu'est-ce que c'est que ça ?! Ce ne sont que des ordures sales !",
           "en": "Right, I'm digging! Zak-zak, zak-zak... Argh! What on earth is this?! Nothing but filthy garbage!",
           "mots": [
@@ -949,6 +1147,9 @@
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[掘|ほ]る",
@@ -964,11 +1165,17 @@
               "t": "。"
             },
             {
+              "t": " "
+            },
+            {
               "t": "ザクザク",
               "v": "zakuzaku"
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "ザクザク",
@@ -979,6 +1186,9 @@
             },
             {
               "t": "。"
+            },
+            {
+              "t": " "
             },
             {
               "t": "うわあ",
@@ -1001,6 +1211,9 @@
               "en": "is"
             },
             {
+              "t": " "
+            },
+            {
               "t": "これ",
               "v": "kore"
             },
@@ -1017,6 +1230,9 @@
             {
               "t": "[汚|きたな]い",
               "v": "kitanai"
+            },
+            {
+              "t": " "
             },
             {
               "t": "ゴミ",
@@ -1038,13 +1254,16 @@
         {
           "numero": 12,
           "role": "narrateur",
-          "texte": "[意地悪|いじわる]なおじいさんはとても[怒|おこ]って、クワでシロを[叩|たた]きました。",
+          "texte": "[意地悪|いじわる]な おじいさんは とても [怒|おこ]って、 クワで シロを [叩|たた]きました。",
           "fr": "Le méchant homme se mit dans une colère noire et frappa Shiro avec sa houe.",
           "en": "The mean old man flew into a rage and struck Shiro with his hoe.",
           "mots": [
             {
               "t": "[意地悪|いじわる]な",
               "v": "ijiwaru"
+            },
+            {
+              "t": " "
             },
             {
               "t": "おじいさん",
@@ -1055,8 +1274,14 @@
               "v": "wa"
             },
             {
+              "t": " "
+            },
+            {
               "t": "とても",
               "v": "totemo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[怒|おこ]って",
@@ -1066,6 +1291,9 @@
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "クワ",
@@ -1078,12 +1306,18 @@
               "en": "with"
             },
             {
+              "t": " "
+            },
+            {
               "t": "シロ",
               "v": "shiro"
             },
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[叩|たた]きました",
@@ -1099,7 +1333,7 @@
         {
           "numero": 13,
           "role": "narrateur",
-          "texte": "[可哀想|かわいそう]に、シロは[死|し]んでしまいました。",
+          "texte": "[可哀想|かわいそう]に、 シロは [死|し]んでしまいました。",
           "fr": "Pauvre Shiro, il en mourut.",
           "en": "Poor Shiro died of it.",
           "mots": [
@@ -1113,12 +1347,18 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "シロ",
               "v": "shiro"
             },
             {
               "t": "は",
               "v": "wa"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[死|し]んでしまいました",
@@ -1142,13 +1382,16 @@
         {
           "numero": 14,
           "role": "narrateur",
-          "texte": "[正直|しょうじき]なおじいさんとおばあさんは、たくさん[泣|な]いて、\nシロを[庭|にわ]にうめました。",
+          "texte": "[正直|しょうじき]な おじいさんと おばあさんは、 たくさん [泣|な]いて、\nシロを [庭|にわ]に うめました。",
           "fr": "Le gentil vieil homme et sa femme pleurèrent beaucoup et enterrèrent Shiro dans le jardin.",
           "en": "The kind old man and his wife wept and wept, and buried Shiro in the garden.",
           "mots": [
             {
               "t": "[正直|しょうじき]な",
               "v": "shoujiki"
+            },
+            {
+              "t": " "
             },
             {
               "t": "おじいさん",
@@ -1159,6 +1402,9 @@
               "v": "to",
               "fr": "et",
               "en": "and"
+            },
+            {
+              "t": " "
             },
             {
               "t": "おばあさん",
@@ -1172,8 +1418,14 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "たくさん",
               "v": "takusan"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[泣|な]いて",
@@ -1196,6 +1448,9 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[庭|にわ]",
               "v": "niwa"
             },
@@ -1204,6 +1459,9 @@
               "v": "ni",
               "fr": "dans",
               "en": "in"
+            },
+            {
+              "t": " "
             },
             {
               "t": "うめました",
@@ -1219,7 +1477,7 @@
         {
           "numero": 15,
           "role": "narrateur",
-          "texte": "すると、そこから[大|おお]きな[木|き]が、あっという[間|ま]に[育|そだ]ちました。",
+          "texte": "すると、 そこから [大|おお]きな [木|き]が、 あっという[間|ま]に [育|そだ]ちました。",
           "fr": "Alors, à cet endroit précis, un grand arbre poussa en un clin d'œil.",
           "en": "Then, on that very spot, a great tree grew up in the blink of an eye.",
           "mots": [
@@ -1231,6 +1489,9 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "そこ",
               "v": "soko"
             },
@@ -1239,8 +1500,14 @@
               "v": "kara"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[大|おお]きな",
               "v": "ookina"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[木|き]",
@@ -1254,8 +1521,14 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "あっという[間|ま]に",
               "v": "attoiumani"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[育|そだ]ちました",
@@ -1271,7 +1544,7 @@
         {
           "numero": 16,
           "role": "obaasan",
-          "texte": "おじいさん、この[木|き]でうすを[作|つく]りましょう。\nシロが[好|す]きだったおもちを[作|つく]りましょう。",
+          "texte": "おじいさん、 この [木|き]で うすを [作|つく]りましょう。\nシロが [好|す]きだった おもちを [作|つく]りましょう。",
           "fr": "Mon mari, fabriquons un mortier à Mochi (Usu) avec cet arbre.\nFaisons du Mochi, ce que Shiro aimait tant.",
           "en": "Dear, let's make a Mochi mortar (Usu) from this tree.\nLet's make Mochi, the thing Shiro loved so much.",
           "mots": [
@@ -1285,8 +1558,14 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "この",
               "v": "kono"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[木|き]",
@@ -1299,12 +1578,18 @@
               "en": "from (material)"
             },
             {
+              "t": " "
+            },
+            {
               "t": "うす",
               "v": "usu"
             },
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[作|つく]りましょう",
@@ -1327,10 +1612,16 @@
               "v": "ga"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[好|す]きだった",
               "v": "suki",
               "fr": "aimait",
               "en": "loved"
+            },
+            {
+              "t": " "
             },
             {
               "t": "おもち",
@@ -1339,6 +1630,9 @@
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[作|つく]りましょう",
@@ -1354,7 +1648,7 @@
         {
           "numero": 17,
           "role": "ojiisan",
-          "texte": "そうだね。シロもよろこぶよ。（[木|き]を[切|き]ってうすを[作|つく]る）",
+          "texte": "そうだね。 シロも よろこぶよ。 （[木|き]を [切|き]って うすを [作|つく]る）",
           "fr": "Tu as raison. Shiro sera content lui aussi. (Il coupe l'arbre et fabrique le mortier)",
           "en": "You're right. Shiro will be happy too. (He cuts the tree and makes the mortar)",
           "mots": [
@@ -1376,12 +1670,18 @@
               "t": "。"
             },
             {
+              "t": " "
+            },
+            {
               "t": "シロ",
               "v": "shiro"
             },
             {
               "t": "も",
               "v": "mo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "よろこぶ",
@@ -1397,6 +1697,9 @@
               "t": "。"
             },
             {
+              "t": " "
+            },
+            {
               "t": "（"
             },
             {
@@ -1408,10 +1711,16 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[切|き]って",
               "v": "kiru",
               "fr": "coupe et",
               "en": "cuts and"
+            },
+            {
+              "t": " "
             },
             {
               "t": "うす",
@@ -1420,6 +1729,9 @@
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[作|つく]る",
@@ -1435,7 +1747,7 @@
         {
           "numero": 18,
           "role": "ojiisan",
-          "texte": "おもちをつきましょう。（ペッタン、ペッタン）",
+          "texte": "おもちを つきましょう。 （ペッタン、 ペッタン）",
           "fr": "Pilons le Mochi ! (Pettan, pettan / Bruit du pilon)",
           "en": "Let's pound the Mochi! (Pettan, pettan / Sound of the pestle)",
           "mots": [
@@ -1448,6 +1760,9 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "つきましょう",
               "v": "tsuku",
               "fr": "pilons",
@@ -1455,6 +1770,9 @@
             },
             {
               "t": "。"
+            },
+            {
+              "t": " "
             },
             {
               "t": "（"
@@ -1465,6 +1783,9 @@
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "ペッタン",
@@ -1478,7 +1799,7 @@
         {
           "numero": 19,
           "role": "narrateur",
-          "texte": "[二人|ふたり]がお[餅|もち]をつくと、[不思議|ふしぎ]なことに、\nうすの[中|なか]からまた たくさんのお[金|かね]が[出|で]てきました。",
+          "texte": "[二人|ふたり]が お[餅|もち]を つくと、 [不思議|ふしぎ]な ことに、\nうすの [中|なか]から また たくさんの お[金|かね]が [出|で]てきました。",
           "fr": "Alors qu'ils pillaient le Mochi, par magie, une immense quantité d'or sortit à nouveau du mortier.",
           "en": "As they pounded the Mochi, as if by magic, a huge amount of gold came out of the mortar once again.",
           "mots": [
@@ -1493,12 +1814,18 @@
               "v": "ga"
             },
             {
+              "t": " "
+            },
+            {
               "t": "お[餅|もち]",
               "v": "omochi"
             },
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "つく",
@@ -1514,8 +1841,14 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[不思議|ふしぎ]な",
               "v": "fushigi"
+            },
+            {
+              "t": " "
             },
             {
               "t": "こと",
@@ -1542,12 +1875,18 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[中|なか]",
               "v": "naka"
             },
             {
               "t": "から",
               "v": "kara"
+            },
+            {
+              "t": " "
             },
             {
               "t": "また",
@@ -1565,12 +1904,18 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "お[金|かね]",
               "v": "okane"
             },
             {
               "t": "が",
               "v": "ga"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[出|で]てきました",
@@ -1586,7 +1931,7 @@
         {
           "numero": 20,
           "role": "narrateur",
-          "texte": "それを[見|み]た[意地悪|いじわる]なおじいさんは、ある[夜|よる]、うすをぬすんで、\nおもちをつきましたが...",
+          "texte": "それを [見|み]た [意地悪|いじわる]な おじいさんは、 ある [夜|よる]、 うすを ぬすんで、\nおもちを つきましたが ...",
           "fr": "En voyant cela, une nuit, le méchant voisin vola le mortier et pila du Mochi, mais...",
           "en": "Seeing this, one night the mean neighbour stole the mortar and pounded Mochi, but...",
           "mots": [
@@ -1599,14 +1944,23 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[見|み]た",
               "v": "miru",
               "fr": "qui avait vu",
               "en": "who saw"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[意地悪|いじわる]な",
               "v": "ijiwaru"
+            },
+            {
+              "t": " "
             },
             {
               "t": "おじいさん",
@@ -1620,10 +1974,16 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "ある",
               "v": "aru-certain",
               "fr": "une",
               "en": "one"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[夜|よる]",
@@ -1633,12 +1993,18 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "うす",
               "v": "usu"
             },
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "ぬすんで",
@@ -1661,6 +2027,9 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "つきました",
               "v": "tsuku",
               "fr": "pila",
@@ -1671,6 +2040,9 @@
               "v": "ga-mais"
             },
             {
+              "t": " "
+            },
+            {
               "t": "..."
             }
           ]
@@ -1678,7 +2050,7 @@
         {
           "numero": 21,
           "role": "narrateur",
-          "texte": "[出|で]てきたのはゴミや[動物|どうぶつ]の[死骸|しがい]ばかりでした。",
+          "texte": "[出|で]てきたのは ゴミや [動物|どうぶつ]の [死骸|しがい]ばかりでした。",
           "fr": "Ce qui en sortit ne fut que des ordures et des cadavres d'animaux.",
           "en": "All that came out was garbage and dead animals.",
           "mots": [
@@ -1699,6 +2071,9 @@
               "v": "wa"
             },
             {
+              "t": " "
+            },
+            {
               "t": "ゴミ",
               "v": "gomi"
             },
@@ -1707,12 +2082,18 @@
               "v": "ya"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[動物|どうぶつ]",
               "v": "doubutsu"
             },
             {
               "t": "の",
               "v": "no"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[死骸|しがい]",
@@ -1736,7 +2117,7 @@
         {
           "numero": 22,
           "role": "narrateur",
-          "texte": "[怒|おこ]った[意地悪|いじわる]なおじいさんは、おのでうすをバラバラにこわして、もやしてしまいました。",
+          "texte": "[怒|おこ]った [意地悪|いじわる]な おじいさんは、 おので うすを バラバラに こわして、 もやしてしまいました。",
           "fr": "Fou de rage, le méchant homme brisa le mortier en morceaux avec une hache et le brûla.",
           "en": "Mad with rage, the mean old man smashed the mortar to pieces with an axe and burned it.",
           "mots": [
@@ -1747,8 +2128,14 @@
               "en": "angry"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[意地悪|いじわる]な",
               "v": "ijiwaru"
+            },
+            {
+              "t": " "
             },
             {
               "t": "おじいさん",
@@ -1762,6 +2149,9 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "おの",
               "v": "ono"
             },
@@ -1772,6 +2162,9 @@
               "en": "with"
             },
             {
+              "t": " "
+            },
+            {
               "t": "うす",
               "v": "usu"
             },
@@ -1780,10 +2173,16 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "バラバラに",
               "v": "barabara",
               "fr": "en morceaux",
               "en": "to pieces"
+            },
+            {
+              "t": " "
             },
             {
               "t": "こわして",
@@ -1793,6 +2192,9 @@
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "もやしてしまいました",
@@ -1816,7 +2218,7 @@
         {
           "numero": 23,
           "role": "narrateur",
-          "texte": "[正直|しょうじき]なおじいさんは[悲|かな]しんで、うすの[灰|はい]をもらって[帰|かえ]りました。",
+          "texte": "[正直|しょうじき]な おじいさんは [悲|かな]しんで、 うすの [灰|はい]を もらって [帰|かえ]りました。",
           "fr": "Le gentil vieil homme fut très attristé, ramassa les cendres du mortier et rentra chez lui.",
           "en": "The kind old man, deeply saddened, gathered the ashes of the mortar and went home.",
           "mots": [
@@ -1825,12 +2227,18 @@
               "v": "shoujiki"
             },
             {
+              "t": " "
+            },
+            {
               "t": "おじいさん",
               "v": "ojiisan"
             },
             {
               "t": "は",
               "v": "wa"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[悲|かな]しんで",
@@ -1842,12 +2250,18 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "うす",
               "v": "usu"
             },
             {
               "t": "の",
               "v": "no"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[灰|はい]",
@@ -1858,10 +2272,16 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "もらって",
               "v": "morau",
               "fr": "récupéra et",
               "en": "got and"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[帰|かえ]りました",
@@ -1877,7 +2297,7 @@
         {
           "numero": 24,
           "role": "narrateur",
-          "texte": "そして、[庭|にわ]の[枯|か]れた[木|き]に、その[灰|はい]をまきました。",
+          "texte": "そして、 [庭|にわ]の [枯|か]れた [木|き]に、 その [灰|はい]を まきました。",
           "fr": "Puis, il dispersa ces cendres sur un arbre mort dans son jardin.",
           "en": "Then he scattered the ashes on a dead tree in his garden.",
           "mots": [
@@ -1889,6 +2309,9 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[庭|にわ]",
               "v": "niwa"
             },
@@ -1897,10 +2320,16 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[枯|か]れた",
               "v": "kareru",
               "fr": "mort, desséché",
               "en": "dead, withered"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[木|き]",
@@ -1916,8 +2345,14 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "その",
               "v": "sono"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[灰|はい]",
@@ -1926,6 +2361,9 @@
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "まきました",
@@ -1941,7 +2379,7 @@
         {
           "numero": 25,
           "role": "ojiisan",
-          "texte": "シロ、お[前|まえ]のうすが[灰|はい]になってしまったよ。……えい。",
+          "texte": "シロ、 お[前|まえ]の うすが [灰|はい]に なってしまったよ。…… えい。",
           "fr": "Shiro, ton mortier est devenu de la cendre... Hop !",
           "en": "Shiro, your mortar has turned to ash... Here goes!",
           "mots": [
@@ -1951,6 +2389,9 @@
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "お[前|まえ]",
@@ -1963,12 +2404,18 @@
               "en": "of you: your"
             },
             {
+              "t": " "
+            },
+            {
               "t": "うす",
               "v": "usu"
             },
             {
               "t": "が",
               "v": "ga"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[灰|はい]",
@@ -1979,6 +2426,9 @@
               "v": "ni",
               "fr": "(résultat) en",
               "en": "(result) into"
+            },
+            {
+              "t": " "
             },
             {
               "t": "なってしまった",
@@ -1997,6 +2447,9 @@
               "t": "……"
             },
             {
+              "t": " "
+            },
+            {
               "t": "えい",
               "v": "ei"
             },
@@ -2008,7 +2461,7 @@
         {
           "numero": 26,
           "role": "narrateur",
-          "texte": "おじいさんが[灰|はい]をまくと、[不思議|ふしぎ]なことが[起|お]こりました。\n[枯|か]れた[木|き]に、ピンクの[桜|さくら]の[花|はな]がいっしゅんでたくさん[咲|さ]きました。",
+          "texte": "おじいさんが [灰|はい]を まくと、 [不思議|ふしぎ]な ことが [起|お]こりました。\n[枯|か]れた [木|き]に、 ピンクの [桜|さくら]の [花|はな]が いっしゅんで たくさん [咲|さ]きました。",
           "fr": "Lorsque le vieil homme dispersa les cendres, une chose merveilleuse se produisit. Sur l'arbre mort, de nombreuses fleurs de cerisier roses s'épanouirent en un instant.",
           "en": "When the old man scattered the ashes, something wonderful happened. On the dead tree, countless pink cherry blossoms bloomed in an instant.",
           "mots": [
@@ -2021,12 +2474,18 @@
               "v": "ga"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[灰|はい]",
               "v": "hai"
             },
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "まく",
@@ -2042,8 +2501,14 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[不思議|ふしぎ]な",
               "v": "fushigi"
+            },
+            {
+              "t": " "
             },
             {
               "t": "こと",
@@ -2052,6 +2517,9 @@
             {
               "t": "が",
               "v": "ga"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[起|お]こりました",
@@ -2072,6 +2540,9 @@
               "en": "dead, withered"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[木|き]",
               "v": "ki"
             },
@@ -2085,12 +2556,18 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "ピンク",
               "v": "pinku"
             },
             {
               "t": "の",
               "v": "no"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[桜|さくら]",
@@ -2101,12 +2578,18 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[花|はな]",
               "v": "hana"
             },
             {
               "t": "が",
               "v": "ga"
+            },
+            {
+              "t": " "
             },
             {
               "t": "いっしゅん",
@@ -2119,8 +2602,14 @@
               "en": "in (time)"
             },
             {
+              "t": " "
+            },
+            {
               "t": "たくさん",
               "v": "takusan"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[咲|さ]きました",
@@ -2136,7 +2625,7 @@
         {
           "numero": 27,
           "role": "ojiisan",
-          "texte": "すごい！ [枯|か]れ[木|き]に[花|はな]が[咲|さ]いた！ もっとまこう。",
+          "texte": "すごい！ [枯|か]れ[木|き]に [花|はな]が [咲|さ]いた！ もっと まこう。",
           "fr": "C'est incroyable ! Des fleurs ont poussé sur un arbre mort ! Dispersons-en encore plus !",
           "en": "Incredible! Flowers have bloomed on a dead tree! Let's scatter some more!",
           "mots": [
@@ -2161,12 +2650,18 @@
               "en": "on"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[花|はな]",
               "v": "hana"
             },
             {
               "t": "が",
               "v": "ga"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[咲|さ]いた",
@@ -2185,6 +2680,9 @@
               "v": "motto"
             },
             {
+              "t": " "
+            },
+            {
               "t": "まこう",
               "v": "maku",
               "fr": "répandons",
@@ -2198,7 +2696,7 @@
         {
           "numero": 28,
           "role": "obaasan",
-          "texte": "[枯|か]れ[木|き]に[花|はな]を[咲|さ]かせましょう！",
+          "texte": "[枯|か]れ[木|き]に [花|はな]を [咲|さ]かせましょう！",
           "fr": "Faisons fleurir les arbres morts !",
           "en": "Let's make the dead trees bloom!",
           "mots": [
@@ -2213,12 +2711,18 @@
               "en": "on"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[花|はな]",
               "v": "hana"
             },
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[咲|さ]かせましょう",
@@ -2242,7 +2746,7 @@
         {
           "numero": 29,
           "role": "narrateur",
-          "texte": "そこへ、[馬|うま]に[乗|の]ったえらい[殿様|とのさま]が[通|とお]りかかりました。",
+          "texte": "そこへ、 [馬|うま]に [乗|の]った えらい [殿様|とのさま]が [通|とお]りかかりました。",
           "fr": "C'est alors que passa par là un grand Seigneur à cheval.",
           "en": "Just then, a great Lord on horseback came passing by.",
           "mots": [
@@ -2260,6 +2764,9 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[馬|うま]",
               "v": "uma"
             },
@@ -2270,14 +2777,23 @@
               "en": "on"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[乗|の]った",
               "v": "noru",
               "fr": "monté (sur)",
               "en": "riding"
             },
             {
+              "t": " "
+            },
+            {
               "t": "えらい",
               "v": "erai"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[殿様|とのさま]",
@@ -2286,6 +2802,9 @@
             {
               "t": "が",
               "v": "ga"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[通|とお]りかかりました",
@@ -2301,7 +2820,7 @@
         {
           "numero": 30,
           "role": "tono",
-          "texte": "おお、[素晴|すば]らしい！ [冬|ふゆ]なのに[美|うつく]しい[桜|さくら]が[咲|さ]いている。\nこれをやったのは[誰|だれ]だ？",
+          "texte": "おお、 [素晴|すば]らしい！ [冬|ふゆ] なのに [美|うつく]しい [桜|さくら]が [咲|さ]いている。\nこれを やったのは [誰|だれ]だ？",
           "fr": "Oh, c'est magnifique ! Des cerisiers si somptueux fleurissent alors que c’est l’hiver. Qui a fait cela ?",
           "en": "Oh, how wonderful! Such splendid cherry trees in bloom, in the middle of winter. Who did this?",
           "mots": [
@@ -2311,6 +2830,9 @@
             },
             {
               "t": "、"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[素晴|すば]らしい",
@@ -2327,12 +2849,21 @@
               "v": "fuyu"
             },
             {
+              "t": " "
+            },
+            {
               "t": "なのに",
               "v": "nanoni"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[美|うつく]しい",
               "v": "utsukushii"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[桜|さくら]",
@@ -2341,6 +2872,9 @@
             {
               "t": "が",
               "v": "ga"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[咲|さ]いている",
@@ -2363,6 +2897,9 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "やった",
               "v": "yaru",
               "fr": "a fait",
@@ -2377,6 +2914,9 @@
             {
               "t": "は",
               "v": "wa"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[誰|だれ]",
@@ -2394,7 +2934,7 @@
         {
           "numero": 31,
           "role": "ojiisan",
-          "texte": "[私|わたくし]でございます、[殿様|とのさま]。",
+          "texte": "[私|わたくし]でございます、 [殿様|とのさま]。",
           "fr": "C'est moi, votre Seigneurie.",
           "en": "It was I, my Lord.",
           "mots": [
@@ -2410,6 +2950,9 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[殿様|とのさま]",
               "v": "tonosama",
               "fr": "mon Seigneur",
@@ -2423,13 +2966,16 @@
         {
           "numero": 32,
           "role": "tono",
-          "texte": "たいした[知恵|ちえ]だ。お[前|まえ]にたくさんのほうびをあげよう。\n（ほうびをあげる）",
+          "texte": "たいした [知恵|ちえ]だ。 お[前|まえ]に たくさんの ほうびを あげよう。\n（ほうびを あげる）",
           "fr": "C'est un savoir-faire extraordinaire. Je vais te donner une grande récompense. (Il lui donne la récompense)",
           "en": "What remarkable skill. I shall give you a great reward. (He gives him the reward)",
           "mots": [
             {
               "t": "たいした",
               "v": "taishita"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[知恵|ちえ]",
@@ -2443,6 +2989,9 @@
               "t": "。"
             },
             {
+              "t": " "
+            },
+            {
               "t": "お[前|まえ]",
               "v": "omae"
             },
@@ -2453,6 +3002,9 @@
               "en": "to"
             },
             {
+              "t": " "
+            },
+            {
               "t": "たくさん",
               "v": "takusan"
             },
@@ -2461,12 +3013,18 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "ほうび",
               "v": "houbi"
             },
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "あげよう",
@@ -2492,6 +3050,9 @@
               "v": "wo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "あげる",
               "v": "ageru",
               "fr": "donne",
@@ -2505,7 +3066,7 @@
         {
           "numero": 33,
           "role": "ijiwaru",
-          "texte": "（[走|はし]ってきて）[殿様|とのさま]！ [私|わたし]もできます！\n[私|わたし]も[灰|はい]をまきます！ えい！",
+          "texte": "（[走|はし]ってきて） [殿様|とのさま]！ [私|わたし]も できます！\n[私|わたし]も [灰|はい]を まきます！ えい！",
           "fr": "(Arrivant en courant) Mon Seigneur ! Moi aussi je peux le faire ! Moi aussi je vais disperser des cendres ! Hop !",
           "en": "(Running up) My Lord! I can do it too! I'll scatter ashes too! Here goes!",
           "mots": [
@@ -2520,6 +3081,9 @@
             },
             {
               "t": "）"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[殿様|とのさま]",
@@ -2542,6 +3106,9 @@
               "v": "mo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "できます",
               "v": "dekiru",
               "fr": "peux le faire",
@@ -2562,12 +3129,18 @@
               "v": "mo"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[灰|はい]",
               "v": "hai"
             },
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "まきます",
@@ -2593,13 +3166,16 @@
         {
           "numero": 34,
           "role": "narrateur",
-          "texte": "[意地悪|いじわる]なおじいさんが[灰|はい]をまくと、[風|かぜ]が[吹|ふ]いて、[灰|はい]が[殿様|とのさま]の[目|め]に[入|はい]ってしまいました。",
+          "texte": "[意地悪|いじわる]な おじいさんが [灰|はい]を まくと、 [風|かぜ]が [吹|ふ]いて、 [灰|はい]が [殿様|とのさま]の [目|め]に [入|はい]ってしまいました。",
           "fr": "Lorsque le méchant homme dispersa les cendres, le vent se leva et les cendres entrèrent dans les yeux du Seigneur.",
           "en": "When the mean old man scattered the ashes, the wind blew and the ashes got into the Lord's eyes.",
           "mots": [
             {
               "t": "[意地悪|いじわる]な",
               "v": "ijiwaru"
+            },
+            {
+              "t": " "
             },
             {
               "t": "おじいさん",
@@ -2610,12 +3186,18 @@
               "v": "ga"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[灰|はい]",
               "v": "hai"
             },
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "まく",
@@ -2631,12 +3213,18 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[風|かぜ]",
               "v": "kaze"
             },
             {
               "t": "が",
               "v": "ga"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[吹|ふ]いて",
@@ -2648,12 +3236,18 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[灰|はい]",
               "v": "hai"
             },
             {
               "t": "が",
               "v": "ga"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[殿様|とのさま]",
@@ -2664,6 +3258,9 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[目|め]",
               "v": "me"
             },
@@ -2672,6 +3269,9 @@
               "v": "ni",
               "fr": "dans",
               "en": "into"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[入|はい]ってしまいました",
@@ -2687,7 +3287,7 @@
         {
           "numero": 35,
           "role": "tono",
-          "texte": "いたい！ [目|め]が[痛|いた]い！ [無礼者|ぶれいもの]！\nこの[男|おとこ]をつかまえろ！",
+          "texte": "いたい！ [目|め]が [痛|いた]い！ [無礼者|ぶれいもの]！\nこの [男|おとこ]を つかまえろ！",
           "fr": "Aïe ! Mes yeux me font mal ! Insolent ! Arrêtez cet homme !",
           "en": "Ow! My eyes hurt! You insolent man! Seize him!",
           "mots": [
@@ -2710,6 +3310,9 @@
             {
               "t": "が",
               "v": "ga"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[痛|いた]い",
@@ -2738,12 +3341,18 @@
               "v": "kono"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[男|おとこ]",
               "v": "otoko"
             },
             {
               "t": "を",
               "v": "wo"
+            },
+            {
+              "t": " "
             },
             {
               "t": "つかまえろ",
@@ -2759,7 +3368,7 @@
         {
           "numero": 36,
           "role": "narrateur",
-          "texte": "[意地悪|いじわる]なおじいさんは[罰|ばっ]せられました。",
+          "texte": "[意地悪|いじわる]な おじいさんは [罰|ばっ]せられました。",
           "fr": "Le méchant voisin fut sévèrement puni.",
           "en": "The mean neighbour was severely punished.",
           "mots": [
@@ -2768,12 +3377,18 @@
               "v": "ijiwaru"
             },
             {
+              "t": " "
+            },
+            {
               "t": "おじいさん",
               "v": "ojiisan"
             },
             {
               "t": "は",
               "v": "wa"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[罰|ばっ]せられました",
@@ -2789,13 +3404,16 @@
         {
           "numero": 37,
           "role": "narrateur",
-          "texte": "[正直|しょうじき]なおじいさんとおばあさんは、\nシロの[咲|さ]かせる[美|うつく]しい[花|はな]を、[年中|ねんじゅう][眺|なが]めながら、\nシロの[思|おも]い[出|で]と[一緒|いっしょ]に、ずっと[幸|しあわ]せに[暮|く]らしました。",
+          "texte": "[正直|しょうじき]な おじいさんと おばあさんは、\nシロの [咲|さ]かせる [美|うつく]しい [花|はな]を、 [年中|ねんじゅう] [眺|なが]めながら、\nシロの [思|おも]い[出|で]と [一緒|いっしょ]に、 ずっと [幸|しあわ]せに [暮|く]らしました。",
           "fr": "Le gentil vieil homme et sa femme vécurent heureux pour toujours, chérissant le souvenir de Shiro tout en admirant, tout au long de l'année, les magnifiques fleurs que Shiro faisait épanouir.",
           "en": "The kind old man and his wife lived happily ever after, cherishing their memories of Shiro as they gazed, all year round, at the beautiful flowers Shiro made bloom.",
           "mots": [
             {
               "t": "[正直|しょうじき]な",
               "v": "shoujiki"
+            },
+            {
+              "t": " "
             },
             {
               "t": "おじいさん",
@@ -2806,6 +3424,9 @@
               "v": "to",
               "fr": "et",
               "en": "and"
+            },
+            {
+              "t": " "
             },
             {
               "t": "おばあさん",
@@ -2832,14 +3453,23 @@
               "en": "(subject of the clause)"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[咲|さ]かせる",
               "v": "saku",
               "fr": "fait fleurir",
               "en": "makes bloom"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[美|うつく]しい",
               "v": "utsukushii"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[花|はな]",
@@ -2853,8 +3483,14 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[年中|ねんじゅう]",
               "v": "nenjuu"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[眺|なが]めながら",
@@ -2877,6 +3513,9 @@
               "v": "no"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[思|おも]い[出|で]",
               "v": "omoide"
             },
@@ -2887,6 +3526,9 @@
               "en": "with"
             },
             {
+              "t": " "
+            },
+            {
               "t": "[一緒|いっしょ]に",
               "v": "issho"
             },
@@ -2894,14 +3536,23 @@
               "t": "、"
             },
             {
+              "t": " "
+            },
+            {
               "t": "ずっと",
               "v": "zutto"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[幸|しあわ]せに",
               "v": "shiawase",
               "fr": "heureux",
               "en": "happily"
+            },
+            {
+              "t": " "
             },
             {
               "t": "[暮|く]らしました",
